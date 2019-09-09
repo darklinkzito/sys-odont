@@ -14,7 +14,7 @@ try {
 }
 if (isset($linha[0])){
     $_SESSION['logar']=$usuario;
-    header('Location: TelaPerfil.php');
+    header('Location: Index.php');
 }else{
     $_SESSION["msg_erro"]="Usuário ou senha inválidos.";
     header('Location: TelaLogin.php');
