@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>So'Dont</title>
+    <title>Sys'Odont</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -37,7 +37,7 @@
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="index.html" class="site_title"><i class="fa fa-tooth"></i> <span>So'Dont</span></a>
+                        <a href="index.php" class="site_title"><i class="fa fa-tooth"></i> <span>Sys'Odont</span></a>
                     </div>
 
                     <div class="clearfix"></div>
@@ -60,14 +60,14 @@
                             <ul class="nav side-menu">
                                 <li><a><i class="fa fa-edit"></i>Cadastros<span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="cadastroFuncionario.html">Cadastro de Funcionários</a></li>
+                                        <li><a href="cadastroFuncionario.php">Cadastro de Funcionários</a></li>
 
 
                                     </ul>
                                 </li>
-                                <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
+                                <li><a><i class="fa fa-table"></i> Tabelas <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="tables.html">Tables</a></li>
+                                        <li><a href="tabelaConsultas.php">Tabela de Consultas</a></li>
                                         <li><a href="tables_dynamic.html">Table Dynamic</a></li>
                                     </ul>
                                 </li>
@@ -110,42 +110,42 @@
                     <h2>Cadastro de Funcionários</h2>
                     
                 </div>
-                <form class="form-horizontal" action="POST">
+                <form class="form-horizontal" method="POST" action="usua_cad.php">
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="NomeCompleto">Nome Completo:<span class="required">*</span></label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" required="required" id="NomeCompleto">
+                            <input type="text" class="form-control" required="required" id="NomeCompleto" name="nm_usuario">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="pwd">CPF:<span class="required">*</span></label>
                         <div class="col-sm-2">
-                            <input type="text" class="form-control" id="CPF"
+                            <input type="text" class="form-control" id="CPF" name="cpf"
                             required="required">
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="DataNascimento">Data de nascimento:<span class="required">*</span></label>
                             <div class="col-sm-2">
-                                <input type="text" class="form-control" required="required" id="DataNascimento" data-inputmask="'mask': '99/99/9999'">
+                                <input type="text" class="form-control" required="required" id="DataNascimento" name="dt_usuario" data-inputmask="'mask': '99/99/9999'">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="RG">RG:<span class="required">*</span></label>
                         <div class="col-sm-2">
-                            <input type="text" class="form-control" required="required" id="RG">
+                            <input type="text" class="form-control" required="required" id="RG" name="rg">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="PIS">PIS/PASEP:<span class="required">*</span></label>
                         <div class="col-sm-2">
-                            <input type="text" class="form-control" required="required"  id="PIS">
+                            <input type="text" class="form-control" required="required"  id="PIS" name="pis">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="Endereco">Endereço:<span class="required">*</span></label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" required="required" id="Endereco">
+                            <input type="text" class="form-control" required="required" id="Endereco" name="dt_usuario">
                         </div>
                     </div>
                     <div class="form-group">

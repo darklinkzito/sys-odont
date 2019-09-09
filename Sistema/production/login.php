@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>So'Dont</title>
+    <title>Sys'Odont</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -42,7 +42,7 @@
           <section class="login_content">
             <form>
                
-              <h1> <i class="fa fa-tooth po "></i></h1> <h1>Bem-vindo a So'Dont</h1>
+              <h1> <i class="fa fa-tooth po "></i></h1> <h1>Bem-vindo a Sys'Odont</h1>
               <div>
                 <input type="text" class="form-control" placeholder="Código de Usuário" required="required" />
               </div>

@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>So'Dont</title>
+    <title>Sys'Odont</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -32,7 +32,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-tooth"></i> <span>So'Dont</span></a>
+              <a href="index.php" class="site_title"><i class="fa fa-tooth"></i> <span>Sys'Odont</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -55,15 +55,15 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-edit"></i>Cadastros<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="cadastroFuncionario.html">Cadastro de  Funcionários</a></li>
+                      <li><a href="cadastroFuncionario.php">Cadastro de  Funcionários</a></li>
                       
                      
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-table"></i> Tabelas <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="tables.html">Tables</a></li>
-                      <li><a href="tables_dynamic.html">Table Dynamic</a></li>
+                      <li><a href="tabelaConsultas.php">Tabela de Consultas</a></li>
+                      <li><a href="tables_dynamic.php">Table Dynamic</a></li>
                     </ul>
                   </li>
                   
