@@ -5,7 +5,6 @@ $usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
 try {
     require('conexao.php');    
-    
     $stmt = $conn->prepare("select * from usuario where usua_nm_usuario = '$usuario' and usua_nm_senha = '$senha'");
     $stmt->execute();
     $linha = $stmt->fetchAll();
@@ -14,9 +13,9 @@ try {
 }
 if (isset($linha[0])){
     $_SESSION['logar']=$usuario;
-    header('Location: Index.php');
+    header('Location: index.php');
 }else{
     $_SESSION["msg_erro"]="Usuário ou senha inválidos.";
-    header('Location: TelaLogin.php');
+    header('Location: login.php');
 }
 ?>

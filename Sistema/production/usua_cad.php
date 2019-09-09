@@ -1,9 +1,7 @@
 <?php 
 try {
     session_start();
-    //conexão com o banco de dados
-    $conn = new PDO('mysql:host=localhost;dbname=controle_de_acesso', 'root', 'root123');
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    require('conexao.php');
     //inserção de dados no banco de dados
     $stmt = $conn->prepare('INSERT INTO usuario (
     usua_nm_usuario,
@@ -22,6 +20,10 @@ try {
 }
 //condicional para ir para a proxima página
 if($stmt == 1){
-
+    $_SESSION["msg_ok"]="Cadastro realizado com sucesso!";
+    header('Location: index.php');
+}else{
+    $_SESSION["msg_erro"]="Cadastro não pode ser realizado, favor entrar em contato com o suporte de TI";
+    header('Location: cadastroFuncionario.php');
 };
 ?>
