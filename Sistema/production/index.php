@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Sys'Odont</title>
+  <title>Sys'Odont</title>
 
-    <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- bootstrap-progressbar -->
-    <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-    <!-- bootstrap-daterangepicker -->
-    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-    
-    <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/37b548cb8d.js"></script>
-  </head>
+  <!-- Bootstrap -->
+  <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- bootstrap-progressbar -->
+  <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+  <!-- bootstrap-daterangepicker -->
+  <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+  <!-- Custom Theme Style -->
+  <link href="../build/css/custom.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/37b548cb8d.js"></script>
+</head>
 
   <body class="nav-md">
     <div class="container body">
@@ -41,35 +41,33 @@
             <div class="profile clearfix">
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h3>John Doe</h3>
+                <h3>nome do usuario</h3>
               </div>
             </div>
             <!-- /menu profile quick info -->
+          <br />
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <h3>Menu</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-edit"></i>Cadastros<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="cadastroFuncionario.php">Cadastro de Funcionários</a></li>
 
-            <br />
 
-            <!-- sidebar menu -->
-            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-              <div class="menu_section">
-                <h3>Menu</h3>
-                <ul class="nav side-menu">
-                  <li><a><i class="fa fa-edit"></i>Cadastros<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="cadastroFuncionario.php">Cadastro de  Funcionários</a></li>
-                      
-                     
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-table"></i> Tabelas <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="tabelaConsultas.php">Tabela de Consultas</a></li>
-                      <li><a href="tables_dynamic.php">Table Dynamic</a></li>
-                    </ul>
-                  </li>
-                  
-              </div>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-table"></i> Tabelas <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="tabelaConsultas.php">Tabela de Consultas</a></li>
+                    <li><a href="tables_dynamic.php">Table Dynamic</a></li>
+                  </ul>
+                </li>
 
             </div>
+
+          </div>
           </div>
         </div>
 
@@ -92,7 +90,7 @@
                   </ul>
                 </li>
 
-                             </ul>
+              </ul>
             </nav>
           </div>
         </div>
@@ -106,7 +104,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-             Admin Template by
+            Admin Template by
           </div>
           <div class="clearfix"></div>
         </footer>
@@ -154,4 +152,5 @@
     <script src="../build/js/custom.min.js"></script>
 
   </body>
-</html> 
+
+</html>
