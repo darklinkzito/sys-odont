@@ -49,10 +49,8 @@
                             <h3>John Doe</h3>
                         </div>
                     </div>
-                    <!-- /menu profile quick info -->
 
                     <br />
-
                     <!-- sidebar menu -->
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                         <div class="menu_section">
@@ -61,14 +59,14 @@
                                 <li><a><i class="fa fa-edit"></i>Cadastros<span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
                                         <li><a href="cadastroFuncionario.php">Cadastro de Funcionários</a></li>
-
-
+                                        <li><a href="#">Cadastro de consulta</a></li>
+                                        <li><a href="#">Cadastro de Paciente</a></li>
                                     </ul>
                                 </li>
-                                <li><a><i class="fa fa-table"></i> Tabelas <span class="fa fa-chevron-down"></span></a>
+                                <li><a><i class="fa fa-table"></i> Registros <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="tabelaConsultas.php">Tabela de Consultas</a></li>
-                                        <li><a href="tables_dynamic.html">Table Dynamic</a></li>
+                                        <li><a href="tabelaConsultas.php">Registro de Consultas</a></li>
+                                        <li><a href="#">Relatório de Consulta</a></li>
                                     </ul>
                                 </li>
 
@@ -88,12 +86,12 @@
 
                         <ul class="nav navbar-nav navbar-right">
                             <li class="">
-                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
-                                    aria-expanded="false">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                     <span class=" fa fa-angle-down"></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-usermenu pull-right">
-
+                                    <li><a href="#"><i class="fa fa-address-card pull-right"></i>Meus Dados</a></li>
+                                    <li><a href="#"><i class="fa fa-wrench pull-right"></i>Suporte</a></li>
                                     <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                                 </ul>
                             </li>
@@ -102,13 +100,11 @@
                     </nav>
                 </div>
             </div>
-            <!-- /top navigation -->
-
             <!-- page content -->
             <div class="right_col " role="main">
                 <div>
                     <h2>Cadastro de Funcionários</h2>
-                    
+
                 </div>
                 <form class="form-horizontal" method="POST" action="usua_cad.php">
                     <div class="form-group">
@@ -120,8 +116,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="pwd">CPF:<span class="required">*</span></label>
                         <div class="col-sm-2">
-                            <input type="text" class="form-control" id="CPF" name="cpf"
-                            required="required">
+                            <input type="text" class="form-control" id="CPF" name="cpf" required="required">
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="DataNascimento">Data de nascimento:<span class="required">*</span></label>
@@ -129,34 +124,44 @@
                                 <input type="text" class="form-control" required="required" id="DataNascimento" name="dt_usuario" data-inputmask="'mask': '99/99/9999'">
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="sexo">Sexo <span class="required">*</span></label>
+                            <div class="col-sm-2">
+                                <select class="form-control" id="sexo" name="in_sexo">
+                                    <option value="0" disable></option>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Feminino">Feminino</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="RG">RG:<span class="required">*</span></label>
                         <div class="col-sm-2">
-                            <input type="text" class="form-control" required="required" id="RG" name="rg">
+                            <input type="text" class="form-control" required="required" id="RG" name="ds_rg">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="PIS">PIS/PASEP:<span class="required">*</span></label>
                         <div class="col-sm-2">
-                            <input type="text" class="form-control" required="required"  id="PIS" name="pis">
+                            <input type="text" class="form-control" required="required" id="PIS" name="ds_pis">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="Endereco">Endereço:<span class="required">*</span></label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" required="required" id="Endereco" name="dt_usuario">
+                            <input type="text" class="form-control" required="required" id="Endereco" name="ds_endereco">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="pwd">CEP:<span class="required">*</span></label>
                         <div class="col-sm-1">
-                            <input type="text" class="form-control" id="CEP">
+                            <input type="text" class="form-control" id="CEP" name="ds_cep">
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="NumCasa">Número:<span class="required">*</span></label>
                             <div class="col-sm-1">
-                                <input type="text" class="form-control" required="required" id="NumCasa">
+                                <input type="text" class="form-control" required="required" id="ds_numCasa">
 
                             </div>
                         </div>
