@@ -55,7 +55,7 @@
                   <ul class="nav child_menu">
                     <li><a href="cadastroFuncionario.php">Cadastro de Funcionários</a></li>
                     <li><a href="#">Cadastro de consulta</a></li>
-                    <li><a href="#">Cadastro de Paciente</a></li>
+                    <li><a href="cadastroPaciente.php">Cadastro de Paciente</a></li>
                   </ul>
                 </li>
                 <li><a><i class="fa fa-table"></i> Registros <span class="fa fa-chevron-down"></span></a>
