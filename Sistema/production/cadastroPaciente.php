@@ -183,29 +183,30 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-2" for="Convenio">Possui Convênio?:<span class="required">*</span></label>
-                        <input type="radio" name="radionbutton" value="1" id="button1" />
-                        <label class="control-label col-sm-2" for="Convenio2">Sim: <span class="required"></span></label>
-                        <input type="radio" name="radionbutton" value="2" id="button2" />
-                        <label class="control-label col-sm-2" for="Convenio3">Não: <span class="required"></span></label>
-                    </div>
+                        <label class="control-label col-sm-2"  id="Conv" for="Convenio">Possui Convênio?:<span class="required">*</span></label>
+                        <label for="cnv2">Sim: <span class="required">*</span></label>
+                        <input type="radio" name="radionbutton" value="1" id="sim" />
+                        <label for="cnv3">Não: <span class="required">*</span></label>
+                        <input type="radio" name="radionbutton" value="2" id="nao" />
 
                     </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn estilo">Cadastrar</button>
-                        </div>
-                    </div>
-                </form>
+
             </div>
-            <!-- footer content -->
-            <footer>
-                <div class="pull-right">
-                    Admin Template by
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn estilo">Cadastrar</button>
                 </div>
-                <div class="clearfix"></div>
-            </footer>
+            </div>
+            </form>
         </div>
+        <!-- footer content -->
+        <footer>
+            <div class="pull-right">
+                Admin Template by
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+    </div>
     </div>
 
     <!-- jQuery -->
@@ -238,5 +239,15 @@
 
     <!-- Initialize datetimepicker -->
 </body>
+<script>
+    function FunctionConvenio {
+        var  convenio = document.getElementById('Conv').innerHTML;
+        if{
+            
+        }
+
+    }
+    
+</script>
 
 </html>
