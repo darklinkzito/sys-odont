@@ -31,13 +31,12 @@
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
     <style>
-    .estilo{
-      background-color:#2A3F54;
-      color:white;
-    }
-    
+        .estilo {
+            background-color: #2A3F54;
+            color: white;
+        }
     </style>
-  <script src="https://kit.fontawesome.com/37b548cb8d.js"></script>
+    <script src="https://kit.fontawesome.com/37b548cb8d.js"></script>
 
 </head>
 
@@ -194,11 +193,30 @@
                             <input type="email" class="form-control" required="required" id="Email">
                         </div>
                     </div>
+
+
                     <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn estilo">Cadastrar</button>
+                        <label class="control-label col-sm-2">Perfil: <span class="required">*</span> </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div id="perfil" class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                                    <input type="radio" name="perfil" value="gestor"> Gestor 
+                                </label>
+                                <label class="btn btn-warning" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                                    <input type="radio" name="perfil" value="dentista"> Dentista
+                                </label>
+                                <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                                    <input type="radio" name="perfil" value="atendente"> Atendente
+                                </label>
+                            </div>
                         </div>
-                    </div>
+                        <div class="right_col " role="main">
+                            <br>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn estilo" style="margin-top: 30px">Cadastrar</button>
+                                </div>
+                            </div>
                 </form>
             </div>
             <!-- footer content -->
