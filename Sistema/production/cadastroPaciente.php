@@ -183,9 +183,12 @@
                         </div>
                     </div>
                     <div class="form-group">
-                    <label class="control-label col-sm-2" for="Convenio">Possui Convênio?:<span class="required">*</span></label>
-                    <input type="radio" name="radionbutton" value="1"/>
-
+                        <label class="control-label col-sm-2" for="Convenio">Possui Convênio?:<span class="required">*</span></label>
+                        <input type="radio" name="radionbutton" value="1" id="button1" />
+                        <label class="control-label col-sm-2" for="Convenio2">Sim: <span class="required"></span></label>
+                        <input type="radio" name="radionbutton" value="2" id="button2" />
+                        <label class="control-label col-sm-2" for="Convenio3">Não: <span class="required"></span></label>
+                    </div>
 
                     </div>
                     <div class="form-group">
