@@ -31,13 +31,12 @@
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
     <style>
-    .estilo{
-      background-color:#2A3F54;
-      color:white;
-    }
-    
+        .estilo {
+            background-color: #2A3F54;
+            color: white;
+        }
     </style>
-  <script src="https://kit.fontawesome.com/37b548cb8d.js"></script>
+    <script src="https://kit.fontawesome.com/37b548cb8d.js"></script>
 
 </head>
 
@@ -170,7 +169,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="Telefone">Telefone:<span class="required">*</span></label>
                         <div class="col-sm-3">
@@ -182,6 +181,12 @@
                         <div class="col-sm-4">
                             <input type="email" class="form-control" required="required" id="Email">
                         </div>
+                    </div>
+                    <div class="form-group">
+                    <label class="control-label col-sm-2" for="Convenio">Possui Convênio?:<span class="required">*</span></label>
+                    <input type="radio" name="radionbutton" value="1"/>
+
+
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
