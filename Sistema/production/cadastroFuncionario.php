@@ -150,11 +150,6 @@
                             <input type="text" class="form-control" data-inputmask="'mask' : '99.999.999-99'" required="required" id="RG" name="ds_rg">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="PIS">PIS/PASEP:<span class="required">*</span></label>
-                        <div class="col-sm-2">
-                            <input type="text" class="form-control" data-inputmask="'mask' : '999.99999.99-9'" required="required" id="PIS" name="ds_pis">
-                        </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="Endereco">Endereço:<span class="required">*</span></label>
@@ -175,11 +170,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="referencia">Ponto de Referência:</label>
-                        <div class="col-sm-4">
-                            <input type="text" class="form-control" id="referencia">
-                        </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="Telefone">Telefone:<span class="required">*</span></label>
