@@ -112,10 +112,10 @@
             <!-- page content -->
             <div class="right_col " role="main">
                 <div>
-                    <h2>Cadastro de Funcionários</h2>
+                    <h2>Cadastro de Pacientes</h2>
 
                 </div>
-                <form class="form-horizontal" method="POST" action="usua_cad.php">
+                <form class="form-horizontal" method="POST" action="./req_banco/usua_cad.php">
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="NomeCompleto">Nome Completo:<span class="required">*</span></label>
                         <div class="col-sm-6">
@@ -183,29 +183,43 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-2"  id="Conv" for="Convenio">Possui Convênio?:<span class="required">*</span></label>
-                        <label for="cnv2">Sim: <span class="required">*</span></label>
-                        <input type="radio" name="radionbutton" value="1" id="sim" />
-                        <label for="cnv3">Não: <span class="required">*</span></label>
-                        <input type="radio" name="radionbutton" value="2" id="nao" />
-
+                        <label class="control-label col-sm-2" for="Email">Possui convênio?:<span class="required">*</span></label>
+                        <div class="form-check form-check-inline">
+                            <div class="col-sm-1">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="FunctionConvenio(1)">
+                                <label class="form-check-label" for="inlineRadio1">Sim</label>
+                            </div>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <div class="col-sm-1">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="FunctionConvenio(2)">
+                                <label class="form-check-label" for="inlineRadio1">Não</label>
+                            </div>
+                        </div>
                     </div>
-
+                    <div class="form-group hidden convenios">
+                        <label class="control-label col-sm-2" for="Email">Qual?:<span class="required">*</span></label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" required="required" name="ds_convenio" id="convenio">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn estilo">Cadastrar</button>
+                        </div>
+                    </div>
             </div>
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn estilo">Cadastrar</button>
-                </div>
-            </div>
-            </form>
         </div>
-        <!-- footer content -->
-        <footer>
-            <div class="pull-right">
-                Admin Template by
-            </div>
-            <div class="clearfix"></div>
-        </footer>
+
+        </form>
+    </div>
+    <!-- footer content -->
+    <footer>
+        <div class="pull-right">
+            Admin Template by
+        </div>
+        <div class="clearfix"></div>
+    </footer>
     </div>
     </div>
 
@@ -240,14 +254,12 @@
     <!-- Initialize datetimepicker -->
 </body>
 <script>
-    function FunctionConvenio {
-        var  convenio = document.getElementById('Conv').innerHTML;
-        if{
-            
-        }
-
+    function FunctionConvenio(item) {
+        if (item == 1)
+            $('.convenios').removeClass('hidden');
+        else
+            $('.convenios').addClass('hidden')
     }
-    
 </script>
 
 </html>
