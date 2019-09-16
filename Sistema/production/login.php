@@ -34,6 +34,14 @@
 </head>
 
 <body class="login">
+  <?php
+  session_start();
+  if (isset($_SESSION["msg_erro"])) { ?>
+    <?php echo "<script>alert('usuário ou senha invalido');
+        </script>"; ?>
+  <?php
+    unset($_SESSION["msg_erro"]);
+  } ?>
   <div>
     <a class="hiddenanchor" id="signup"></a>
     <a class="hiddenanchor" id="signin"></a>

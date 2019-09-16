@@ -14,7 +14,7 @@ try {
 if (isset($linha[0])){
     header('Location: ../index.php');
 }else{
-    $_SESSION["msg_erro"]="Usuário ou senha inválidos.";
+    $_SESSION["msg_erro"]= 1;
     header('Location: ../login.php');
 }
 ?>
