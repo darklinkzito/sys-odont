@@ -41,15 +41,15 @@
     <div class="login_wrapper">
       <div class="animate form login_form">
         <section class="login_content">
-          <form method="POST" action="valida_login.php">
+          <form method="POST" action="req_banco/valida_login.php">
 
             <h1> <i class="fa fa-tooth po "></i></h1>
             <h1>Bem-vindo a Sys'Odont</h1>
             <div>
-              <input type="text" class="form-control" placeholder="Código de Usuário" required="required" />
+              <input type="text" class="form-control" placeholder="Código de Usuário" name="usuario" required="required" />
             </div>
             <div>
-              <input type="password" class="form-control" placeholder="Senha" required="required" />
+              <input type="password" class="form-control" placeholder="Senha" name="senha" required="required" />
             </div>
             <div>
               <input type="submit" value="Acessar" class="btn float-right login_btn">

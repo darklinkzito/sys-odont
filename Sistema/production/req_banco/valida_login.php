@@ -12,10 +12,9 @@ try {
     echo 'ERROR: ' . $e->getMessage();
 }
 if (isset($linha[0])){
-    $_SESSION['logar']=$usuario;
-    header('Location: index.php');
+    header('Location: ../index.php');
 }else{
     $_SESSION["msg_erro"]="Usuário ou senha inválidos.";
-    header('Location: login.php');
+    header('Location: ../login.php');
 }
 ?>
