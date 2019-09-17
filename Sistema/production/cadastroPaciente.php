@@ -68,7 +68,7 @@
                                 <li><a><i class="fa fa-edit"></i>Cadastros<span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
                                         <li><a href="cadastroFuncionario.php">Cadastro de Funcionários</a></li>
-                                        <li><a href="">Cadastro de consulta</a></li>
+                                        <li><a href="cadastroConsulta.php">Cadastro de consulta</a></li>
                                         <li><a href="cadastroPaciente.php">Cadastro de Paciente</a></li>
                                     </ul>
                                 </li>
