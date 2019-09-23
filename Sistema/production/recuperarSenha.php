@@ -34,33 +34,21 @@
 </head>
 
 <body class="login">
-  <?php
-  session_start();
-  if (isset($_SESSION["msg_erro"])) { ?>
-    <?php echo "<script>alert('usuário ou senha invalido');
-        </script>"; ?>
-  <?php
-    unset($_SESSION["msg_erro"]);
-  } ?>
-  <div>
-    <a class="hiddenanchor" id="signup"></a>
-    <a class="hiddenanchor" id="signin"></a>
 
+  <div>
     <div class="login_wrapper">
       <div class="animate form login_form">
         <section class="login_content">
-          <form method="POST" action="req_banco/valida_login.php">
+          <form method="POST" action="">
 
             <h1> <i class="fa fa-tooth po "></i></h1>
-            <h1>Bem-vindo a Sys'Odont</h1>
+            <p>Insire o seu código de usuário</p>
+            <p>um email será enviado para você com a recuperação da senha.</p>
             <div>
-              <input type="text" class="form-control" placeholder="Código de Usuário" name="usuario" required="required" />
+              <input type="text" class="form-control" placeholder="Codigo de usuário" name="senha" required="required" />
             </div>
             <div>
-              <input type="password" class="form-control" placeholder="Senha" name="senha" required="required" />
-            </div>
-            <div>
-              <input type="submit" value="Acessar" class="btn float-right login_btn">
+              <input type="submit" value="Enviar" class="btn float-right login_btn">
             </div>
           </form>
         </section>
