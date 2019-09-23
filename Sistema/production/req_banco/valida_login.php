@@ -12,6 +12,7 @@ try {
     echo 'ERROR: ' . $e->getMessage();
 }
 if (isset($linha[0])){
+    $_SESSION["msg_ok"]=2;
     header('Location: ../index.php');
 }else{
     $_SESSION["msg_erro"]= 1;

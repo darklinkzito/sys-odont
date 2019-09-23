@@ -151,18 +151,10 @@
                         </div>
                     </div>
                     <div class="form-group">
-<<<<<<< HEAD
-                        <label class="control-label col-sm-2" for="RG">RG:<span class="required">*</span></label>
-                        <div class="col-sm-2">
-                            <input type="text" class="form-control" data-inputmask="'mask' : '99.999.999-99'" required="required" id="RG" name="ds_rg">
-                        </div>
-                    </div>
-=======
                         <label class="control-label col-sm-2" for="cep">CEP:<span class="required">*</span></label>
                         <div class="col-sm-2">
                             <input type="text" class="form-control" data-inputmask="'mask' : '99999-999'" id="CEP" name="ds_cep">
                         </div>
->>>>>>> 114c3ef2abcf70a4afa75465833e467d1766ee3c
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="Endereco">Endereço:<span class="required">*</span></label>
@@ -176,14 +168,11 @@
                             <input type="text" class="form-control" required="required" id="Endereco" name="ds_complemento">
                         </div>
                     </div>
-<<<<<<< HEAD
-=======
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="NumCasa">Número:<span class="required">*</span></label>
                         <div class="col-sm-1">
                             <input type="text" class="form-control" required="required" id="num_casa" name="num_casa">
                         </div>
->>>>>>> 114c3ef2abcf70a4afa75465833e467d1766ee3c
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="Telefone">Telefone:<span class="required">*</span></label>

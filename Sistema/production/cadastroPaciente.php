@@ -115,22 +115,22 @@
                     <h2>Cadastro de Pacientes</h2>
 
                 </div>
-                <form class="form-horizontal" method="POST" action="./req_banco/usua_cad.php">
+                <form class="form-horizontal" method="POST" action="./req_banco/Cad_paciente.php">
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="NomeCompleto">Nome Completo:<span class="required">*</span></label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" required="required" id="NomeCompleto" name="nm_usuario">
+                            <input type="text" class="form-control" required="required" id="NomeCompleto" name="nm_paciente">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="pwd">CPF:<span class="required">*</span></label>
                         <div class="col-sm-2">
-                            <input type="text" class="form-control" data-inputmask="'mask' : '999.999.999-99'" id="CPF" name="cpf" required="required">
+                            <input type="text" class="form-control" data-inputmask="'mask' : '999.999.999-99'" id="CPF" name="ds_cpf" required="required">
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="DataNascimento">Data de nascimento:<span class="required">*</span></label>
                             <div class="col-sm-2">
-                                <input type="text" class="form-control" required="required" id="DataNascimento" name="dt_usuario" data-inputmask="'mask': '99/99/9999'">
+                                <input type="text" class="form-control" required="required" id="DataNascimento" name="dt_paciente" data-inputmask="'mask': '99/99/9999'">
                             </div>
                         </div>
                         <div class="form-group">
@@ -164,7 +164,7 @@
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="NumCasa">Número:<span class="required">*</span></label>
                             <div class="col-sm-1">
-                                <input type="text" class="form-control" required="required" id="ds_numCasa">
+                                <input type="text" class="form-control" required="required" name="ds_numero" id="ds_numero">
 
                             </div>
                         </div>
@@ -173,13 +173,13 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="Telefone">Telefone:<span class="required">*</span></label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" data-inputmask="'mask' : '(99) 99999-9999'" id="Telefone" name="ds_tel">
+                            <input type="text" class="form-control" data-inputmask="'mask' : '(99) 99999-9999'" id="Telefone" name="ds_telefone">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="Email">Email:<span class="required">*</span></label>
                         <div class="col-sm-4">
-                            <input type="email" class="form-control" required="required" id="Email">
+                            <input type="email" class="form-control" required="required" name="ds_email" id="Email">
                         </div>
                     </div>
                     <div class="form-group">
