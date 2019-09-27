@@ -66,7 +66,7 @@
                                     <ul class="nav child_menu">
                                         <li><a href="tabelaConsultas.php">Registro de Consultas</a></li>
                                         <li><a href="#">Relatório de Consulta</a></li>
-                                        <li><a href="#">Perfil Paciente</a></li>
+                                        <li><a href="perfilPaciente.php">Perfil Paciente</a></li>
                                     </ul>
                                 </li>
 

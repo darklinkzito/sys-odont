@@ -104,7 +104,6 @@
 
             <!-- page content -->
             <div class="right_col" role="main">
-
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
@@ -131,6 +130,7 @@
                             <table id="datatable-buttons" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
+                                        <th> ID </th>
                                         <th>Nome</th>
                                         <th>Data de Nascimento</th>
                                         <th>Visualizar</th>
@@ -141,9 +141,10 @@
                                 <tbody>
                                     <?php foreach ($dados as $value) { ?>
                                         <tr>
-                                            <td><?php echo $value['usua_nm_usuario'] ?></td>
-                                            <td><?php echo $value['usua_nm_usuario'] ?></td>
-                                            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button></td>
+                                            <td><?php echo $value['paci_cod_paciente'] ?></td>
+                                            <td><?php echo $value['paci_nm_paciente'] ?></td>
+                                            <td><?php echo $value['paci_dt_paciente'] ?></td>
+                                            <td><button type="button" class="btn btn-primary" onclick="abrirmodal(<?php echo $value['paci_cod_paciente'] ?>)">Detalhes</button></td>
                                         </tr>
                                     <?php } ?>
                                 </tbody>
@@ -155,23 +156,21 @@
             </div>
 
             <!-- Inicio Modal -->
-            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal fade bs-example-modal-lg"  tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
 
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
                             </button>
-                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                            <h4 class="modal-title" id="myModalLabel">Ficha do Paciente</h4>
                         </div>
                         <div class="modal-body">
-                            <h4>Text in a modal</h4>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-                            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-primary">Salvar Mudanças</button>
                         </div>
 
                     </div>
@@ -188,7 +187,23 @@
             </footer>
         </div>
     </div>
-
+    <script>
+        function abrirmodal(id_paciente) {
+            $.ajax({
+                type: "POST",
+                url: "modal_paciente.php",
+                data: {
+                    id: id_paciente
+                },
+                success: function(result) {
+                    $('.modal-body').html(result);
+                    $('.bs-example-modal-lg').modal('show');
+                    //console.log(result);
+                    // do something here
+                }
+            });
+        }
+    </script>
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -218,7 +233,6 @@
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
-
 </body>
 
 </html>

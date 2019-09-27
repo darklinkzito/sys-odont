@@ -7,9 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>DataTables | Gentelella</title>
-
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -19,7 +17,6 @@
     <!-- iCheck -->
     <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
     <!-- Datatables -->
-
     <link href="../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
@@ -29,7 +26,6 @@
     <script src="https://kit.fontawesome.com/37b548cb8d.js"></script>
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
-
     <script src="https://kit.fontawesome.com/37b548cb8d.js"></script>
 </head>
 
@@ -41,9 +37,7 @@
                     <div class="navbar nav_title" style="border: 0;">
                         <a href="index.php" class="site_title"><i class="fa fa-tooth"></i> <span>Sys'Odont</span></a>
                     </div>
-
                     <div class="clearfix"></div>
-
                     <!-- menu profile quick info -->
                     <div class="profile clearfix">
                         <div class="profile_info">
@@ -52,9 +46,7 @@
                         </div>
                     </div>
                     <!-- /menu profile quick info -->
-
                     <br />
-
                     <!-- sidebar menu -->
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                         <div class="menu_section">
@@ -73,13 +65,10 @@
                                         <li><a href="#">Relatório de Consulta</a></li>
                                     </ul>
                                 </li>
-
                         </div>
-
                     </div>
                 </div>
             </div>
-
             <!-- top navigation -->
             <div class="top_nav">
                 <div class="nav_menu">
@@ -87,7 +76,6 @@
                         <div class="nav toggle">
                             <a id="menu_toggle"><i class="fa fa-bars"></i></a>
                         </div>
-
                         <ul class="nav navbar-nav navbar-right">
                             <li class="">
                                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -99,12 +87,10 @@
                                     <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                                 </ul>
                             </li>
-
                         </ul>
                     </nav>
                 </div>
             </div>
-
             <!-- page content -->
             <div class="right_col" role="main">
                 <div class="">
@@ -112,7 +98,6 @@
                         <div class="title_left">
                             <h3>Usuários cadastrados </h3>
                         </div>
-
                         <div class="title_right">
                             <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                                 <div class="input-group">
@@ -124,9 +109,7 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="clearfix"></div>
-
                     <div class="row">
                         <div class="col-md-12">
                             <div class="x_panel">
@@ -150,80 +133,53 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
-
-
-
                                     <!-- start project list -->
-
-
-
                                     <div class="container">
-
-
-
                                         <!-- The Modal -->
                                         <div class="modal" id="myModal">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
-
                                                     <!-- Modal Header -->
                                                     <div class="modal-header">
                                                         <h4 class="modal-title">Informações</h4>
                                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                     </div>
-
                                                     <!-- Modal body -->
                                                     <div class="modal-body">
                                                         <label for="NomeCompleto">Nome Completo:</label>
                                                         <input type="text" class="form-control" id="#" name="#">
-
                                                         <label for="">CPF: </label>
                                                         <input type="text" class="form-control" id="#" name="#">
-
                                                         <label for="">RG </label>
                                                         <input type="text" class="form-control" id="#" name="#">
-
                                                         <label for="">Data de nascimento</label>
                                                         <input type="text" class="form-control" id="#" name="#">
-
                                                         <label for="">Sexo</label>
                                                         <input type="text" class="form-control" id="#" name="#">
-
                                                         <label for="">CEP</label>
                                                         <input type="text" class="form-control" id="#" name="#">
-
                                                         <label for="">Endereço </label>
                                                         <input type="text" class="form-control" id="#" name="#">
-
                                                         <label for="">Completo</label>
                                                         <input type="text" class="form-control" id="#" name="#">
-
                                                         <label for="">Número </label>
                                                         <input type="text" class="form-control" id="#" name="#">
-
                                                         <label for="">Telefone</label>
                                                         <input type="text" class="form-control" id="#" name="#">
-
                                                         <label for="">Emai </label>
                                                         <input type="text" class="form-control" id="#" name="#">
-
                                                         <label for="">Perfil </label>
                                                         <input type="text" class="form-control" id="#" name="#">
-
                                                     </div>
-
                                                     <!-- Modal footer -->
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-danger" data-dismiss="modal">Sair</button>
                                                         <button type="button" class="btn btn-primary" data-dismiss="modal">Salvar</button>
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
-
                                     <table class="table table-striped projects">
                                         <thead>
                                             <tr>
@@ -258,28 +214,23 @@
                                                     </ul>
                                                 </td>
                                                 <td>
-                                                    <div class="">
+                                                    <div class="list-inline">
                                                         <label>
-                                                            <input type="checkbox" class="js-switch" checked /> 
+                                                            <input type="checkbox" class="js-switch" checked />
                                                             Desativar/Ativar
                                                         </label>
-                                                      
                                                     </div>
-
                                                 </td>
                                                 <td>
                                                     <a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-folder"></i> Vizualizar <i class="fa fa-pencil"></i> Editar </a>
                                                     <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Excluir </a>
-
                                                 </td>
                                             </tr>
                                             <tr>
-
                                             </tr>
                                         </tbody>
                                     </table>
                                     <!-- end project list -->
-
                                 </div>
                             </div>
                         </div>
@@ -295,7 +246,6 @@
             </footer>
         </div>
     </div>
-
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -322,12 +272,9 @@
     <script src="../vendors/jszip/dist/jszip.min.js"></script>
     <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
     <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
-
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
     <script src="../vendors/switchery/dist/switchery.min.js"></script>
-
-
 </body>
 
 </html>

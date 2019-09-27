@@ -135,6 +135,7 @@
                                         <th>Dentista</th>
                                         <th>Data Marcada</th>
                                         <th>Hora Marcada</th>
+                                        <th>Acessar Dados</th>
                                     </tr>
                                 </thead>
 
@@ -155,7 +156,6 @@
                 </div>
 
             </div>
-
             <!-- footer content -->
             <footer>
                 <div class="pull-right">
