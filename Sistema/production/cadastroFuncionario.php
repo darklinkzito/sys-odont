@@ -61,53 +61,12 @@
 
                     <br />
                     <!-- sidebar menu -->
-                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-                        <div class="menu_section">
-                            <h3>Menu</h3>
-                            <ul class="nav side-menu">
-                                <li><a><i class="fa fa-edit"></i>Cadastros<span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="cadastroFuncionario.php">Cadastro de Funcionários</a></li>
-                                        <li><a href="cadastroConsulta.php">Cadastro de consulta</a></li>
-                                        <li><a href="cadastroPaciente.php">Cadastro de Paciente</a></li>
-                                    </ul>
-                                </li>
-                                <li><a><i class="fa fa-table"></i> Registros <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="tabelaConsultas.php">Registro de Consultas</a></li>
-                                        <li><a href="#">Relatório de Consulta</a></li>
-                                    </ul>
-                                </li>
-
-                        </div>
-
-                    </div>
+                    <?php include("sidebarMenu.php") ?>
                 </div>
             </div>
-
             <!-- top navigation -->
-            <div class="top_nav">
-                <div class="nav_menu">
-                    <nav>
-                        <div class="nav toggle">
-                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-                        </div>
-
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="">
-                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                    <span class=" fa fa-angle-down"></span>
-                                </a>
-                                <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                    <li><a href="#"><i class="fa fa-address-card pull-right"></i>Meus Dados</a></li>
-                                    <li><a href="#"><i class="fa fa-wrench pull-right"></i>Suporte</a></li>
-                                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                                </ul>
-                            </li>
-
-                        </ul>
-                    </nav>
-                </div>
+            <div>
+                <?php include("topNavigation.php") ?>
             </div>
             <!-- page content -->
             <div class="right_col " role="main">
@@ -143,7 +102,6 @@
                             <label class="control-label col-sm-2" for="sexo">Sexo <span class="required">*</span></label>
                             <div class="col-sm-2">
                                 <select class="form-control" id="sexo" name="in_sexo">
-                                    <option value="0" disable></option>
                                     <option value="Masculino">Masculino</option>
                                     <option value="Feminino">Feminino</option>
                                 </select>
@@ -191,13 +149,13 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div id="perfil" class="btn-group" data-toggle="buttons">
                                 <label class="btn btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                    <input type="radio" name="perfil" value="gestor"> Gestor
+                                    <input type="radio" name="perfil" value="3"> Gestor
                                 </label>
                                 <label class="btn btn-warning" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                    <input type="radio" name="perfil" value="dentista"> Dentista
+                                    <input type="radio" name="perfil" value="2"> Dentista
                                 </label>
                                 <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                    <input type="radio" name="perfil" value="atendente"> Atendente
+                                    <input type="radio" name="perfil" value="1"> Atendente
                                 </label>
                             </div>
                         </div>

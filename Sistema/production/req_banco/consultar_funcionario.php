@@ -4,7 +4,7 @@
 
 try {
     require('conexao.php');    
-    $stmt = $conn->prepare("select * from usuario ");
+    $stmt = $conn->prepare("SELECT * FROM usuario INNER JOIN perfil WHERE usuario.perf_cod_perfil = perfil.perf_cod_perfil ");
     $stmt->execute();
     $dados = $stmt->fetchAll();
 } catch (PDOException $e) {

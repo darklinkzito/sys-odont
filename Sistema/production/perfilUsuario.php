@@ -48,49 +48,11 @@
                     <!-- /menu profile quick info -->
                     <br />
                     <!-- sidebar menu -->
-                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-                        <div class="menu_section">
-                            <h3>Menu</h3>
-                            <ul class="nav side-menu">
-                                <li><a><i class="fa fa-edit"></i>Cadastros<span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="cadastroFuncionario.php">Cadastro de Funcionários</a></li>
-                                        <li><a href="#">Cadastro de consulta</a></li>
-                                        <li><a href="#">Cadastro de Paciente</a></li>
-                                    </ul>
-                                </li>
-                                <li><a><i class="fa fa-table"></i> Registros <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="tabelaConsultas.php">Registro de Consultas</a></li>
-                                        <li><a href="#">Relatório de Consulta</a></li>
-                                    </ul>
-                                </li>
-                        </div>
-                    </div>
+                    <?php include("sidebarMenu.php") ?>
                 </div>
             </div>
             <!-- top navigation -->
-            <div class="top_nav">
-                <div class="nav_menu">
-                    <nav>
-                        <div class="nav toggle">
-                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-                        </div>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="">
-                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                    <span class=" fa fa-angle-down"></span>
-                                </a>
-                                <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                    <li><a href="#"><i class="fa fa-address-card pull-right"></i>Meus Dados</a></li>
-                                    <li><a href="#"><i class="fa fa-wrench pull-right"></i>Suporte</a></li>
-                                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+            <?php include("topNavigation.php") ?>
             <!-- page content -->
             <div class="right_col" role="main">
                 <div class="">
@@ -136,40 +98,17 @@
                                     <!-- start project list -->
                                     <div class="container">
                                         <!-- The Modal -->
-                                        <div class="modal" id="myModal">
-                                            <div class="modal-dialog">
+                                        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg">
                                                 <div class="modal-content">
                                                     <!-- Modal Header -->
                                                     <div class="modal-header">
-                                                        <h4 class="modal-title">Informações</h4>
                                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel">Informações</h4>
                                                     </div>
                                                     <!-- Modal body -->
                                                     <div class="modal-body">
-                                                        <label for="NomeCompleto">Nome Completo:</label>
-                                                        <input type="text" class="form-control" id="#" name="#">
-                                                        <label for="">CPF: </label>
-                                                        <input type="text" class="form-control" id="#" name="#">
-                                                        <label for="">RG </label>
-                                                        <input type="text" class="form-control" id="#" name="#">
-                                                        <label for="">Data de nascimento</label>
-                                                        <input type="text" class="form-control" id="#" name="#">
-                                                        <label for="">Sexo</label>
-                                                        <input type="text" class="form-control" id="#" name="#">
-                                                        <label for="">CEP</label>
-                                                        <input type="text" class="form-control" id="#" name="#">
-                                                        <label for="">Endereço </label>
-                                                        <input type="text" class="form-control" id="#" name="#">
-                                                        <label for="">Completo</label>
-                                                        <input type="text" class="form-control" id="#" name="#">
-                                                        <label for="">Número </label>
-                                                        <input type="text" class="form-control" id="#" name="#">
-                                                        <label for="">Telefone</label>
-                                                        <input type="text" class="form-control" id="#" name="#">
-                                                        <label for="">Emai </label>
-                                                        <input type="text" class="form-control" id="#" name="#">
-                                                        <label for="">Perfil </label>
-                                                        <input type="text" class="form-control" id="#" name="#">
+
                                                     </div>
                                                     <!-- Modal footer -->
                                                     <div class="modal-footer">
@@ -180,54 +119,37 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <table class="table table-striped projects">
+                                    <table class="table table-striped table-bordered jambo_table bulk_action">
                                         <thead>
                                             <tr>
-                                                <th style="width: 1%">#</th>
+                                                <th style="width: 1%">ID</th>
                                                 <th style="width: 20%">Nome do Usuário</th>
                                                 <th>CPF</th>
                                                 <th>Funcão</th>
                                                 <th>Gerenciar Usuário</th>
-                                                <th style="width: 20%">#Editar</th>
+                                                <th style="width: 20%">Editar</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>Bundovisk Bolsonotário</a>
-                                                    <br />
-                                                    <small>Dentista</small>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            123.123.123.34
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            123.123.123.34
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                                <td>
-                                                    <div class="list-inline">
+                                            <?php include("./req_banco/consultar_funcionario.php");
+                                            foreach ($dados as $value) { ?>
+                                                <tr>
+                                                    <td><?php echo $value['usua_cod_usuario'] ?></td>
+                                                    <td><?php echo $value['usua_nm_usuario'] ?></td>
+                                                    <td><?php echo $value['usua_ds_cpf'] ?></td>
+                                                    <td><?php echo $value['perf_nm_perfil'] ?></td>
+                                                    <td>
                                                         <label>
                                                             <input type="checkbox" class="js-switch" checked />
                                                             Desativar/Ativar
                                                         </label>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-folder"></i> Vizualizar <i class="fa fa-pencil"></i> Editar </a>
-                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Excluir </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                            </tr>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-primary btn-xs" onclick="abrirusuario(<?php echo $value['usua_cod_usuario'] ?>)"> Vizualizar / <i class="fa fa-pencil"></i> Editar </button>
+                                                        <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Excluir </button>
+                                                    </td>
+                                                </tr>
+                                            <?php } ?>
                                         </tbody>
                                     </table>
                                     <!-- end project list -->
@@ -246,6 +168,21 @@
             </footer>
         </div>
     </div>
+    <script>
+        function abrirusuario(id_usuario) {
+            $.ajax({
+                type: "POST",
+                url: "modal_usuario.php",
+                data: {
+                    id: id_usuario
+                },
+                success: function(result) {
+                    $('.modal-body').html(result);
+                    $('.bs-example-modal-lg').modal('show');
+                }
+            });
+        }
+    </script>
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->

@@ -53,54 +53,12 @@
                     <br />
 
                     <!-- sidebar menu -->
-                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-                        <div class="menu_section">
-                            <h3>Menu</h3>
-                            <ul class="nav side-menu">
-                                <li><a><i class="fa fa-edit"></i>Cadastros<span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="cadastroFuncionario.php">Cadastro de Funcionários</a></li>
-                                        <li><a href="#">Cadastro de consulta</a></li>
-                                        <li><a href="#">Cadastro de Paciente</a></li>
-                                    </ul>
-                                </li>
-                                <li><a><i class="fa fa-table"></i> Registros <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="tabelaConsultas.php">Registro de Consultas</a></li>
-                                        <li><a href="#">Relatório de Consulta</a></li>
-                                    </ul>
-                                </li>
-
-                        </div>
-
-                    </div>
+                   <?php include ("sidebarMenu.php")?>
                 </div>
             </div>
 
             <!-- top navigation -->
-            <div class="top_nav">
-                <div class="nav_menu">
-                    <nav>
-                        <div class="nav toggle">
-                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-                        </div>
-
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="">
-                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                    <span class=" fa fa-angle-down"></span>
-                                </a>
-                                <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                    <li><a href="#"><i class="fa fa-address-card pull-right"></i>Meus Dados</a></li>
-                                    <li><a href="#"><i class="fa fa-wrench pull-right"></i>Suporte</a></li>
-                                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                                </ul>
-                            </li>
-
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+            <?php include ("topNavigation.php")?>
 
             <!-- page content -->
             <div class="right_col" role="main">
@@ -127,11 +85,13 @@
                         </div>
                         <div class="x_content">
                             <?php include("req_banco/consultar_paciente.php"); ?>
-                            <table id="datatable-buttons" class="table table-striped table-bordered">
+                            <table class="table table-striped table-bordered jambo_table bulk_action">
                                 <thead>
                                     <tr>
                                         <th> ID </th>
                                         <th>Nome</th>
+                                        <th>CPF</th>
+                                        <th>RG</th>
                                         <th>Data de Nascimento</th>
                                         <th>Visualizar</th>
                                     </tr>
@@ -143,6 +103,8 @@
                                         <tr>
                                             <td><?php echo $value['paci_cod_paciente'] ?></td>
                                             <td><?php echo $value['paci_nm_paciente'] ?></td>
+                                            <td><?php echo $value['paci_ds_rg'] ?></td>
+                                            <td><?php echo $value['paci_ds_cpf'] ?></td>
                                             <td><?php echo $value['paci_dt_paciente'] ?></td>
                                             <td><button type="button" class="btn btn-primary" onclick="abrirmodal(<?php echo $value['paci_cod_paciente'] ?>)">Detalhes</button></td>
                                         </tr>
@@ -198,8 +160,6 @@
                 success: function(result) {
                     $('.modal-body').html(result);
                     $('.bs-example-modal-lg').modal('show');
-                    //console.log(result);
-                    // do something here
                 }
             });
         }
