@@ -1,4 +1,4 @@
-<?php include("./req_banco/consulta_dados_usuario.php"); ?>
+<?php include("../req_banco/consulta_dados_usuario.php"); ?>
 <label for="NomeCompleto">Nome Completo:</label>
 <input type="text" value="<?php echo $dados['usua_nm_usuario'] ?>" class="form-control" id="#" name="#">
 <label for="">CPF: </label>

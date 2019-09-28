@@ -53,12 +53,12 @@
                     <br />
 
                     <!-- sidebar menu -->
-                   <?php include ("sidebarMenu.php")?>
+                   <?php include ("./View/sidebarMenu.php")?>
                 </div>
             </div>
 
             <!-- top navigation -->
-            <?php include ("topNavigation.php")?>
+            <?php include ("./View/topNavigation.php")?>
 
             <!-- page content -->
             <div class="right_col" role="main">
@@ -153,7 +153,7 @@
         function abrirmodal(id_paciente) {
             $.ajax({
                 type: "POST",
-                url: "modal_paciente.php",
+                url: "./Modal/modal_paciente.php",
                 data: {
                     id: id_paciente
                 },

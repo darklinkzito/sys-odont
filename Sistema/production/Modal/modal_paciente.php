@@ -1,5 +1,5 @@
 <table id="datatable-buttons" class="table table-striped table-bordered">
-    <?php include("req_banco/consulta_perfil_paciente.php"); ?>
+    <?php include("../req_banco/consulta_perfil_paciente.php"); ?>
         <tr>
             <th>ID</th>
             <td><?php echo $dados['paci_cod_paciente'] ?></td>

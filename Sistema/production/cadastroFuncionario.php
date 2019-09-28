@@ -61,12 +61,12 @@
 
                     <br />
                     <!-- sidebar menu -->
-                    <?php include("sidebarMenu.php") ?>
+                    <?php include("./View/sidebarMenu.php") ?>
                 </div>
             </div>
             <!-- top navigation -->
             <div>
-                <?php include("topNavigation.php") ?>
+                <?php include("./View/topNavigation.php") ?>
             </div>
             <!-- page content -->
             <div class="right_col " role="main">
