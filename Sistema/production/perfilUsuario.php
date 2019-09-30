@@ -40,12 +40,7 @@
                     </div>
                     <div class="clearfix"></div>
                     <!-- menu profile quick info -->
-                    <div class="profile clearfix">
-                        <div class="profile_info">
-                            <span>Welcome,</span>
-                            <h3>John Doe</h3>
-                        </div>
-                    </div>
+                    <?php include('./View/profile.php') ?>
                     <!-- /menu profile quick info -->
                     <br />
                     <!-- sidebar menu -->

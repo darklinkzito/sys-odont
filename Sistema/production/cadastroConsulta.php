@@ -81,7 +81,7 @@
                             <div class="clearfix"></div>
 
                         </div>
-                        <form class="form-horizontal">
+                        <form action="./req_banco/cad_consulta.php" method="POST" class="form-horizontal">
                             <div class="form-group">
                                 <label class="control-label col-sm-2">Nome Paciente:<span class="required">*</span></label>
                                 <div class="col-sm-6">
@@ -91,7 +91,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-md-2 ">Date Nascimento</label>
+                                <label class="control-label col-md-2 ">Data de Nascimento</label>
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" data-inputmask="'mask': '99/99/9999'">
                                     <span class="fa fa-calendar form-control-feedback right" aria-hidden="true"></span>
@@ -101,12 +101,10 @@
                             <div class="form-group">
                                 <label class="control-label col-md-2"> Dentista:<span class="required">*</span></label>
                                 <div class="col-md-6 col-sm-9 col-xs-6">
+                                    <?php include("./req_banco/consulta_dentista.php")?>
                                     <select class="form-control">
                                         <option value="Selecione">Selecione</option>
                                         <option value="Dentista-1"> Dentista-1</option>
-                                        <option value="Dentista-2"> Dentista-2</option>
-                                        <option value="Dentista-3"> Dentista-3</option>
-                                        <option value="Dentista-4"> Dentista-4</option>
                                     </select>
 
                                 </div>
@@ -115,7 +113,7 @@
                             <div class="form-group">
                                 <label class="control-label col-sm-2">Consulta Data e Hora:<span class="required">*</span></label>
                                 <div class="col-sm-5">
-                                    <input type="date" name="bday"><input type="time" name="usr_time">
+                                    <input type="date" name="data"><input type="time" name="hora">
                                 </div>
                             </div>
                             <div class="form-group">
