@@ -40,6 +40,7 @@
 
 </head>
 <?php include("./View/verificar_Login.php") ?>
+
 <body class="nav-md">
     <div class="container body">
         <div class="main_container">
@@ -61,12 +62,12 @@
 
                     <br />
                     <!-- sidebar menu -->
-                    <?php include ("./View/sidebarMenu.php")?>
+                    <?php include("./View/sidebarMenu.php") ?>
                 </div>
             </div>
 
             <!-- top navigation -->
-            <?php include ("./View/topNavigation.php")?>
+            <?php include("./View/topNavigation.php") ?>
             <!-- page content -->
 
             <div class="right_col " role="main">
@@ -85,7 +86,7 @@
                             <div class="form-group">
                                 <label class="control-label col-sm-2">Nome Paciente:<span class="required">*</span></label>
                                 <div class="col-sm-6">
-                                    <input type="text" class="form-control" required="required" id="NomePaciente" name="">
+                                    <input type="text" class="form-control" required="required" id="NomePaciente" name="paciente">
                                     <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
                                 </div>
                             </div>
@@ -101,10 +102,10 @@
                             <div class="form-group">
                                 <label class="control-label col-md-2"> Dentista:<span class="required">*</span></label>
                                 <div class="col-md-6 col-sm-9 col-xs-6">
-                                    <?php include("./req_banco/consulta_dentista.php")?>
-                                    <select class="form-control">
-                                        <option value="Selecione">Selecione</option>
-                                        <option value="Dentista-1"> Dentista-1</option>
+                                    <?php include("./req_banco/consulta_dentista.php") ?>
+                                    <select class="form-control" name="dentista">
+                                        <option value="0">Selecione</option>
+                                        <?php foreach ($dados as $value) { ?><option value="<?php echo ($value['prof_cod_profissional']) ?>"><?php echo $value['prof_nm_profissional'] ?></option> <?php } ?>
                                     </select>
 
                                 </div>

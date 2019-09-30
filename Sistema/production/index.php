@@ -56,6 +56,7 @@
     <!-- page content -->
     <div class="right_col" role="main">
       <?php echo ($_SESSION['usuario_id']) ?>
+      <?php echo ($_SESSION['usuario_nome']) ?>
       <?php echo ($_SESSION['usuario_perfil']) ?>
     </div>
     <!-- /page content -->s
