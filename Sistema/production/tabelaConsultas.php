@@ -29,7 +29,7 @@
     <link href="../build/css/custom.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/37b548cb8d.js"></script>
 </head>
-
+<?php include("./View/verificar_Login.php") ?>
 <body class="nav-md">
     <div class="container body">
         <div class="main_container">
