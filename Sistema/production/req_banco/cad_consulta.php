@@ -14,7 +14,6 @@ try {
 } catch(PDOException $e) {
     echo 'ERROR: ' . $e->getMessage();
 }
-die();
 //condicional para ir para a proxima página
 if ($stmt == 1) {
     $_SESSION["cunsulta_ok"] = "Consulta Marcada!";
