@@ -27,9 +27,14 @@
     <link href="../vendors/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css" rel="stylesheet">
 
     <link href="../vendors/cropper/dist/cropper.min.css" rel="stylesheet">
-
+    <!-- Select com pesquisa-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css" rel="stylesheet" />
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+
+
     <style>
         .estilo {
             background-color: #2A3F54;
@@ -86,8 +91,12 @@
                             <div class="form-group">
                                 <label class="control-label col-sm-2">Nome Paciente:<span class="required">*</span></label>
                                 <div class="col-sm-6">
-                                    <input type="text" class="form-control" required="required" id="NomePaciente" name="paciente">
-                                    <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+                                    <?php include("./req_banco/consultar_paciente.php") ?>
+                                    <select class="form-control selectpicker" data-live-search="true" required="required" id="NomePaciente" name="paciente">
+                                        <option value="0">Selecione</option>
+                                        <?php foreach ($dados as $value) { ?><option value="<?php echo ($value['paci_cod_paciente']) ?>"><?php echo $value['paci_nm_paciente'] ?></option> <?php } ?>
+                                    </select>
+
                                 </div>
                             </div>
 
@@ -103,7 +112,7 @@
                                 <label class="control-label col-md-2"> Dentista:<span class="required">*</span></label>
                                 <div class="col-md-6 col-sm-9 col-xs-6">
                                     <?php include("./req_banco/consulta_dentista.php") ?>
-                                    <select class="form-control" name="dentista">
+                                    <select class="form-control selectpicker" data-live-search="true" required="required" id="dentista" name="dentista">
                                         <option value="0">Selecione</option>
                                         <?php foreach ($dados as $value) { ?><option value="<?php echo ($value['prof_cod_profissional']) ?>"><?php echo $value['prof_nm_profissional'] ?></option> <?php } ?>
                                     </select>
@@ -133,7 +142,11 @@
                     <div class="clearfix"></div>
                 </footer>
             </div>
-
+            <script>
+                $(function() {
+                    $('.selectpicker').selectpicker();
+                });
+            </script>
             <!-- jQuery -->
             <script src="../vendors/jquery/dist/jquery.min.js"></script>
             <!-- Bootstrap -->
