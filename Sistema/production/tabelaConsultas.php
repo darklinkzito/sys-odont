@@ -85,7 +85,7 @@
                             <div class="clearfix"></div>
                         </div>
                         <div class="x_content">
-                            <?php include("req_banco/consultar_funcionario.php"); ?>
+                            <?php include("req_banco/consultar_marcacoes.php"); ?>
                             <table id="datatable-buttons" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
@@ -93,7 +93,6 @@
                                         <th>Dentista</th>
                                         <th>Data Marcada</th>
                                         <th>Hora Marcada</th>
-                                        <th>Acessar Dados</th>
                                     </tr>
                                 </thead>
 
@@ -101,10 +100,10 @@
                                 <tbody>
                                     <?php foreach ($dados as $value) { ?>
                                         <tr>
-                                            <td><?php echo $value['usua_nm_usuario'] ?></td>
-                                            <td><?php echo $value['usua_nm_usuario'] ?></td>
-                                            <td><?php echo $value['usua_dt_usuario'] ?></td>
-                                            <td><?php echo $value['usua_dt_usuario'] ?></td>
+                                            <td><?php echo $value['paci_nm_paciente'] ?></td>
+                                            <td><?php echo $value['prof_nm_profissional'] ?></td>
+                                            <td><?php echo $value['cons_dt_consulta'] ?></td>
+                                            <td><?php echo $value['cons_hr_consulta'] ?></td>
                                         </tr>
                                     <?php } ?>
                                 </tbody>
