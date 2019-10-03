@@ -55,28 +55,30 @@
     <!-- top navigation -->
     <?php include("./View/topNavigation.php") ?>
     <!-- page content -->
-    <div class="chart-container" style="position: relative; height:20vh; width:40vw">
-      <canvas class="bar-chart"></canvas>
-      <canvas id="myChart"></canvas>
+    <div class="right_col " role="main">
+      <div class="chart-container" style="margin-top: -30vh; height:20vh; width:40vw">
+        <canvas class="bar-chart"></canvas>
+        <canvas id="myChart"></canvas>
 
-      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-      <script>
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var chart = new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-            datasets: [{
-              label: 'Controle Mensal de clientes',
-              backgroundColor: '#2A3F54',
-              borderColor: 'rgb(255, 99, 132)',
-              data: [50, 10, 5, 2, 20, 30, 45, 100, 10, 5, 30, 20]
-            }]
-          },
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script>
+          var ctx = document.getElementById('myChart').getContext('2d');
+          var chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+              datasets: [{
+                label: 'Controle Mensal de clientes',
+                backgroundColor: '#2A3F54',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [50, 10, 5, 2, 20, 30, 45, 100, 10, 5, 30, 20]
+              }]
+            },
 
-          options: {}
-        });
-      </script>
+            options: {}
+          });
+        </script>
+      </div>
     </div>
     <!-- /page content -->
     <!-- footer content -->
