@@ -135,12 +135,7 @@
                     </div>
 
                 </div>
-                <footer>
-                    <div class="pull-right">
-                        Sys-Odont
-                    </div>
-                    <div class="clearfix"></div>
-                </footer>
+                <?php include("./View/footer.php") ?>
             </div>
             <script>
                 $(function() {

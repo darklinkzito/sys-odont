@@ -141,12 +141,7 @@
             <!-- Final Modal -->
 
             <!-- footer content -->
-            <footer>
-                <div class="pull-right">
-                    Admin Template by
-                </div>
-                <div class="clearfix"></div>
-            </footer>
+            <?php include("./View/footer.php") ?>
         </div>
     </div>
     <script>

@@ -40,6 +40,7 @@
 
 </head>
 <?php include("./View/verificar_Login.php") ?>
+
 <body class="nav-md">
     <div class="container body">
         <div class="main_container">
@@ -168,16 +169,10 @@
                     </div>
             </div>
         </div>
-
         </form>
     </div>
     <!-- footer content -->
-    <footer>
-        <div class="pull-right">
-            Admin Template by
-        </div>
-        <div class="clearfix"></div>
-    </footer>
+    <?php include("./View/footer.php") ?>
     </div>
     </div>
 

@@ -156,12 +156,7 @@
                 </div>
             </div>
             <!-- footer content -->
-            <footer>
-                <div class="pull-right">
-                    Sys-Odont
-                </div>
-                <div class="clearfix"></div>
-            </footer>
+            <?php include("./View/footer.php") ?>
         </div>
     </div>
     <script>

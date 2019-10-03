@@ -40,6 +40,7 @@
 
 </head>
 <?php include("./View/verificar_Login.php") ?>
+
 <body class="nav-md">
     <div class="container body">
         <div class="main_container">
@@ -52,12 +53,7 @@
                     <div class="clearfix"></div>
 
                     <!-- menu profile quick info -->
-                    <div class="profile clearfix">
-                        <div class="profile_info">
-                            <span>Welcome,</span>
-                            <h3>John Doe</h3>
-                        </div>
-                    </div>
+                    <?php include("./View/profile.php") ?>
 
                     <br />
                     <!-- sidebar menu -->
@@ -69,7 +65,7 @@
                 <?php include("./View/topNavigation.php") ?>
             </div>
             <!-- page content -->
-            <div class="right_col " role="main">
+            <div class="right_col" role="main">
                 <div>
                     <h2>Cadastro de Funcionários</h2>
 
@@ -159,22 +155,17 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="right_col " role="main">
                             <br>
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <button type="submit" class="btn estilo" style="margin-top: 30px">Cadastrar</button>
                                 </div>
                             </div>
+                    </div>
                 </form>
             </div>
             <!-- footer content -->
-            <footer>
-                <div class="pull-right">
-                    Admin Template by
-                </div>
-                <div class="clearfix"></div>
-            </footer>
+            <?php include("./View/footer.php") ?>
         </div>
     </div>
 
