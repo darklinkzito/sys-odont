@@ -6,8 +6,8 @@
   $nivel_necessario = 2;
     
   // Verifica se não há a variável da sessão que identifica o usuário
-  if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] <$nivel_necessario)) {
+  if (!isset($_SESSION['usuario_id']) OR ($_SESSION['usuario_perfil'] <$nivel_necessario)) {
     header("Location: ./acesso_negado.php");
-}
+  }
     
-  ?>
+?>

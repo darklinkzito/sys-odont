@@ -55,52 +55,46 @@
     <!-- top navigation -->
     <?php include("./View/topNavigation.php") ?>
     <!-- page content -->
-    <div class="right_col" role="main">
-      <?php echo ($_SESSION['usuario_id']) ?>
-      <?php echo ($_SESSION['usuario_nome']) ?>
-      <?php echo ($_SESSION['usuario_perfil']) ?>
-    </div>
-
-    <div class="right_col" role="main">
-      <div class="">
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <div class="x_panel">
-            <div class="x_title">
-              <h2>Total Clientes<small>Mensal</small></h2>
-              <ul class="nav navbar-right panel_toolbox">
-                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Settings 1</a>
-                    </li>
-                    <li><a href="#">Settings 2</a>
-                    </li>
-                  </ul>
-                </li>
-                <li><a class="close-link"><i class="fa fa-close"></i></a>
-                </li>
-              </ul>
-              <div class="clearfix"></div>
-            </div>
-            <div class="x_content">
-              <canvas id="mybarChart"></canvas>
+      <div class="right_col" role="main">
+        <div class="">
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="x_panel">
+              <div class="x_title">
+                <h2>Total Clientes<small>Mensal</small></h2>
+                <ul class="nav navbar-right panel_toolbox">
+                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Settings 1</a>
+                      </li>
+                      <li><a href="#">Settings 2</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="close-link"><i class="fa fa-close"></i></a>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <canvas id="mybarChart"></canvas>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- /page content -->
+      <!-- footer content -->
+      <footer>
+        <div class="pull-right">
+          Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+        </div>
+        <div class="clearfix"></div>
+      </footer>
+      <!-- /footer content -->
     </div>
-    <!-- /page content -->s
-    <!-- footer content -->
-    <footer>
-      <div class="pull-right">
-        Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-      </div>
-      <div class="clearfix"></div>
-    </footer>
-    <!-- /footer content -->
-  </div>
   </div>
 
   <!-- jQuery -->
