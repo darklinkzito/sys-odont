@@ -66,102 +66,105 @@
             </div>
             <!-- page content -->
             <div class="right_col" role="main">
-                <div>
+                <div class="x_panel">
+                <div class="x_title">
                     <h2>Cadastro de Funcionários</h2>
-
+                    <div class="clearfix"></div>
                 </div>
-                <form class="form-horizontal" method="POST" action="./req_banco/usua_cad_func.php">
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="NomeCompleto">Nome Completo:<span class="required">*</span></label>
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control" required="required" id="NomeCompleto" name="nm_usuario">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="pwd">CPF:<span class="required">*</span></label>
-                        <div class="col-sm-2">
-                            <input type="text" class="form-control" data-inputmask="'mask' : '999.999.999-99'" id="CPF" name="ds_cpf" required="required">
-                        </div>
+
+                    <form class="form-horizontal" method="POST" action="./req_banco/usua_cad_func.php">
                         <div class="form-group">
-                            <label class="control-label col-sm-2" for="RG">RG:<span class="required">*</span></label>
-                            <div class="col-sm-2">
-                                <input type="text" class="form-control" data-inputmask="'mask' : '99.999.999-99'" required="required" id="RG" name="ds_rg">
+                            <label class="control-label col-sm-2" for="NomeCompleto">Nome Completo:<span class="required">*</span></label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" required="required" id="NomeCompleto" name="nm_usuario">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-2" for="DataNascimento">Data de nascimento:<span class="required">*</span></label>
+                            <label class="control-label col-sm-2" for="pwd">CPF:<span class="required">*</span></label>
                             <div class="col-sm-2">
-                                <input type="text" class="form-control" required="required" id="DataNascimento" name="dt_usuario" data-inputmask="'mask': '99/99/9999'">
+                                <input type="text" class="form-control" data-inputmask="'mask' : '999.999.999-99'" id="CPF" name="ds_cpf" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="RG">RG:<span class="required">*</span></label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" data-inputmask="'mask' : '99.999.999-99'" required="required" id="RG" name="ds_rg">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="DataNascimento">Data de nascimento:<span class="required">*</span></label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" required="required" id="DataNascimento" name="dt_usuario" data-inputmask="'mask': '99/99/9999'">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="sexo">Sexo <span class="required">*</span></label>
+                                <div class="col-sm-2">
+                                    <select class="form-control" id="sexo" name="in_sexo">
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Feminino">Feminino</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-2" for="sexo">Sexo <span class="required">*</span></label>
+                            <label class="control-label col-sm-2" for="cep">CEP:<span class="required">*</span></label>
                             <div class="col-sm-2">
-                                <select class="form-control" id="sexo" name="in_sexo">
-                                    <option value="Masculino">Masculino</option>
-                                    <option value="Feminino">Feminino</option>
-                                </select>
+                                <input type="text" class="form-control" data-inputmask="'mask' : '99999-999'" id="CEP" name="ds_cep">
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="cep">CEP:<span class="required">*</span></label>
-                        <div class="col-sm-2">
-                            <input type="text" class="form-control" data-inputmask="'mask' : '99999-999'" id="CEP" name="ds_cep">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="Endereco">Endereço:<span class="required">*</span></label>
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control" required="required" id="Endereco" name="ds_endereco">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="Endereco">Complemento:<span class="required">*</span></label>
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control" required="required" id="Endereco" name="ds_complemento">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="NumCasa">Número:<span class="required">*</span></label>
-                        <div class="col-sm-1">
-                            <input type="text" class="form-control" required="required" id="num_casa" name="num_casa">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="Telefone">Telefone:<span class="required">*</span></label>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" data-inputmask="'mask' : '(99) 99999-9999'" id="Telefone" name="ds_telefone">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="Email">Email:<span class="required">*</span></label>
-                        <div class="col-sm-4">
-                            <input type="email" class="form-control" required="required" id="Email" name="ds_email">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2">Perfil: <span class="required">*</span> </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div id="perfil" class="btn-group" data-toggle="buttons">
-                                <label class="btn btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                    <input type="radio" name="perfil" value="3"> Gestor
-                                </label>
-                                <label class="btn btn-warning" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                    <input type="radio" name="perfil" value="2"> Dentista
-                                </label>
-                                <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                    <input type="radio" name="perfil" value="1"> Atendente
-                                </label>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="Endereco">Endereço:<span class="required">*</span></label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" required="required" id="Endereco" name="ds_endereco">
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="Endereco">Complemento:<span class="required">*</span></label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" required="required" id="Endereco" name="ds_complemento">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="NumCasa">Número:<span class="required">*</span></label>
+                            <div class="col-sm-1">
+                                <input type="text" class="form-control" required="required" id="num_casa" name="num_casa">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="Telefone">Telefone:<span class="required">*</span></label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" data-inputmask="'mask' : '(99) 99999-9999'" id="Telefone" name="ds_telefone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="Email">Email:<span class="required">*</span></label>
+                            <div class="col-sm-4">
+                                <input type="email" class="form-control" required="required" id="Email" name="ds_email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Perfil: <span class="required">*</span> </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div id="perfil" class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                                        <input type="radio" name="perfil" value="3"> Gestor
+                                    </label>
+                                    <label class="btn btn-warning" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                                        <input type="radio" name="perfil" value="2"> Dentista
+                                    </label>
+                                    <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                                        <input type="radio" name="perfil" value="1"> Atendente
+                                    </label>
+                                </div>
+                            </div>
                             <br>
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <button type="submit" class="btn estilo" style="margin-top: 30px">Cadastrar</button>
                                 </div>
                             </div>
-                    </div>
+                        </div>
+                </div>
                 </form>
             </div>
             <!-- footer content -->

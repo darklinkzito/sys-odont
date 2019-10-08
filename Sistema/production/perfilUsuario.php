@@ -30,6 +30,7 @@
 </head>
 <?php include("./View/verificar_Login.php") ?>
 <?php include("./nivel_usuario/gerente.php") ?>
+
 <body class="nav-md">
     <div class="container body">
         <div class="main_container">
@@ -107,10 +108,7 @@
 
                                                     </div>
                                                     <!-- Modal footer -->
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Sair</button>
-                                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Salvar</button>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -159,6 +157,12 @@
             <?php include("./View/footer.php") ?>
         </div>
     </div>
+    <?php 
+    if($_SESSION['editado'] == 1){
+        echo  "<script>alert('Usuario editado com sucesso!');</script>";
+        $_SESSION['editado'] = 0;
+    }
+    ?>
     <script>
         function abrirusuario(id_usuario) {
             $.ajax({

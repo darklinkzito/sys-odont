@@ -353,6 +353,7 @@ $.extend( Buttons.prototype, {
 		} );
 
 		for ( var i=0, ien=buttons.length ; i<ien ; i++ ) {
+			console.log(1);
 			this.add( buttons[i] );
 		}
 

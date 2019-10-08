@@ -70,103 +70,105 @@
             <?php include("./View/topNavigation.php") ?>
             <!-- page content -->
             <div class="right_col " role="main">
-                <div>
-                    <h2>Cadastro de Pacientes</h2>
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Cadastro de Pacientes</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <form class="form-horizontal" method="POST" action="./req_banco/Cad_paciente.php">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="NomeCompleto">Nome Completo:<span class="required">*</span></label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" required="required" id="NomeCompleto" name="nm_paciente">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="pwd">CPF:<span class="required">*</span></label>
+                            <div class="col-sm-2">
+                                <input type="text" class="form-control" data-inputmask="'mask' : '999.999.999-99'" id="CPF" name="ds_cpf" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="DataNascimento">Data de nascimento:<span class="required">*</span></label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" required="required" id="DataNascimento" name="dt_paciente" data-inputmask="'mask': '99/99/9999'">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="sexo">Sexo <span class="required">*</span></label>
+                                <div class="col-sm-2">
+                                    <select class="form-control" id="sexo" name="in_sexo">
+                                        <option value="0" disable></option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Feminino">Feminino</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="RG">RG:<span class="required">*</span></label>
+                            <div class="col-sm-2">
+                                <input type="text" class="form-control" data-inputmask="'mask' : '99.999.999-99'" required="required" id="RG" name="ds_rg">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="Endereco">Endereço:<span class="required">*</span></label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" required="required" id="Endereco" name="ds_endereco">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="pwd">CEP:<span class="required">*</span></label>
+                            <div class="col-sm-2">
+                                <input type="text" class="form-control" data-inputmask="'mask' : '99999-999'" id="CEP" name="ds_cep">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="NumCasa">Número:<span class="required">*</span></label>
+                                <div class="col-sm-1">
+                                    <input type="text" class="form-control" required="required" name="ds_numero" id="ds_numero">
 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="Telefone">Telefone:<span class="required">*</span></label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" data-inputmask="'mask' : '(99) 99999-9999'" id="Telefone" name="ds_telefone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="Email">Email:<span class="required">*</span></label>
+                            <div class="col-sm-4">
+                                <input type="email" class="form-control" required="required" name="ds_email" id="Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="Email">Possui convênio?:<span class="required">*</span></label>
+                            <div class="form-check form-check-inline">
+                                <div class="col-sm-1">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="FunctionConvenio(1)">
+                                    <label class="form-check-label" for="inlineRadio1">Sim</label>
+                                </div>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <div class="col-sm-1">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="FunctionConvenio(2)">
+                                    <label class="form-check-label" for="inlineRadio1">Não</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group hidden convenios">
+                            <label class="control-label col-sm-2" for="Email">Qual?:<span class="required">*</span></label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" required="required" name="ds_convenio" id="convenio">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn estilo">Cadastrar</button>
+                            </div>
+                        </div>
                 </div>
-                <form class="form-horizontal" method="POST" action="./req_banco/Cad_paciente.php">
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="NomeCompleto">Nome Completo:<span class="required">*</span></label>
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control" required="required" id="NomeCompleto" name="nm_paciente">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="pwd">CPF:<span class="required">*</span></label>
-                        <div class="col-sm-2">
-                            <input type="text" class="form-control" data-inputmask="'mask' : '999.999.999-99'" id="CPF" name="ds_cpf" required="required">
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-2" for="DataNascimento">Data de nascimento:<span class="required">*</span></label>
-                            <div class="col-sm-2">
-                                <input type="text" class="form-control" required="required" id="DataNascimento" name="dt_paciente" data-inputmask="'mask': '99/99/9999'">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-2" for="sexo">Sexo <span class="required">*</span></label>
-                            <div class="col-sm-2">
-                                <select class="form-control" id="sexo" name="in_sexo">
-                                    <option value="0" disable></option>
-                                    <option value="Masculino">Masculino</option>
-                                    <option value="Feminino">Feminino</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="RG">RG:<span class="required">*</span></label>
-                        <div class="col-sm-2">
-                            <input type="text" class="form-control" data-inputmask="'mask' : '99.999.999-99'" required="required" id="RG" name="ds_rg">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="Endereco">Endereço:<span class="required">*</span></label>
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control" required="required" id="Endereco" name="ds_endereco">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="pwd">CEP:<span class="required">*</span></label>
-                        <div class="col-sm-2">
-                            <input type="text" class="form-control" data-inputmask="'mask' : '99999-999'" id="CEP" name="ds_cep">
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-2" for="NumCasa">Número:<span class="required">*</span></label>
-                            <div class="col-sm-1">
-                                <input type="text" class="form-control" required="required" name="ds_numero" id="ds_numero">
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="Telefone">Telefone:<span class="required">*</span></label>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" data-inputmask="'mask' : '(99) 99999-9999'" id="Telefone" name="ds_telefone">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="Email">Email:<span class="required">*</span></label>
-                        <div class="col-sm-4">
-                            <input type="email" class="form-control" required="required" name="ds_email" id="Email">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="Email">Possui convênio?:<span class="required">*</span></label>
-                        <div class="form-check form-check-inline">
-                            <div class="col-sm-1">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="FunctionConvenio(1)">
-                                <label class="form-check-label" for="inlineRadio1">Sim</label>
-                            </div>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <div class="col-sm-1">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="FunctionConvenio(2)">
-                                <label class="form-check-label" for="inlineRadio1">Não</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group hidden convenios">
-                        <label class="control-label col-sm-2" for="Email">Qual?:<span class="required">*</span></label>
-                        <div class="col-sm-4">
-                            <input type="text" class="form-control" required="required" name="ds_convenio" id="convenio">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn estilo">Cadastrar</button>
-                        </div>
-                    </div>
             </div>
         </div>
         </form>
