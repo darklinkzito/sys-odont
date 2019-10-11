@@ -1,0 +1,17 @@
+.ficha {
+    padding: 20px;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ficha h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+div .form-group {
+    margin: 18x;
+}
