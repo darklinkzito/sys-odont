@@ -67,10 +67,10 @@
             <!-- page content -->
             <div class="right_col" role="main">
                 <div class="x_panel">
-                <div class="x_title">
-                    <h2>Cadastro de Funcionários</h2>
-                    <div class="clearfix"></div>
-                </div>
+                    <div class="x_title">
+                        <h2>Cadastro de Funcionários</h2>
+                        <div class="clearfix"></div>
+                    </div>
 
                     <form class="form-horizontal" method="POST" action="./req_banco/usua_cad_func.php">
                         <div class="form-group">
