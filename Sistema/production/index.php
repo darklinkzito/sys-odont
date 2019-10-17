@@ -29,7 +29,19 @@
 
   <!-- Custom Theme Style -->
   <link href="../build/css/custom.min.css" rel="stylesheet">
+  <link href="../build/css/custom.min.css" rel="stylesheet">
+  <style>
+
+    #myCarousel{
+      width: 800px;
+    }
+    .estilo {
+      background-color: #2A3F54;
+      color: white;
+    }
+  </style>
   <script src="https://kit.fontawesome.com/37b548cb8d.js"></script>
+
 </head>
 <?php include("./View/verificar_Login.php") ?>
 
@@ -45,45 +57,95 @@
           <div class="clearfix"></div>
 
           <!-- menu profile quick info -->
-          <?php include('./View/profile.php') ?>
+          <?php include("./View/profile.php") ?>
+
           <br />
           <!-- sidebar menu -->
           <?php include("./View/sidebarMenu.php") ?>
         </div>
       </div>
-    </div>
-    <!-- top navigation -->
-    <?php include("./View/topNavigation.php") ?>
-    <!-- page content -->
-    <div class="right_col " role="main">
-      <div class="chart-container" style="margin-top: -30vh; height:20vh; width:40vw">
-        <canvas class="bar-chart"></canvas>
-        <canvas id="myChart"></canvas>
-
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-        <script>
-          var ctx = document.getElementById('myChart').getContext('2d');
-          var chart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-              labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-              datasets: [{
-                label: 'Controle Mensal de clientes',
-                backgroundColor: '#2A3F54',
-                borderColor: 'rgb(255, 99, 132)',
-                data: [50, 10, 5, 2, 20, 30, 45, 100, 10, 5, 30, 20]
-              }]
-            },
-
-            options: {}
-          });
-        </script>
+      <!-- top navigation -->
+      <div>
+        <?php include("./View/topNavigation.php") ?>
       </div>
+      <!-- page content -->
+      <div class="right_col" role="main">
+        <!-- top tiles -->
+        <div class="row tile_count">
+
+          <div class="col-md-3 col-sm-5 col-xs-7  tile_stats_count">
+            <span class="count_top"><i class="fa fa-user"></i> Atendimentos Diários para Atendimento</span>
+            <div class="count">4,567</div>
+            <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
+          </div>
+          <div class="col-md-3 col-sm-5 col-xs-7 tile_stats_count">
+            <span class="count_top"><i class="fa fa-user"></i> Atendimentos Diários Encerrados</span>
+            <div class="count">2,315</div>
+            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+          </div>
+        </div>
+        <!-- /top tiles -->
+
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="dashboard_graph">
+
+              <div class="row x_title">
+                <div class="col-md-6">
+                  <h3>Bem-vindo(a) <small>Excelência em saúde bucal</small></h3>
+                </div>
+              </div>
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="./assets/sorrisao.jpg" alt="Sorriso">
+                  </div>
+
+                  <div class="item">
+                    <img src="./assets/ortodontia_2.jpg" alt="Proteses">
+                  </div>
+
+                  <div class="item">
+                    <img src="./assets/sorrisores.jpg" alt="Restauração">
+                  </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+
+
+            </div>
+
+            <div class="clearfix"></div>
+          </div>
+        </div>
+
+      </div>
+
+
+
     </div>
-    <!-- /page content -->
-    <!-- footer content -->
-<?php include("./View/footer.php") ?>
-    <!-- /footer content -->
+  </div>
+  </div>
+  </div>
+  <!-- footer content -->
+  <?php include("./View/footer.php") ?>
   </div>
   </div>
 
@@ -95,39 +157,28 @@
   <script src="../vendors/fastclick/lib/fastclick.js"></script>
   <!-- NProgress -->
   <script src="../vendors/nprogress/nprogress.js"></script>
-  <!-- Chart.js -->
-  <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
-  <!-- gauge.js -->
-  <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
-  <!-- bootstrap-progressbar -->
-  <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-  <!-- iCheck -->
-  <script src="../vendors/iCheck/icheck.min.js"></script>
-  <!-- Skycons -->
-  <script src="../vendors/skycons/skycons.js"></script>
-  <!-- Flot -->
-  <script src="../vendors/Flot/jquery.flot.js"></script>
-  <script src="../vendors/Flot/jquery.flot.pie.js"></script>
-  <script src="../vendors/Flot/jquery.flot.time.js"></script>
-  <script src="../vendors/Flot/jquery.flot.stack.js"></script>
-  <script src="../vendors/Flot/jquery.flot.resize.js"></script>
-  <!-- Flot plugins -->
-  <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-  <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-  <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
-  <!-- DateJS -->
-  <script src="../vendors/DateJS/build/date.js"></script>
-  <!-- JQVMap -->
-  <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
-  <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-  <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
   <!-- bootstrap-daterangepicker -->
   <script src="../vendors/moment/min/moment.min.js"></script>
   <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-
+  <!-- bootstrap-datetimepicker -->
+  <script src="../vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+  <!-- Ion.RangeSlider -->
+  <script src="../vendors/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+  <!-- Bootstrap Colorpicker -->
+  <script src="../vendors/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+  <!-- jquery.inputmask -->
+  <script src="../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+  <!-- jQuery Knob -->
+  <script src="../vendors/jquery-knob/dist/jquery.knob.min.js"></script>
+  <!-- Cropper -->
+  <script src="../vendors/cropper/dist/cropper.min.js"></script>
+  <!-- validator -->
+  <script src="../vendors/validator/validator.js"></script>
   <!-- Custom Theme Scripts -->
-  <script src="../build/js/custom.js"></script>
+  <script src="../build/js/custom.min.js"></script>
+  <script src="../assets/sorriso1"></script>
 
+  <!-- Initialize datetimepicker -->
 </body>
 
 </html>

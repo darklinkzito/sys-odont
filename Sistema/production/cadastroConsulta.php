@@ -109,7 +109,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-md-2"> Dentista:<span class="required">*</span></label>
+                                <label class="control-label col-md-2"> Profissional:<span class="required">*</span></label>
                                 <div class="col-md-6 col-sm-9 col-xs-6">
                                     <?php include("./req_banco/consulta_dentista.php") ?>
                                     <select class="form-control selectpicker" data-live-search="true" required="required" id="dentista" name="dentista">
