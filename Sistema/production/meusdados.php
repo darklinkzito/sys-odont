@@ -79,24 +79,24 @@
                             <div class="form-group">
                                 <label class="control-label col-sm-2" for="NomeCompleto">Nome Completo:<span class="required">*</span></label>
                                 <div class="col-sm-6">
-                                    <input type="text" class="form-control" value="<?php echo $value['usua_nm_usuario']; ?>">
+                                    <input type="text" readonly class="form-control" value="<?php echo $value['usua_nm_usuario']; ?>">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-sm-2" for="pwd">CPF:<span class="required">*</span></label>
                                 <div class="col-sm-2">
-                                    <input type="text" class="form-control" data-inputmask="'mask' : '999.999.999-99'" value="<?php echo $value['usua_ds_cpf']; ?>">
+                                    <input type="text" readonly class="form-control" data-inputmask="'mask' : '999.999.999-99'" value="<?php echo $value['usua_ds_cpf']; ?>">
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-sm-2" for="RG">RG:<span class="required">*</span></label>
                                     <div class="col-sm-2">
-                                        <input type="text" class="form-control" data-inputmask="'mask' : '99.999.999-99'" value="<?php echo $value['usua_ds_rg']; ?>">
+                                        <input type="text" readonly class="form-control" data-inputmask="'mask' : '99.999.999-99'" value="<?php echo $value['usua_ds_rg']; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-sm-2" for="DataNascimento">Data de nascimento:<span class="required">*</span></label>
                                     <div class="col-sm-2">
-                                        <input type="text" class="form-control" data-inputmask="'mask': '99/99/9999'" value="<?php echo date("d/m/Y", strtotime($value['usua_dt_usuario'])); ?>">
+                                        <input type="text" readonly class="form-control" data-inputmask="'mask': '99/99/9999'" value="<?php echo date("d/m/Y", strtotime($value['usua_dt_usuario'])); ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -115,6 +115,12 @@
                                     <label class="control-label col-sm-2" for="Email">Email:<span class="required">*</span></label>
                                     <div class="col-sm-4">
                                         <input type="text" class="form-control" value="<?php echo $value['usua_ds_email']; ?>">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="Email">Função:<span class="required">*</span></label>
+                                    <div class="col-sm-4">
+                                        <input type="text" readonly class="form-control" value="<?php echo $value['perf_nm_perfil']; ?>">
                                     </div>
                                 </div>
                             </div>

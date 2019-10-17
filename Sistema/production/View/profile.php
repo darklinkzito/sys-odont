@@ -1,6 +1,6 @@
 <div class="profile clearfix">
     <div class="profile_info">
-        <h3>Bem vindo(a),</h3>
+        <font color="white" size="4px">Bem vindo(a),</font>
         <p><?php echo($_SESSION['usuario_nome']) ?></p>
     </div>
 </div>
