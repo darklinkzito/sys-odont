@@ -72,205 +72,200 @@
             <!-- page content -->
             <!-- page content -->
             <div class="right_col" role="main">
-                <div class="">
-                    <div class="page-title">
-                        <div class="title_left">
-                        </div>
-
-
+                <div class="page-title">
+                    <div class="title_left">
                     </div>
-                    <div class="clearfix"></div>
 
 
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="x_panel">
-                            <div class="x_title">
-                                <h2>Cadastro de Paciente</h2>
+                </div>
+                <div class="clearfix"></div>
 
-                                <div class="clearfix"></div>
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Cadastro de Paciente</h2>
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <form id="regForm" action="">
+
+                        <h1>Cadastro Paciente</h1>
+
+                        <div class="tab">
+                            <p><input class="form-control" placeholder="Nome Completo" required="required" id="NomeCompleto" name="nm_paciente" oninput="this.className = ''"></p>
+                            <p>
+                                <input type="text" class="form-control" data-inputmask="'mask' : '999.999.999-99'" id="CPF" name="ds_cpf" required="required" placeholder="CPF" oninput="this.className = ''">
+                            </p>
+                            <p><input input type="text" class="form-control" data-inputmask="'mask' : '99.999.999-99'" required="required" id="RG" name="ds_rg" placeholder="RG" oninput="this.className = ''"></p>
+                            <p>
+                                <input type="text" class="form-control" required="required" id="DataNascimento" name="dt_paciente" data-inputmask="'mask': '99/99/9999'" placeholder="Data de Nascimento">
+                            </p>
+                            <p><input type="text" class="form-control" required="required" id="Endereco" name="ds_endereco" placeholder="Endereço" oninput="this.className = ''"></p>
+                            <p><input type="text" class="form-control" data-inputmask="'mask' : '99999-999'" id="CEP" name="ds_cep" placeholder="CEP" oninput="this.className = ''"></p>
+                            <p><input type="text" class="form-control" required="required" name="ds_numero" id="ds_numero" placeholder="Complemento (Andar,Num Casa, Bloco...etc)" oninput="this.className = ''"></p>
+                            <p><input type="text" class="form-control" data-inputmask="'mask' : '(99) 99999-9999'" id="Telefone" name="ds_telefone" placeholder="Telefone" oninput="this.className = ''"></p>
+                            <p><input type="email" class="form-control" required="required" name="ds_email" id="Email" placeholder="Email" oninput="this.className = ''"></p>
+                            <div class="form-group col-md-3">
+
+                                Sexo:
+                                <select class="form-control" id="sexo" name="in_sexo">
+                                    <option value="0" disable>Escolha...</option>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Feminino">Feminino</option>
+                                </select>
                             </div>
-                            <form id="regForm" action="">
-
-                                <h1>Cadastro Paciente</h1>
-
-                                <div class="tab">
-                                    <p><input class="form-control" placeholder="Nome Completo" required="required" id="NomeCompleto" name="nm_paciente" oninput="this.className = ''"></p>
-                                    <p>
-                                        <input type="text" class="form-control" data-inputmask="'mask' : '999.999.999-99'" id="CPF" name="ds_cpf" required="required" placeholder="CPF" oninput="this.className = ''">
-                                    </p>
-                                    <p><input input type="text" class="form-control" data-inputmask="'mask' : '99.999.999-99'" required="required" id="RG" name="ds_rg" placeholder="RG" oninput="this.className = ''"></p>
-                                    <p>
-                                        <input type="text" class="form-control" required="required" id="DataNascimento" name="dt_paciente" data-inputmask="'mask': '99/99/9999'" placeholder="Data de Nascimento">
-                                    </p>
-                                    <p><input type="text" class="form-control" required="required" id="Endereco" name="ds_endereco" placeholder="Endereço" oninput="this.className = ''"></p>
-                                    <p><input type="text" class="form-control" data-inputmask="'mask' : '99999-999'" id="CEP" name="ds_cep" placeholder="CEP" oninput="this.className = ''"></p>
-                                    <p><input type="text" class="form-control" required="required" name="ds_numero" id="ds_numero" placeholder="Complemento (Andar,Num Casa, Bloco...etc)" oninput="this.className = ''"></p>
-                                    <p><input type="text" class="form-control" data-inputmask="'mask' : '(99) 99999-9999'" id="Telefone" name="ds_telefone" placeholder="Telefone" oninput="this.className = ''"></p>
-                                    <p><input type="email" class="form-control" required="required" name="ds_email" id="Email" placeholder="Email" oninput="this.className = ''"></p>
-                                    <div class="form-group col-md-3">
-
-                                        Sexo:
-                                        <select class="form-control" id="sexo" name="in_sexo">
-                                            <option value="0" disable>Escolha...</option>
-                                            <option value="Masculino">Masculino</option>
-                                            <option value="Feminino">Feminino</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="" class="col-md-2">Possui convênio?</label>
-                                        <div class="form-check form-check-inline">
-                                            <div class="col-sm-1">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="FunctionConvenio(1)" oninput="this.className = ''">
-                                                <label class="form-check-label" for="inlineRadio1">Sim</label>
-                                            </div>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <div class="col-sm-1">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="FunctionConvenio(2)">
-                                                <label class="form-check-label" for="inlineRadio1">Não</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group hidden convenios">
-                                        <label class="control-label col-sm-1" for="convenio">Qual?:<span class="required">*</span></label>
-                                        <div class="form-group col-md-3">
-
-                                            <select class="form-control" id="convenio" name="conveio">
-                                                <option value="0" disable>Escolha...</option>
-                                                <option value="Masculino">Hapvida</option>
-                                                <option value="Feminino">Sulamerica</option>
-                                            </select>
-
-                                        </div>
+                            <div class="form-group">
+                                <label for="" class="col-md-2">Possui convênio?</label>
+                                <div class="form-check form-check-inline">
+                                    <div class="col-sm-1">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="FunctionConvenio(1)" oninput="this.className = ''">
+                                        <label class="form-check-label" for="inlineRadio1">Sim</label>
                                     </div>
                                 </div>
-
-                                <div class="tab">
-                                    <div class="form-group">
-                                        <div>
-                                            <label for="">Se faz uso de algum medicamento informe abaixo:</label>
-                                            <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Se o paciente tiver algum problema de saúde informe abaixo:</label>
-                                        <div>
-                                            <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Se o paciente estiver em algum tratamento ou acompanhamentoinforme
-                                            abaixo:</label>
-                                        <div>
-                                            <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="">Se o paciente tiver alergia a algum medicamento informe
-                                            abaixo:</label>
-                                        <div>
-                                            <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Se o paciente já teve hemorragia
-                                            alguma vez ou
-                                            foi internado alguma vez informe
-                                            abaixo o motivo:</label>
-                                        <div>
-                                            <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Se o paciente fuma ou já fumou
-                                            alguma vez informe por quanto tempo:</label>
-                                        <div>
-                                            <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">O paciente possui alguns hábitos como
-                                            apertamento, bruxismo, morder objetos?</label>
-                                        <div>
-                                            <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="tab">
-                                    <div class="form-group">
-                                        <label for="exampleFormControlTextarea3">Como faz a higiene oral? Quantas vezes ao dia? Usa fio dental ou algum bochecho com flúor?(Responda na ordem)</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea3" rows="5"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlTextarea3">Já foi ao dentista antes? Quando foi seu último tratamento?(Responda na ordem)</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea3" rows="5"></textarea>
-                                    </div>
-                                    <h3>Crianças</h3>
-                                    <div class="form-group">
-                                        <label for="">Quem faz a higieno bucal da criança?</label>
-                                        <div>
-                                            <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="exampleFormControlTextarea3">Defina a alimentação básica da criança:</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea3" rows="5"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlTextarea3">Defina a alimentação básica da criança:</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="" class="col-md-2">Faz uso de chupeta ou mamadeira?</label>
-                                        <div class="form-check form-check-inline">
-                                            <div class="col-sm-1">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="FunctionConvenio(1)" oninput="this.className = ''">
-                                                <label class="form-check-label" for="inlineRadio1">Sim</label>
-                                            </div>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <div class="col-sm-1">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="FunctionConvenio(2)">
-                                                <label class="form-check-label" for="inlineRadio1">Não</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="tab">
-                                    <p><input placeholder="Pressão Arterial" oninput="this.className = ''"></p>
-                                    <p>
-                                        <input type="text" class="form-control" required="required" id="DataPA" name="dt_pa" data-inputmask="'mask': '99/99/9999'" placeholder="Data de Nascimento">
-                                    </p>
-                                    <p><input placeholder="BPM" oninput="this.className = ''"></p>
-                                    <p>
-                                        <input type="text" class="form-control" required="required" id="DataBPM" name="dt_bpm" data-inputmask="'mask': '99/99/9999'" placeholder="Data de Nascimento">
-                                    </p>
-
-                                </div>
-
-                                <div style="overflow:auto;">
-                                    <div style="float:right;">
-                                        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
-                                        <button type="button" id="nextBtn" onclick="nextPrev(1)">Proximo</button>
+                                <div class="form-check form-check-inline">
+                                    <div class="col-sm-1">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="FunctionConvenio(2)">
+                                        <label class="form-check-label" for="inlineRadio1">Não</label>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="form-group hidden convenios">
+                                <label class="control-label col-sm-1" for="convenio">Qual?:<span class="required">*</span></label>
+                                <div class="form-group col-md-3">
 
-                                <!-- Circles which indicates the steps of the form: -->
-                                <div style="text-align:center;margin-top:40px;">
-                                    <span class="step"></span>
-                                    <span class="step"></span>
-                                    <span class="step"></span>
-                                    <span class="step"></span>
+                                    <select class="form-control" id="convenio" name="conveio">
+                                        <option value="0" disable>Escolha...</option>
+                                        <option value="Masculino">Hapvida</option>
+                                        <option value="Feminino">Sulamerica</option>
+                                    </select>
+
                                 </div>
-
-                            </form>
+                            </div>
                         </div>
-                    </div>
+
+                        <div class="tab">
+                            <div class="form-group">
+                                <div>
+                                    <label for="">Se faz uso de algum medicamento informe abaixo:</label>
+                                    <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Se o paciente tiver algum problema de saúde informe abaixo:</label>
+                                <div>
+                                    <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Se o paciente estiver em algum tratamento ou acompanhamentoinforme
+                                    abaixo:</label>
+                                <div>
+                                    <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">Se o paciente tiver alergia a algum medicamento informe
+                                    abaixo:</label>
+                                <div>
+                                    <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Se o paciente já teve hemorragia
+                                    alguma vez ou
+                                    foi internado alguma vez informe
+                                    abaixo o motivo:</label>
+                                <div>
+                                    <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Se o paciente fuma ou já fumou
+                                    alguma vez informe por quanto tempo:</label>
+                                <div>
+                                    <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="">O paciente possui alguns hábitos como
+                                    apertamento, bruxismo, morder objetos?</label>
+                                <div>
+                                    <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="tab">
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea3">Como faz a higiene oral? Quantas vezes ao dia? Usa fio dental ou algum bochecho com flúor?(Responda na ordem)</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea3" rows="5"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea3">Já foi ao dentista antes? Quando foi seu último tratamento?(Responda na ordem)</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea3" rows="5"></textarea>
+                            </div>
+                            <h3>Crianças</h3>
+                            <div class="form-group">
+                                <label for="">Quem faz a higieno bucal da criança?</label>
+                                <div>
+                                    <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea3">Defina a alimentação básica da criança:</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea3" rows="5"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea3">Defina a alimentação básica da criança:</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-md-2">Faz uso de chupeta ou mamadeira?</label>
+                                <div class="form-check form-check-inline">
+                                    <div class="col-sm-1">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="FunctionConvenio(1)" oninput="this.className = ''">
+                                        <label class="form-check-label" for="inlineRadio1">Sim</label>
+                                    </div>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <div class="col-sm-1">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="FunctionConvenio(2)">
+                                        <label class="form-check-label" for="inlineRadio1">Não</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="tab">
+                            <p><input placeholder="Pressão Arterial" oninput="this.className = ''"></p>
+                            <p>
+                                <input type="text" class="form-control" required="required" id="DataPA" name="dt_pa" data-inputmask="'mask': '99/99/9999'" placeholder="Data de Nascimento">
+                            </p>
+                            <p><input placeholder="BPM" oninput="this.className = ''"></p>
+                            <p>
+                                <input type="text" class="form-control" required="required" id="DataBPM" name="dt_bpm" data-inputmask="'mask': '99/99/9999'" placeholder="Data de Nascimento">
+                            </p>
+
+                        </div>
+
+                        <div style="overflow:auto;">
+                            <div style="float:right;">
+                                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
+                                <button type="button" id="nextBtn" onclick="nextPrev(1)">Proximo</button>
+                            </div>
+                        </div>
+
+                        <!-- Circles which indicates the steps of the form: -->
+                        <div style="text-align:center;margin-top:40px;">
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                        </div>
+
+                    </form>
                 </div>
             </div>
         </div>
