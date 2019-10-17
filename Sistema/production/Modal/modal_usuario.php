@@ -9,7 +9,7 @@
     <label for="">RG </label>
     <input type="text" value="<?php echo $dados['usua_ds_rg'] ?>" class="form-control" id="#" name="rg">
     <label for="">Data de nascimento</label>
-    <input type="text" value="<?php echo $dados['usua_dt_usuario'] ?>" class="form-control" id="#" name="data">
+    <input type="text" data-inputmask="'mask': '99/99/9999'" value="<?php echo date("d/m/Y", strtotime($dados['usua_dt_usuario'])); ?>" class="form-control" id="#" name="data">
     <label for="">Sexo</label>
     <input type="text" value="<?php echo $dados['usua_in_sexo'] ?>" class="form-control" id="#" name="sx">
     <label for="">CEP</label>

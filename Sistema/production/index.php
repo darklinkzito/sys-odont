@@ -95,6 +95,7 @@
                   <h3>Bem-vindo(a) <small>Excelência em saúde bucal</small></h3>
                 </div>
               </div>
+              <div align="center">
               <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -106,15 +107,15 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                   <div class="item active">
-                    <img src="./assets/sorrisao.jpg" alt="Sorriso">
+                    <img class="d-block w-100" src="./assets/sorrisao.jpg" alt="Sorriso">
                   </div>
 
                   <div class="item">
-                    <img src="./assets/ortodontia_2.jpg" alt="Proteses">
+                    <img class="d-block w-100"src="./assets/ortodontia_2.jpg" alt="Proteses">
                   </div>
 
                   <div class="item">
-                    <img src="./assets/sorrisores.jpg" alt="Restauração">
+                    <img class="d-block w-100" src="./assets/sorrisores.jpg" alt="Restauração">
                   </div>
                 </div>
 
@@ -128,7 +129,7 @@
                   <span class="sr-only">Next</span>
                 </a>
               </div>
-
+              </div>
 
             </div>
 

@@ -25,7 +25,7 @@
     <link href="../vendors/ion.rangeSlider/css/ion.rangeSlider.skinFlat.css" rel="stylesheet">
     <!-- Bootstrap Colorpicker -->
     <link href="../vendors/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css" rel="stylesheet">
-    
+
     <link href="../vendors/cropper/dist/cropper.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
@@ -67,61 +67,60 @@
             <!-- page content -->
             <div class="right_col" role="main">
                 <div class="x_panel">
-                <div class="x_title">
-                    <h2>Dados de perfil</h2>
-                    <div class="clearfix"></div>
-                </div>
+                    <div class="x_title">
+                        <h2>Dados de perfil</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <?php include("./req_banco/meusdados.php");
+                    foreach ($dados as $value) {
+                        ?>
 
-                    <form class="form-horizontal" method="POST" action="./req_banco/usua_cad_func.php">
-                        <div class="form-group">
-                            <label class="control-label col-sm-2" for="NomeCompleto">Nome Completo:<span class="required">*</span></label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" required="required" id="NomeCompleto" name="nm_usuario">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-2" for="pwd">CPF:<span class="required">*</span></label>
-                            <div class="col-sm-2">
-                                <input type="text" class="form-control" data-inputmask="'mask' : '999.999.999-99'" id="CPF" name="ds_cpf" required="required">
-                            </div>
+                        <form class="form-horizontal">
                             <div class="form-group">
-                                <label class="control-label col-sm-2" for="RG">RG:<span class="required">*</span></label>
-                                <div class="col-sm-2">
-                                    <input type="text" class="form-control" data-inputmask="'mask' : '99.999.999-99'" required="required" id="RG" name="ds_rg">
+                                <label class="control-label col-sm-2" for="NomeCompleto">Nome Completo:<span class="required">*</span></label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" value="<?php echo $value['usua_nm_usuario']; ?>">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-sm-2" for="DataNascimento">Data de nascimento:<span class="required">*</span></label>
+                                <label class="control-label col-sm-2" for="pwd">CPF:<span class="required">*</span></label>
                                 <div class="col-sm-2">
-                                    <input type="text" class="form-control" required="required" id="DataNascimento" name="dt_usuario" data-inputmask="'mask': '99/99/9999'">
+                                    <input type="text" class="form-control" data-inputmask="'mask' : '999.999.999-99'" value="<?php echo $value['usua_ds_cpf']; ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="RG">RG:<span class="required">*</span></label>
+                                    <div class="col-sm-2">
+                                        <input type="text" class="form-control" data-inputmask="'mask' : '99.999.999-99'" value="<?php echo $value['usua_ds_rg']; ?>">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="DataNascimento">Data de nascimento:<span class="required">*</span></label>
+                                    <div class="col-sm-2">
+                                        <input type="text" class="form-control" data-inputmask="'mask': '99/99/9999'" value="<?php echo date("d/m/Y", strtotime($value['usua_dt_usuario'])); ?>">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="Endereco">Endereço:<span class="required">*</span></label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" value="<?php echo $value['usua_ds_endereco']; ?>">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="Telefone">Telefone:<span class="required">*</span></label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" value="<?php echo $value['usua_ds_telefone']; ?>">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="Email">Email:<span class="required">*</span></label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" value="<?php echo $value['usua_ds_email']; ?>">
+                                    </div>
                                 </div>
                             </div>
-                            
-                       
-                        <div class="form-group">
-                            <label class="control-label col-sm-2" for="Endereco">Endereço:<span class="required">*</span></label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" required="required" id="Endereco" name="ds_endereco">
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="form-group">
-                            <label class="control-label col-sm-2" for="Telefone">Telefone:<span class="required">*</span></label>
-                            <div class="col-sm-3">
-                                <input type="text" class="form-control" data-inputmask="'mask' : '(99) 99999-9999'" id="Telefone" name="ds_telefone">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-2" for="Email">Email:<span class="required">*</span></label>
-                            <div class="col-sm-4">
-                                <input type="email" class="form-control" required="required" id="Email" name="ds_email">
-                            </div>
-                        </div>
-                        
-                        </div>
                 </div>
                 </form>
+            <?php } ?>
             </div>
             <!-- footer content -->
             <?php include("./View/footer.php") ?>
