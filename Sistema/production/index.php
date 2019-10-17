@@ -74,14 +74,14 @@
         <div class="row tile_count">
 
           <div class="col-md-3 col-sm-5 col-xs-7  tile_stats_count">
-            <span class="count_top"><i class="fa fa-user"></i> Atendimentos Diários para Atendimento</span>
-            <div class="count">4,567</div>
-            <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
+            <span class="count_top"><i class="fa fa-user"></i> Atendimentos Diários</span>
+            <div class="count">0</div>
+            <span class="count_bottom"><i class="fa fa-sort-desc"></i>0% </i> da semana passada</span>
           </div>
           <div class="col-md-3 col-sm-5 col-xs-7 tile_stats_count">
             <span class="count_top"><i class="fa fa-user"></i> Atendimentos Diários Encerrados</span>
-            <div class="count">2,315</div>
-            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+            <div class="count">0</div>
+            <span class="count_bottom"><i class="fa fa-sort-asc"></i>0% </i> da semana passada</span>
           </div>
         </div>
         <!-- /top tiles -->
