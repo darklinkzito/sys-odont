@@ -18,7 +18,7 @@
             </li>
             <li><a><i class="fa fa-file"></i> Relatórios <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Relatório de Consultas</a></li>
+                    <li><a href="relatorio_de_consultas.php">Relatório de Consultas</a></li>
                     <li><a href="#">Relatório de Tratamentos</a></li>
                     <li><a href="#">Ficha de Anamnese</a></li>
                 </ul>

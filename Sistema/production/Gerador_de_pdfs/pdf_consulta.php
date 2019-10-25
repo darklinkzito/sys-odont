@@ -1,12 +1,13 @@
-<?php
-   //Inclui a classe 'class.ezpdf.php'
-   include("./");
-     
+<?php  
+   include("../req_banco/pdf_consulta_db.php");
+   foreach($dados as $value){
+   $nome = $value['paci_nm_paciente'];
+   }
+   include("./pdf-php/src/Cezpdf.php");
    //Instancia um novo documento com o nome de pdf
    $pdf = new Cezpdf(); 
      
    //Seleciona a fonte que será usada. As fontes estão localizadas na pasta "pdf-php/fonts". 
-   Use a de sua preferencia.
    $pdf -> selectFont('pdf-php/fonts/Helvetica.afm'); 
      
    //Chama o método "ezText".
@@ -19,12 +20,11 @@
    // spacing => define o espaçamento entrelinhas, deverá ser um float
    // você pode usar apenas leading ou apenas spacing, nunca os dois
  
-   $pdf -> ezText('DevMedia Group!', 20, array(justification => 'center', spacing => 2.0)); 
-   $pdf -> ezText('Olá Pessoal. Obrigado por estarem acompanhando mais este artigo!', 15, 
-   array(justification => 'left', spacing => 3.0));
+   $pdf -> ezText('DevMedia Group!', 20, array('justification' => 'center', 'spacing' => 2.0)); 
+   $pdf -> ezText('Olá '.$nome.' Obrigado por estarem acompanhando mais este artigo!', 15, 
+   array('justification' => 'left', 'spacing' => 3.0));
    $pdf -> ezText('Acessem o portal da DevMedia Group: www.devmedia.com.br!', 10, 
-   array(justification => 'right', spacing => 1.0));
-     
+   array('justification' => 'right', 'spacing' => 1.0));
    //Gera o PDF
    $pdf -> ezStream();
 ?>

@@ -20,6 +20,7 @@ session_start();
 $_SESSION['usuario_id']= $id;
 $_SESSION['usuario_nome']= $nome;
 $_SESSION['usuario_perfil']= $perfil;
+$_SESSION['editado']= 0;
 if (isset($dados[0])){
     header('Location: ../index.php'); 
 }else{

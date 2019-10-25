@@ -54,7 +54,7 @@
                     <div class="clearfix"></div>
 
                     <!-- menu profile quick info -->
-                    <?php include("./View/profile.php")?>
+                    <?php include("./View/profile.php") ?>
 
                     <br />
                     <!-- sidebar menu -->
@@ -268,8 +268,6 @@
 
     <!-- footer content -->
     <?php include("./View/footer.php") ?>
-    </div>
-    </div>
 
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
