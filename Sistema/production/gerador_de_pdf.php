@@ -1,6 +1,6 @@
 <?php
    //Inclui a classe 'class.ezpdf.php'
-   include("");
+   include("./");
      
    //Instancia um novo documento com o nome de pdf
    $pdf = new Cezpdf(); 
