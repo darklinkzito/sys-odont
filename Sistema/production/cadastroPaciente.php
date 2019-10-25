@@ -54,12 +54,7 @@
                     <div class="clearfix"></div>
 
                     <!-- menu profile quick info -->
-                    <div class="profile clearfix">
-                        <div class="profile_info">
-                            <span>Welcome,</span>
-                            <h3>John Doe</h3>
-                        </div>
-                    </div>
+                    <?php include("./View/profile.php")?>
 
                     <br />
                     <!-- sidebar menu -->
@@ -104,17 +99,15 @@
                             <p><input type="text" class="form-control" required="required" name="ds_numero" id="ds_numero" placeholder="Complemento (Andar,Num Casa, Bloco...etc)" oninput="this.className = ''"></p>
                             <p><input type="text" class="form-control" data-inputmask="'mask' : '(99) 99999-9999'" id="Telefone" name="ds_telefone" placeholder="Telefone" oninput="this.className = ''"></p>
                             <p><input type="email" class="form-control" required="required" name="ds_email" id="Email" placeholder="Email" oninput="this.className = ''"></p>
-                            <div class="form-group col-md-3">
-
-                                Sexo:
-                                <select class="form-control" id="sexo" name="in_sexo">
-                                    <option value="0" disable>Escolha...</option>
-                                    <option value="Masculino">Masculino</option>
-                                    <option value="Feminino">Feminino</option>
-                                </select>
-                            </div>
+                            <p>Sexo:</p>
+                            <select class="form-control" id="sexo" name="in_sexo">
+                                <option value="0" disable>Escolha...</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Feminino">Feminino</option>
+                            </select>
+                            <br>
                             <div class="form-group">
-                                <label for="" class="col-md-2">Possui convênio?</label>
+                                <label for="" class="control-label col-md-2">Possui convênio?</label>
                                 <div class="form-check form-check-inline">
                                     <div class="col-sm-1">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="FunctionConvenio(1)" oninput="this.className = ''">
@@ -128,17 +121,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group hidden convenios">
-                                <label class="control-label col-sm-1" for="convenio">Qual?:<span class="required">*</span></label>
-                                <div class="form-group col-md-3">
-
-                                    <select class="form-control" id="convenio" name="conveio">
-                                        <option value="0" disable>Escolha...</option>
-                                        <option value="Masculino">Hapvida</option>
-                                        <option value="Feminino">Sulamerica</option>
-                                    </select>
-
-                                </div>
+                            <div class="form-group hidden convenios"><br><br>
+                                <label class="control-label" for="convenio">Qual?:<span class="required">*</span></label>
+                                <select class="form-control" id="convenio" name="conveio">
+                                    <option value="0" disable>Escolha...</option>
+                                    <option value="Masculino">Hapvida</option>
+                                    <option value="Feminino">Sulamerica</option>
+                                </select>
+                                <label class="control-label" for="convenio">Número da Carteira:<span class="required">*</span></label>
+                                <input type="text" class="form-control" required="required" id="carteira" name="txt_carteira" placeholder="Número">
+                                <label class="control-label" for="convenio">Tipo de Convênio:<span class="required">*</span></label>
+                                <input type="text" class="form-control" required="required" id="carteira" name="txt_tipo" placeholder="Tipo">
+                                <label class="control-label" for="convenio">Data de Validade:<span class="required">*</span></label>
+                                <input type="text" class="form-control" required="required" id="DataValidade" name="dt_validade" data-inputmask="'mask': '99/9999'" placeholder="Data de Validade">
                             </div>
                         </div>
 

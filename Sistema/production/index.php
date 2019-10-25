@@ -31,10 +31,10 @@
   <link href="../build/css/custom.min.css" rel="stylesheet">
   <link href="../build/css/custom.min.css" rel="stylesheet">
   <style>
-
-    #myCarousel{
+    #myCarousel {
       width: 800px;
     }
+
     .estilo {
       background-color: #2A3F54;
       color: white;
@@ -76,12 +76,12 @@
           <div class="col-md-3 col-sm-5 col-xs-7  tile_stats_count">
             <span class="count_top"><i class="fa fa-user"></i> Atendimentos Diários</span>
             <div class="count">0</div>
-            <span class="count_bottom"><i class="fa fa-sort-desc"></i>0% </i> da semana passada</span>
+            <span class="count_bottom"><a href="">Clique para Mais Detalhes</a></span>
           </div>
           <div class="col-md-3 col-sm-5 col-xs-7 tile_stats_count">
             <span class="count_top"><i class="fa fa-user"></i> Atendimentos Diários Encerrados</span>
             <div class="count">0</div>
-            <span class="count_bottom"><i class="fa fa-sort-asc"></i>0% </i> da semana passada</span>
+            <span class="count_bottom"><a href="">Clique para Mais Detalhes</a></span>
           </div>
         </div>
         <!-- /top tiles -->
@@ -92,43 +92,43 @@
 
               <div class="row x_title">
                 <div class="col-md-6">
-                  <h3>Bem-vindo(a) <small>Excelência em saúde bucal</small></h3>
+                  <h3>Sys'Odont <small>Excelência em saúde bucal</small></h3>
                 </div>
               </div>
               <div align="center">
-              <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#myCarousel" data-slide-to="1"></li>
-                  <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                  </ol>
 
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                  <div class="item active">
-                    <img class="d-block w-100" src="./assets/sorrisao.jpg" alt="Sorriso">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img class="d-block w-100" src="./assets/sorrisao.jpg" alt="Sorriso">
+                    </div>
+
+                    <div class="item">
+                      <img class="d-block w-100" src="./assets/ortodontia_2.jpg" alt="Proteses">
+                    </div>
+
+                    <div class="item">
+                      <img class="d-block w-100" src="./assets/sorrisores.jpg" alt="Restauração">
+                    </div>
                   </div>
 
-                  <div class="item">
-                    <img class="d-block w-100"src="./assets/ortodontia_2.jpg" alt="Proteses">
-                  </div>
-
-                  <div class="item">
-                    <img class="d-block w-100" src="./assets/sorrisores.jpg" alt="Restauração">
-                  </div>
+                  <!-- Left and right controls -->
+                  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
                 </div>
-
-                <!-- Left and right controls -->
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                  <span class="glyphicon glyphicon-chevron-left"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                  <span class="glyphicon glyphicon-chevron-right"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
               </div>
 
             </div>

@@ -120,7 +120,7 @@
                                 <div class="form-group">
                                     <label class="control-label col-sm-2" for="Email">Função:<span class="required">*</span></label>
                                     <div class="col-sm-4">
-                                        <input type="text" readonly class="form-control" value="<?php echo $value['perf_nm_perfil']; ?>">
+                                        <input type="text" readonly class="form-control" value="<?php echo $value['func_nm_funcao']; ?>">
                                     </div>
                                 </div>
                             </div>

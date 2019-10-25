@@ -14,10 +14,15 @@
                     <li><a href="perfilUsuario.php">Registro de Usuários</a></li>
                     <li><a href="perfilPaciente.php">Registro de Paciente</a></li>
                     <li><a href="tabelaConsultas.php">Registro de Consultas</a></li>
-                    <li><a href="#">Relatório de Consulta</a></li>
                 </ul>
             </li>
-
+            <li><a><i class="fa fa-file"></i> Relatórios <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="#">Relatório de Consultas</a></li>
+                    <li><a href="#">Relatório de Tratamentos</a></li>
+                    <li><a href="#">Ficha de Anamnese</a></li>
+                </ul>
+            </li>
     </div>
 
 </div>
