@@ -83,10 +83,10 @@ if ($_SESSION['dados_invalidos'] == 1) {
                 <div class="x_panel">
                     <div class="x_title">
                         <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
-                        <h2>Relatorios de Consultas</h2>
+                        <h2>Relatorios de Tratamento</h2>
                         <div class="clearfix"></div>
                     </div>
-                    <form action="./Gerador_de_pdfs/pdf_consulta.php" target="_blank" method="POST" class="form-horizontal">
+                    <form action="./Gerador_de_pdfs/pdf_tratamento.php" target="_blank" method="POST" class="form-horizontal">
                         <div class="form-group">
                             <label class="control-label col-sm-2">Nome Paciente:<span class="required">*</span></label>
                             <div class="col-sm-6">
@@ -98,7 +98,7 @@ if ($_SESSION['dados_invalidos'] == 1) {
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-2"> Responsavel pela Consulta:<span class="required">*</span></label>
+                            <label class="control-label col-md-2"> Responsavel pelo tratamento:<span class="required">*</span></label>
                             <div class="col-md-6 col-sm-9 col-xs-6">
                                 <?php include("./req_banco/consulta_dentista.php") ?>
                                 <select class="form-control selectpicker" data-live-search="true" required="required" id="dentista" name="dentista">
@@ -108,7 +108,7 @@ if ($_SESSION['dados_invalidos'] == 1) {
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-2">Data da Consulta:<span class="required">*</span></label>
+                            <label class="control-label col-sm-2">Data do Tratamento:<span class="required">*</span></label>
                             <div class="col-sm-5">
                                 <input type="date" name="data" required>
                             </div>
