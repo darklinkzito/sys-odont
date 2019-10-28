@@ -81,7 +81,7 @@
 
                         <div class="clearfix"></div>
                     </div>
-                    <form id="regForm" action="">
+                    <form id="regForm" action="./req_banco/cad_paciente.php">
 
                         <h1>Cadastro Paciente</h1>
 
@@ -100,15 +100,15 @@
                             <p><input type="text" class="form-control" data-inputmask="'mask' : '(99) 99999-9999'" id="Telefone" name="ds_telefone" placeholder="Telefone" oninput="this.className = ''"></p>
                             <p><input type="email" class="form-control" required="required" name="ds_email" id="Email" placeholder="Email" oninput="this.className = ''"></p>
                             <p>Sexo:</p>
-                            <select class="form-control" id="sexo" name="in_sexo">
-                                <option value="0" disable>Escolha...</option>
+                            <select class="form-control" id="sexo" name="in_sexo" required="required">
+                                <option value="">Escolha...</option>
                                 <option value="Masculino">Masculino</option>
                                 <option value="Feminino">Feminino</option>
                             </select>
                             <br>
                             <div class="form-group">
                                 <label for="" class="control-label col-md-2">Possui convênio?</label>
-                                <div class="form-check form-check-inline">
+                                <div class="form-check form-check-inline">  
                                     <div class="col-sm-1">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="FunctionConvenio(1)" oninput="this.className = ''">
                                         <label class="form-check-label" for="inlineRadio1">Sim</label>
@@ -123,15 +123,15 @@
                             </div>
                             <div class="form-group hidden convenios"><br><br>
                                 <label class="control-label" for="convenio">Qual?:<span class="required">*</span></label>
-                                <select class="form-control" id="convenio" name="conveio">
-                                    <option value="0" disable>Escolha...</option>
+                                <select class="form-control" id="convenio" name="nm_convenio" required="required">
+                                    <option value="">Escolha...</option>
                                     <option value="Masculino">Hapvida</option>
                                     <option value="Feminino">Sulamerica</option>
                                 </select>
                                 <label class="control-label" for="convenio">Número da Carteira:<span class="required">*</span></label>
-                                <input type="text" class="form-control" required="required" id="carteira" name="txt_carteira" placeholder="Número">
+                                <input type="text" class="form-control" required="required" id="carteira" name="ds_carteira" placeholder="Número">
                                 <label class="control-label" for="convenio">Tipo de Convênio:<span class="required">*</span></label>
-                                <input type="text" class="form-control" required="required" id="carteira" name="txt_tipo" placeholder="Tipo">
+                                <input type="text" class="form-control" required="required" id="carteira" name="ds_tipo" placeholder="Tipo">
                                 <label class="control-label" for="convenio">Data de Validade:<span class="required">*</span></label>
                                 <input type="text" class="form-control" required="required" id="DataValidade" name="dt_validade" data-inputmask="'mask': '99/9999'" placeholder="Data de Validade">
                             </div>
@@ -141,20 +141,20 @@
                             <div class="form-group">
                                 <div>
                                     <label for="">Se faz uso de algum medicamento informe abaixo:</label>
-                                    <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
+                                    <p><input name="in_medicamento" placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="">Se o paciente tiver algum problema de saúde informe abaixo:</label>
                                 <div>
-                                    <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
+                                    <p><input name="in_problema" placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="">Se o paciente estiver em algum tratamento ou acompanhamentoinforme
+                                <label for="">Se o paciente estiver em algum tratamento ou acompanhamento informe
                                     abaixo:</label>
                                 <div>
-                                    <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
+                                    <p><input name="in_acompanhamento" placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
                                 </div>
                             </div>
 
@@ -162,7 +162,7 @@
                                 <label for="">Se o paciente tiver alergia a algum medicamento informe
                                     abaixo:</label>
                                 <div>
-                                    <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
+                                    <p><input name="in_alergia" placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -171,21 +171,21 @@
                                     foi internado alguma vez informe
                                     abaixo o motivo:</label>
                                 <div>
-                                    <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
+                                    <p><input name="in_hemorragia" placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="">Se o paciente fuma ou já fumou
                                     alguma vez informe por quanto tempo:</label>
                                 <div>
-                                    <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
+                                    <p><input name="in_fumante" placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="">O paciente possui alguns hábitos como
                                     apertamento, bruxismo, morder objetos?</label>
                                 <div>
-                                    <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
+                                    <p><input name="in_habitos" placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
                                 </div>
                             </div>
 
