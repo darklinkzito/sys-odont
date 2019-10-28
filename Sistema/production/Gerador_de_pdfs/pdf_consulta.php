@@ -1,8 +1,9 @@
 <?php  
    include("../req_banco/pdf_consulta_db.php");
-   foreach($dados as $value){
-   $nome = $value['paci_nm_paciente'];
-   }
+   $nome = $_SESSION['nome'];
+   $data = $_SESSION['data'];
+   $data = implode("/",array_reverse(explode("-",$data)));
+   $profissional = $_SESSION['profissional'];   
    include("./pdf-php/src/Cezpdf.php");
    //Instancia um novo documento com o nome de pdf
    $pdf = new Cezpdf(); 
@@ -20,11 +21,11 @@
    // spacing => define o espaçamento entrelinhas, deverá ser um float
    // você pode usar apenas leading ou apenas spacing, nunca os dois
  
-   $pdf -> ezText('DevMedia Group!', 20, array('justification' => 'center', 'spacing' => 2.0)); 
-   $pdf -> ezText('Olá '.$nome.' Obrigado por estarem acompanhando mais este artigo!', 15, 
-   array('justification' => 'left', 'spacing' => 3.0));
-   $pdf -> ezText('Acessem o portal da DevMedia Group: www.devmedia.com.br!', 10, 
-   array('justification' => 'right', 'spacing' => 1.0));
+   $pdf -> ezText('Ficha de Atendimento', 20, array('justification' => 'center', 'spacing' => 2.0)); 
+   $pdf -> ezText('Paciente: '.$nome.' Foi atendido em '.$data.' pelo dentista '.$profissional.'', 15, 
+   array('justification' => 'left', 'spacing' => 1.0));
+   $pdf -> ezText('Teste Funcionando com sucesso!', 10, 
+   array('justification' => 'left', 'spacing' => 1.0));
    //Gera o PDF
    $pdf -> ezStream();
 ?>

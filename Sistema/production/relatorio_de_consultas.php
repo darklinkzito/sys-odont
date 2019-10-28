@@ -45,6 +45,15 @@
 
 </head>
 <?php include("./View/verificar_Login.php") ?>
+<?php
+if ($_SESSION['dados_invalidos'] == 1) {
+    echo '<script language="javascript">';
+    echo 'alert("Os dados informados não conferem")';
+    echo '</script>';
+    $_SESSION['dados_invalidos'] = 0;
+    echo "<script>window.close();</script>";
+}
+?>
 
 <body class="nav-md">
     <div class="container body">
@@ -58,12 +67,7 @@
                     <div class="clearfix"></div>
 
                     <!-- menu profile quick info -->
-                    <div class="profile clearfix">
-                        <div class="profile_info">
-                            <span>Welcome,</span>
-                            <h3>John Doe</h3>
-                        </div>
-                    </div>
+                    <?php include("./View/profile.php") ?>
 
                     <br />
                     <!-- sidebar menu -->
@@ -82,7 +86,7 @@
                         <h2>Relatorios de Consultas</h2>
                         <div class="clearfix"></div>
                     </div>
-                    <form action="./Gerador_de_pdfs/pdf_consulta.php" method="POST" class="form-horizontal">
+                    <form action="./Gerador_de_pdfs/pdf_consulta.php" target="_blank" method="POST" class="form-horizontal">
                         <div class="form-group">
                             <label class="control-label col-sm-2">Nome Paciente:<span class="required">*</span></label>
                             <div class="col-sm-6">
@@ -99,7 +103,7 @@
                                 <?php include("./req_banco/consulta_dentista.php") ?>
                                 <select class="form-control selectpicker" data-live-search="true" required="required" id="dentista" name="dentista">
                                     <option value="">Selecione</option>
-                                    <?php foreach ($dados as $value) { ?><option value="<?php echo ($value['prof_cod_profissional']) ?>"><?php echo $value['prof_nm_profissional'] ?></option> <?php } ?>
+                                    <?php foreach ($dados as $value) { ?><option value="<?php echo ($value['prof_nm_profissional']) ?>"><?php echo $value['prof_nm_profissional'] ?></option> <?php } ?>
                                 </select>
                             </div>
                         </div>
@@ -111,7 +115,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" target="_blank" class="btn estilo">Gerar Relatório </button>
+                                <button type="submit" class="btn estilo">Gerar Relatório </button>
                             </div>
                         </div>
                     </form>
