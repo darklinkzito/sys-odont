@@ -146,7 +146,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class=" hidden convenios col-md-3"><br><br>
+                            <div align="center" class=" hidden convenios col-md-3">
                                 <label class="control-label" for="convenio">Qual?:<span class="required">*</span></label>
                                 <select class="form-control" id="convenio" name="nm_convenio" required="required">
                                     <option value="">Escolha...</option>

@@ -72,16 +72,21 @@
       <div class="right_col" role="main">
         <!-- top tiles -->
         <div class="row tile_count">
-
+          <?php include("./req_banco/atendimentos_diarios.php") ?>
           <div class="col-md-3 col-sm-5 col-xs-7  tile_stats_count">
             <span class="count_top"><i class="fa fa-user"></i> Atendimentos Diários</span>
-            <div class="count">0</div>
-            <span class="count_bottom"><a href="">Clique para Mais Detalhes</a></span>
+            <div class="count"><?php echo ($dados['contagem']) ?></div>
+            <span class="count_bottom"><a href="tabelaConsultas.php">Clique para Mais Detalhes</a></span>
           </div>
           <div class="col-md-3 col-sm-5 col-xs-7 tile_stats_count">
             <span class="count_top"><i class="fa fa-user"></i> Atendimentos Diários Encerrados</span>
-            <div class="count">0</div>
-            <span class="count_bottom"><a href="">Clique para Mais Detalhes</a></span>
+            <div class="count"><?php echo ($dados['contagem']) ?></div>
+            <span class="count_bottom"><a href="tabelaConsultas.php">Clique para Mais Detalhes</a></span>
+          </div>
+          <div class="col-md-3 col-sm-5 col-xs-7 tile_stats_count">
+            <span class="count_top"><i class="fa fa-user"></i> Atendimentos Diários Pendentes</span>
+            <div class="count"><?php echo ($dados['contagem']) ?></div>
+            <span class="count_bottom"><a href="tabelaConsultas.php">Clique para Mais Detalhes</a></span>
           </div>
         </div>
         <!-- /top tiles -->
@@ -136,14 +141,8 @@
             <div class="clearfix"></div>
           </div>
         </div>
-
       </div>
-
-
-
     </div>
-  </div>
-  </div>
   </div>
   <!-- footer content -->
   <?php include("./View/footer.php") ?>

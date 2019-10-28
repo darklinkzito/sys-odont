@@ -205,7 +205,7 @@
                                 <div class="well">
                                     <h2>Ficha finalizada!</h2>
                                 </div>
-                                <a class="btn btn-success first" href="#">Start over</a>
+                                <a class="btn btn-success first" href="#">Cadastrar</a>
                             </div>
                         </div>
                     </div>

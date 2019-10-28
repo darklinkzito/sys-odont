@@ -101,14 +101,6 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-md-2 ">Data de Nascimento</label>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" data-inputmask="'mask': '99/99/9999'">
-                                    <span class="fa fa-calendar form-control-feedback right" aria-hidden="true"></span>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
                                 <label class="control-label col-md-2"> Profissional:<span class="required">*</span></label>
                                 <div class="col-md-6 col-sm-9 col-xs-6">
                                     <?php include("./req_banco/consulta_dentista.php") ?>
