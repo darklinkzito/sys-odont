@@ -30,7 +30,6 @@
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
-    <link href="../build/css/customSYS.css" rel="stylesheet">
     <style>
         .estilo {
             background-color: #2A3F54;
@@ -61,52 +60,78 @@
                     <?php include("./View/sidebarMenu.php") ?>
                 </div>
             </div>
-
             <!-- top navigation -->
-            <?php include("./View/topNavigation.php") ?>
-            <!-- page content -->
+            <div>
+                <?php include("./View/topNavigation.php") ?>
+            </div>
             <!-- page content -->
             <div class="right_col" role="main">
-                <div class="page-title">
-                    <div class="title_left">
-                    </div>
-
-
-                </div>
-                <div class="clearfix"></div>
-
                 <div class="x_panel">
                     <div class="x_title">
                         <h2>Cadastro de Paciente</h2>
-
                         <div class="clearfix"></div>
                     </div>
-                    <form id="regForm" action="./req_banco/cad_paciente.php">
 
-                        <h1>Cadastro Paciente</h1>
-
-                        <div class="tab">
-                            <p><input class="form-control" placeholder="Nome Completo" required="required" id="NomeCompleto" name="nm_paciente" oninput="this.className = ''"></p>
-                            <p>
-                                <input type="text" class="form-control" data-inputmask="'mask' : '999.999.999-99'" id="CPF" name="ds_cpf" required="required" placeholder="CPF" oninput="this.className = ''">
-                            </p>
-                            <p><input input type="text" class="form-control" data-inputmask="'mask' : '99.999.999-99'" required="required" id="RG" name="ds_rg" placeholder="RG" oninput="this.className = ''"></p>
-                            <p>
-                                <input type="text" class="form-control" required="required" id="DataNascimento" name="dt_paciente" data-inputmask="'mask': '99/99/9999'" placeholder="Data de Nascimento">
-                            </p>
-                            <p><input type="text" class="form-control" required="required" id="Endereco" name="ds_endereco" placeholder="Endereço" oninput="this.className = ''"></p>
-                            <p><input type="text" class="form-control" data-inputmask="'mask' : '99999-999'" id="CEP" name="ds_cep" placeholder="CEP" oninput="this.className = ''"></p>
-                            <p><input type="text" class="form-control" required="required" name="ds_numero" id="ds_numero" placeholder="Complemento (Andar,Num Casa, Bloco...etc)" oninput="this.className = ''"></p>
-                            <p><input type="text" class="form-control" data-inputmask="'mask' : '(99) 99999-9999'" id="Telefone" name="ds_telefone" placeholder="Telefone" oninput="this.className = ''"></p>
-                            <p><input type="email" class="form-control" required="required" name="ds_email" id="Email" placeholder="Email" oninput="this.className = ''"></p>
-                            <p>Sexo:</p>
-                            <select class="form-control" id="sexo" name="in_sexo" required="required">
-                                <option value="">Escolha...</option>
-                                <option value="Masculino">Masculino</option>
-                                <option value="Feminino">Feminino</option>
-                            </select>
-                            <br>
+                    <form class="form-horizontal" method="POST" action="./req_banco/cad_paciente.php">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="NomeCompleto">Nome Completo:<span class="required">*</span></label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" required="required" id="NomeCompleto" name="nm_usuario">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="pwd">CPF:<span class="required">*</span></label>
+                            <div class="col-sm-2">
+                                <input type="text" class="form-control" data-inputmask="'mask' : '999.999.999-99'" id="CPF" name="ds_cpf" required="required">
+                            </div>
                             <div class="form-group">
+                                <label class="control-label col-sm-2" for="RG">RG:<span class="required">*</span></label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" data-inputmask="'mask' : '99.999.999-99'" required="required" id="RG" name="ds_rg">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="DataNascimento">Data de nascimento:<span class="required">*</span></label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" required="required" id="DataNascimento" name="dt_usuario" data-inputmask="'mask': '99/99/9999'">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="sexo">Sexo <span class="required">*</span></label>
+                                <div class="col-sm-2">
+                                    <select class="form-control" id="sexo" name="in_sexo">
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Feminino">Feminino</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="Endereco">Endereço:<span class="required">*</span></label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" required="required" id="Endereco" name="ds_endereco">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="NumCasa">Número:<span class="required">*</span></label>
+                            <div class="col-sm-1">
+                                <input type="text" class="form-control" required="required" id="num_casa" name="num_casa">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="Telefone">Telefone:<span class="required">*</span></label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" data-inputmask="'mask' : '(99) 99999-9999'" id="Telefone" name="ds_telefone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="Email">Email:<span class="required">*</span></label>
+                            <div class="col-sm-4">
+                                <input type="email" class="form-control" required="required" id="Email" name="ds_email">
+                            </div>
+                        </div>
+                        <div class="form-group">
                                 <label for="" class="control-label col-md-2">Possui convênio?</label>
                                 <div class="form-check form-check-inline">  
                                     <div class="col-sm-1">
@@ -121,7 +146,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group hidden convenios"><br><br>
+                            <div class=" hidden convenios col-md-3"><br><br>
                                 <label class="control-label" for="convenio">Qual?:<span class="required">*</span></label>
                                 <select class="form-control" id="convenio" name="nm_convenio" required="required">
                                     <option value="">Escolha...</option>
@@ -129,145 +154,30 @@
                                     <option value="Feminino">Sulamerica</option>
                                 </select>
                                 <label class="control-label" for="convenio">Número da Carteira:<span class="required">*</span></label>
-                                <input type="text" class="form-control" required="required" id="carteira" name="ds_carteira" placeholder="Número">
+                                <input type="text" class="form-control col-md-3" required="required" id="carteira" name="ds_carteira" placeholder="Número">
                                 <label class="control-label" for="convenio">Tipo de Convênio:<span class="required">*</span></label>
-                                <input type="text" class="form-control" required="required" id="carteira" name="ds_tipo" placeholder="Tipo">
+                                <input type="text" class="form-control col-md-3" required="required" id="carteira" name="ds_tipo" placeholder="Tipo">
                                 <label class="control-label" for="convenio">Data de Validade:<span class="required">*</span></label>
-                                <input type="text" class="form-control" required="required" id="DataValidade" name="dt_validade" data-inputmask="'mask': '99/9999'" placeholder="Data de Validade">
+                                <input type="text" class="form-control col-md-3" required="required" id="DataValidade" name="dt_validade" data-inputmask="'mask': '99/9999'" placeholder="Data de Validade">
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn estilo" id="cadastrar"style="margin-top:30px">Cadastrar</button>
+                                </div>
+                        </div>
+                       
+        
+                            
                             </div>
                         </div>
-
-                        <div class="tab">
-                            <div class="form-group">
-                                <div>
-                                    <label for="">Se faz uso de algum medicamento informe abaixo:</label>
-                                    <p><input name="in_medicamento" placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Se o paciente tiver algum problema de saúde informe abaixo:</label>
-                                <div>
-                                    <p><input name="in_problema" placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Se o paciente estiver em algum tratamento ou acompanhamento informe
-                                    abaixo:</label>
-                                <div>
-                                    <p><input name="in_acompanhamento" placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="">Se o paciente tiver alergia a algum medicamento informe
-                                    abaixo:</label>
-                                <div>
-                                    <p><input name="in_alergia" placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Se o paciente já teve hemorragia
-                                    alguma vez ou
-                                    foi internado alguma vez informe
-                                    abaixo o motivo:</label>
-                                <div>
-                                    <p><input name="in_hemorragia" placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Se o paciente fuma ou já fumou
-                                    alguma vez informe por quanto tempo:</label>
-                                <div>
-                                    <p><input name="in_fumante" placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="">O paciente possui alguns hábitos como
-                                    apertamento, bruxismo, morder objetos?</label>
-                                <div>
-                                    <p><input name="in_habitos" placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="tab">
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea3">Como faz a higiene oral? Quantas vezes ao dia? Usa fio dental ou algum bochecho com flúor?(Responda na ordem)</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea3" rows="5"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea3">Já foi ao dentista antes? Quando foi seu último tratamento?(Responda na ordem)</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea3" rows="5"></textarea>
-                            </div>
-                            <h3>Crianças</h3>
-                            <div class="form-group">
-                                <label for="">Quem faz a higieno bucal da criança?</label>
-                                <div>
-                                    <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea3">Defina a alimentação básica da criança:</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea3" rows="5"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea3">Defina a alimentação básica da criança:</label>
-                            </div>
-                            <div class="form-group">
-                                <label for="" class="col-md-2">Faz uso de chupeta ou mamadeira?</label>
-                                <div class="form-check form-check-inline">
-                                    <div class="col-sm-1">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="FunctionConvenio(1)" oninput="this.className = ''">
-                                        <label class="form-check-label" for="inlineRadio1">Sim</label>
-                                    </div>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <div class="col-sm-1">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="FunctionConvenio(2)">
-                                        <label class="form-check-label" for="inlineRadio1">Não</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="tab">
-                            <p><input placeholder="Pressão Arterial" oninput="this.className = ''"></p>
-                            <p>
-                                <input type="text" class="form-control" required="required" id="DataPA" name="dt_pa" data-inputmask="'mask': '99/99/9999'" placeholder="Data de Nascimento">
-                            </p>
-                            <p><input placeholder="BPM" oninput="this.className = ''"></p>
-                            <p>
-                                <input type="text" class="form-control" required="required" id="DataBPM" name="dt_bpm" data-inputmask="'mask': '99/99/9999'" placeholder="Data de Nascimento">
-                            </p>
-
-                        </div>
-
-                        <div style="overflow:auto;">
-                            <div style="float:right;">
-                                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
-                                <button type="button" id="nextBtn" onclick="nextPrev(1)">Proximo</button>
-                            </div>
-                        </div>
-
-                        <!-- Circles which indicates the steps of the form: -->
-                        <div style="text-align:center;margin-top:40px;">
-                            <span class="step"></span>
-                            <span class="step"></span>
-                            <span class="step"></span>
-                            <span class="step"></span>
-                        </div>
-
-                    </form>
                 </div>
+                </form>
             </div>
+            <!-- footer content -->
+            <?php include("./View/footer.php") ?>
         </div>
     </div>
-
-    <!-- footer content -->
-    <?php include("./View/footer.php") ?>
+    
 
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
@@ -277,15 +187,35 @@
     <script src="../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../vendors/moment/min/moment.min.js"></script>
+    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- bootstrap-datetimepicker -->
+    <script src="../vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <!-- Ion.RangeSlider -->
+    <script src="../vendors/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+    <!-- Bootstrap Colorpicker -->
+    <script src="../vendors/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
     <!-- jquery.inputmask -->
     <script src="../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
-    <!-- jQuery Smart Wizard -->
-    <script src="../vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+    <!-- jQuery Knob -->
+    <script src="../vendors/jquery-knob/dist/jquery.knob.min.js"></script>
+    <!-- Cropper -->
+    <script src="../vendors/cropper/dist/cropper.min.js"></script>
+    <!-- validator -->
+    <script src="../vendors/validator/validator.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
-    <script src="js/Form/Formwiz.js"></script>
 
+    <!-- Initialize datetimepicker -->
+    <script>
+    function FunctionConvenio(item) {
+    if (item == 1)
+        $('.convenios').removeClass('hidden');
+    else
+        $('.convenios').addClass('hidden')
+}
+    </script>
 </body>
-
 
 </html>
