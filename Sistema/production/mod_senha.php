@@ -31,20 +31,21 @@
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
     <style>
-    .estilo {
-        background-color: #2A3F54;
-        color: white;
-    }
+        .estilo {
+            background-color: #2A3F54;
+            color: white;
+        }
 
-    .panel>.panel-heading {
-        color: white;
-        background-color: #2A3F54;
-        border-color: #2A3F54;
-        
-    }
-    ::placeholder{
-        color:black;
-    }
+        .panel>.panel-heading {
+            color: white;
+            background-color: #2A3F54;
+            border-color: #2A3F54;
+
+        }
+
+        ::placeholder {
+            color: black;
+        }
     </style>
     <script src="https://kit.fontawesome.com/37b548cb8d.js"></script>
 
@@ -92,34 +93,35 @@
                                         </h3>
                                     </div>
                                     <div class="panel-body">
-                                        <div style="margin-top:80px;" class="col-xs-6 col-sm-6 col-md-6 login-box">
+                                        <div class="col-xs-6 col-sm-6 col-md-6 login-box">
                                             <div class="form-group">
                                                 <div class="input-group">
-                                                    <div class="input-group-addon"><span
-                                                            class="glyphicon glyphicon-lock"></span></div>
-                                                    <input class="form-control" type="password"
-                                                        placeholder='Senha Atual'>
+                                                    <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                                                    <input class="form-control" type="password" placeholder='Senha Atual'>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="input-group">
-                                                    <div class="input-group-addon"><span
-                                                            class="glyphicon glyphicon-log-in"></span></div>
-                                                    <input class="form-control" type="password"
-                                                        placeholder='Nova Senha'>
+                                                    <div class="input-group-addon"><span class="glyphicon glyphicon-log-in"></span></div>
+                                                    <input class="form-control" id="password" type="password" placeholder='Nova Senha'>
                                                 </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon"><span class="glyphicon glyphicon-log-in"></span></div>
+                                                    <input class="form-control" type="password" placeholder='Confirmar Nova Senha'>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <div class="x_panel">
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-6 col-md-6"></div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <button class="btn icon-btn-save estilo" type="submit">
+                                                    <span class="btn-save-label"><i class="glyphicon glyphicon-floppy-disk"></i></span>Salvar</button>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="row">
-                                        <div class="col-xs-6 col-sm-6 col-md-6"></div>
-                                        <div class="col-xs-6 col-sm-6 col-md-6">
-                                            <button class="btn icon-btn-save estilo" type="submit">
-                                                <span class="btn-save-label"><i
-                                                        class="glyphicon glyphicon-floppy-disk"></i></span>Salvar</button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
