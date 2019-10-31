@@ -88,7 +88,7 @@
                                 <div class="panel panel-dark">
                                     <div class="panel-heading">
                                         <h3 class="panel-title">
-                                            <span class="glyphicon glyphicon-th"></span>
+                                            <span class="glyphicon glyphicon-wrench"></span>
                                             Mofifique sua senha
                                         </h3>
                                     </div>
@@ -113,14 +113,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    <div class="x_panel">
-                                        <div class="row">
                                             <div class="col-xs-6 col-sm-6 col-md-6 pull-right">
-                                                <button class="btn icon-btn-save estilo" type="submit">
+                                                <button class="btn icon-btn-save estilo pull-right" type="submit">
                                                     <span class="btn-save-label"><i class="glyphicon glyphicon-floppy-disk"></i></span>Salvar</button>
                                             </div>
-                                        </div>
-                                    </div>
                                     </div>
                                 </div>
                             </div>
