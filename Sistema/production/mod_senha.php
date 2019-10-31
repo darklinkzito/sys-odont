@@ -31,10 +31,20 @@
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
     <style>
-        .estilo {
-            background-color: #2A3F54;
-            color: white;
-        }
+    .estilo {
+        background-color: #2A3F54;
+        color: white;
+    }
+
+    .panel>.panel-heading {
+        color: white;
+        background-color: #2A3F54;
+        border-color: #2A3F54;
+        
+    }
+    ::placeholder{
+        color:black;
+    }
     </style>
     <script src="https://kit.fontawesome.com/37b548cb8d.js"></script>
 
@@ -68,68 +78,54 @@
             <div class="right_col" role="main">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Dados de perfil</h2>
+                        <h2>Modificar senha</h2>
                         <div class="clearfix"></div>
                     </div>
-                    <?php include("./req_banco/meusdados.php");
-                    foreach ($dados as $value) {
-                        ?>
-
-                        <form class="form-horizontal">
-                            <div class="form-group">
-                                <label class="control-label col-sm-2" for="NomeCompleto">Nome Completo:<span class="required">*</span></label>
-                                <div class="col-sm-6">
-                                    <input type="text" readonly class="form-control" value="<?php echo $value['usua_nm_usuario']; ?>" disabled>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-sm-2" for="pwd">CPF:<span class="required">*</span></label>
-                                <div class="col-sm-2">
-                                    <input type="text" readonly class="form-control" data-inputmask="'mask' : '999.999.999-99'" value="<?php echo $value['usua_ds_cpf']; ?>" disabled>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-sm-2" for="RG">RG:<span class="required">*</span></label>
-                                    <div class="col-sm-2">
-                                        <input type="text" readonly class="form-control" data-inputmask="'mask' : '99.999.999-99'" value="<?php echo $value['usua_ds_rg']; ?>" disabled>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-2">
+                                <div class="panel panel-dark">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">
+                                            <span class="glyphicon glyphicon-th"></span>
+                                            Mofifique sua senha
+                                        </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div style="margin-top:80px;" class="col-xs-6 col-sm-6 col-md-6 login-box">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon"><span
+                                                            class="glyphicon glyphicon-lock"></span></div>
+                                                    <input class="form-control" type="password"
+                                                        placeholder='Senha Atual'>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon"><span
+                                                            class="glyphicon glyphicon-log-in"></span></div>
+                                                    <input class="form-control" type="password"
+                                                        placeholder='Nova Senha'>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="control-label col-sm-2" for="DataNascimento">Data de nascimento:<span class="required">*</span></label>
-                                    <div class="col-sm-2">
-                                        <input type="text" readonly class="form-control" data-inputmask="'mask': '99/99/9999'" value="<?php echo date("d/m/Y", strtotime($value['usua_dt_usuario'])); ?>" disabled>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-sm-2" for="Endereco">Endereço:<span class="required">*</span></label>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control" value="<?php echo $value['usua_ds_endereco']; ?>">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-sm-2" for="Telefone">Telefone:<span class="required">*</span></label>
-                                    <div class="col-sm-3">
-                                        <input type="text" class="form-control" value="<?php echo $value['usua_ds_telefone']; ?>">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-sm-2" for="Email">Email:<span class="required">*</span></label>
-                                    <div class="col-sm-4">
-                                        <input type="text" class="form-control" value="<?php echo $value['usua_ds_email']; ?>" disabled>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-sm-2" for="Email">Função:<span class="required">*</span></label>
-                                    <div class="col-sm-4">
-                                        <input type="text" readonly class="form-control" value="<?php echo $value['func_nm_funcao']; ?>" disabled>
+                                <div class="panel-footer">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-sm-6 col-md-6"></div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <button class="btn icon-btn-save estilo" type="submit">
+                                                <span class="btn-save-label"><i
+                                                        class="glyphicon glyphicon-floppy-disk"></i></span>Salvar</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div style="margin-left:300px">
-                            <a class="btn btn-primary btn-lg estilo" href="mod_senha.php" role="button">Modificar senha</a>
-                            </div>
+                        </div>
+                    </div>
                 </div>
-                </form>
-            <?php } ?>
             </div>
             <!-- footer content -->
             <?php include("./View/footer.php") ?>
