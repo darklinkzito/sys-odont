@@ -115,8 +115,7 @@
                                         </div>
                                     <div class="x_panel">
                                         <div class="row">
-                                            <div class="col-xs-6 col-sm-6 col-md-6"></div>
-                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="col-xs-6 col-sm-6 col-md-6 pull-right">
                                                 <button class="btn icon-btn-save estilo" type="submit">
                                                     <span class="btn-save-label"><i class="glyphicon glyphicon-floppy-disk"></i></span>Salvar</button>
                                             </div>
