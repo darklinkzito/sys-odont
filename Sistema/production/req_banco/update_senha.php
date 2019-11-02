@@ -15,6 +15,6 @@ try {
     echo 'ERROR: ' . $e->getMessage();
 }
 if (isset($stmt)) {
-    $_SESSION['editado'] = 1;
+    $_SESSION['Senha Alterada!'] = 1;
     header('Location: ../mod_senha.php');
 }
