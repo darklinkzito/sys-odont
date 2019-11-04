@@ -52,15 +52,14 @@
 </head>
 <?php include("./View/verificar_Login.php") ?>
 <?php
-    if ($_SESSION['Senha Alterada!'] == 1) {
-        echo "<script>alert(Senha alterada com sucesso!);</script>";
-        $_SESSION['Senha Alterada!'] = 0;
-    }
-    if ($_SESSION['Nao_alterada'] == 1) {
-        echo "<script>alert(Senha informada nao confere);</script>";
-        $_SESSION['Nao_alterada'] = 0;
-    }
-    ?>
+if ($_SESSION['Nao_alterada'] == 1) {
+    echo '<script language="javascript">';
+    echo 'alert("A senha atual informada não confere")';
+    echo '</script>';
+    $_SESSION['Nao_alterada'] = 0;
+}
+?>
+
 <body class="nav-md">
     <div class="container body">
         <div class="main_container">
@@ -102,7 +101,7 @@
                                                 Mofifique sua senha
                                             </h3>
                                         </div>
-                                        <form method="POST" action="./req_banco/update_senha.php" >
+                                        <form method="POST" action="./req_banco/update_senha.php">
                                             <div class="panel-body">
                                                 <div class="col-xs-6 col-sm-6 col-md-6 login-box">
                                                     <div class="form-group">

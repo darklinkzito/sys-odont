@@ -22,6 +22,8 @@ $_SESSION['usuario_nome']= $nome;
 $_SESSION['usuario_perfil']= $perfil;
 $_SESSION['editado']= 0;
 $_SESSION['dados_invalidos'] = 0;
+$_SESSION['Senha Alterada!'] = 0;
+$_SESSION['Nao_alterada'] = 0;
 if (isset($dados[0])){
     header('Location: ../index.php'); 
 }else{
