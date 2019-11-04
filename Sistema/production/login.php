@@ -61,6 +61,7 @@
             </div>
             <div>
               <input type="submit" value="Acessar" class="btn float-right login_btn">
+              <input type="button" onclick="window.location='recuperarSenha.php';" value="Esqueci Minha Senha!" class="btn float-right login_btn">
             </div>
           </form>
         </section>

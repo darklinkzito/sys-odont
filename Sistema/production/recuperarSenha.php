@@ -48,7 +48,8 @@
               <input type="text" class="form-control" placeholder="Codigo de usuário" name="senha" required="required" />
             </div>
             <div>
-              <input type="submit" value="Enviar" class="btn float-right login_btn">
+              <input type="submit" value="Enviar" class="btn login_btn">
+              <input type="button" onclick="window.location='login.php';" value="Voltar" class="btn login_btn">
             </div>
           </form>
         </section>
