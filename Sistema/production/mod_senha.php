@@ -51,7 +51,16 @@
 
 </head>
 <?php include("./View/verificar_Login.php") ?>
-
+<?php
+    if ($_SESSION['Senha Alterada!'] == 1) {
+        echo "<script>alert(Senha alterada com sucesso!);</script>";
+        $_SESSION['Senha Alterada!'] = 0;
+    }
+    if ($_SESSION['Nao_alterada'] == 1) {
+        echo "<script>alert(Senha informada nao confere);</script>";
+        $_SESSION['Nao_alterada'] = 0;
+    }
+    ?>
 <body class="nav-md">
     <div class="container body">
         <div class="main_container">
@@ -93,54 +102,49 @@
                                                 Mofifique sua senha
                                             </h3>
                                         </div>
-
-                                        <div class="panel-body">
-                                            <div class="col-xs-6 col-sm-6 col-md-6 login-box">
-                                                <div class="form-group">
-                                                    <div class="input-group">
-                                                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-                                                        <input class="form-control" type="password" placeholder='Senha Atual' />
+                                        <form method="POST" action="./req_banco/update_senha.php" >
+                                            <div class="panel-body">
+                                                <div class="col-xs-6 col-sm-6 col-md-6 login-box">
+                                                    <div class="form-group">
+                                                        <div class="input-group">
+                                                            <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                                                            <input class="form-control" type="password" name="senha_antiga" placeholder='Senha Atual' />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="input-group">
+                                                            <div class="input-group-addon"><span class="glyphicon glyphicon-log-in"></span></div>
+                                                            <input class="form-control" id="NovaSenha" name="senha_nova" type="password" placeholder='Nova Senha' />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="input-group">
+                                                            <div class="input-group-addon"><span class="glyphicon glyphicon-log-in"></span></div>
+                                                            <input class="form-control" id="CNovaSenha" type="password" placeholder='Confirmar Nova Senha' />
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    <div class="input-group">
-                                                        <div class="input-group-addon"><span class="glyphicon glyphicon-log-in"></span></div>
-                                                        <input class="form-control" id="NovaSenha" type="password" placeholder='Nova Senha' />
-                                                    </div>
+                                                <div class="col-xs-6 col-sm-6 col-md-6 pull-right">
+                                                    <button onclick="validarSenha()" class="btn icon-btn-save estilo pull-right" type="submit">
+                                                        <span class="btn-save-label">
+                                                            <i class="glyphicon glyphicon-floppy-disk">
+                                                            </i>
+                                                        </span>
+                                                        Salvar</button>
                                                 </div>
-                                                <div class="form-group">
-                                                    <div class="input-group">
-                                                        <div class="input-group-addon"><span class="glyphicon glyphicon-log-in"></span></div>
-                                                        <input class="form-control" id="CNovaSenha" type="password" placeholder='Confirmar Nova Senha' />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-6 col-sm-6 col-md-6 pull-right">
-                                                <button onclick="validarSenha()" class="btn icon-btn-save estilo pull-right" type="submit">
-                                                    <span class="btn-save-label">
-                                                        <i class="glyphicon glyphicon-floppy-disk">
-                                                        </i>
-                                                    </span>
-                                                    Salvar</button>
-                                            </div>
-                                        </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </form>
-            <!-- footer content -->
-            <?php include("./View/footer.php") ?>
         </div>
+        </form>
+        <!-- footer content -->
+        <?php include("./View/footer.php") ?>
     </div>
-    <?php 
-    if ($_SESSION['Senha Alterada!'] == 1 ){
-        echo "<script>alert(Senha alterada com sucesso!);</script>";
-        $_SESSION['Senha Alterada!'] = 0;
-    }
-    ?>
+    </div>
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->

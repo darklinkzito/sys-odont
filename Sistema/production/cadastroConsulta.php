@@ -58,12 +58,7 @@
                     <div class="clearfix"></div>
 
                     <!-- menu profile quick info -->
-                    <div class="profile clearfix">
-                        <div class="profile_info">
-                            <span>Welcome,</span>
-                            <h3>John Doe</h3>
-                        </div>
-                    </div>
+                    <?php include("./View/profile.php") ?>
 
                     <br />
                     <!-- sidebar menu -->
@@ -104,14 +99,21 @@
                                 <label class="control-label col-md-2"> Profissional:<span class="required">*</span></label>
                                 <div class="col-md-6 col-sm-9 col-xs-6">
                                     <?php include("./req_banco/consulta_dentista.php") ?>
-                                    <select class="form-control selectpicker" data-live-search="true" required="required" id="dentista" name="dentista">
+                                    <select class="form-control" data-live-search="true"  onchange="showEspecialidade()" required="required" id="dentista" name="dentista">
                                         <option value="0">Selecione</option>
                                         <?php foreach ($dados as $value) { ?><option value="<?php echo ($value['prof_cod_profissional']) ?>"><?php echo $value['prof_nm_profissional'] ?></option> <?php } ?>
                                     </select>
 
                                 </div>
                             </div>
-
+                            <div class="form-group hidden especialidade">
+                                <label class="control-label col-md-2"> Especialidade:<span class="required">*</span></label>
+                                <div class="col-md-6 col-sm-9 col-xs-6">
+                                    <select class="form-control" data-live-search="true" required="required" id="especialidade" name="especilidade">
+                                        <option value="0">Selecione</option>
+                                    </select>
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <label class="control-label col-sm-2">Consulta Data e Hora:<span class="required">*</span></label>
                                 <div class="col-sm-5">
@@ -133,6 +135,26 @@
                 $(function() {
                     $('.selectpicker').selectpicker();
                 });
+                function showEspecialidade() {
+                    $('.especialidade').removeClass('hidden');
+                    $.ajax({
+                        type: "POST",
+                        url: "./req_banco/consultar_especialidade.php",
+                        data: {
+                            dentista: $('#dentista').val(),
+                            ajax: 1
+                        },
+                        success: function(result) {
+                            var obj = JSON.parse(result);
+                            var selectEspecialidade = '<option value="0">Selecione</option>';
+
+                            $.each(obj, function(index, element) {
+                                selectEspecialidade += "<option value=" + element.codigo + ">" + element.nome + "</option>"
+                            });
+                            $('#especialidade').html(selectEspecialidade);
+                        }
+                    });
+                }
             </script>
             <!-- jQuery -->
             <script src="../vendors/jquery/dist/jquery.min.js"></script>
