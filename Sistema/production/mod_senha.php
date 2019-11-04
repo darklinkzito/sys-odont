@@ -76,59 +76,71 @@
                 <?php include("./View/topNavigation.php") ?>
             </div>
             <!-- page content -->
-            <div class="right_col" role="main">
-                <div class="x_panel">
-                    <div class="x_title">
-                        <h2>Modificar senha</h2>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-2">
-                                <div class="panel panel-dark">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">
-                                            <span class="glyphicon glyphicon-wrench"></span>
-                                            Mofifique sua senha
-                                        </h3>
-                                    </div>
-                                    <div class="panel-body">
-                                        <div class="col-xs-6 col-sm-6 col-md-6 login-box">
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-                                                    <input class="form-control" type="password" placeholder='Senha Atual'>
+            <form id="FormSenha" method="POST" action="./req_banco/update_senha.php">
+                <div class="right_col" role="main">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Modificar senha</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-2">
+                                    <div class="panel panel-dark">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">
+                                                <span class="glyphicon glyphicon-wrench"></span>
+                                                Mofifique sua senha
+                                            </h3>
+                                        </div>
+
+                                        <div class="panel-body">
+                                            <div class="col-xs-6 col-sm-6 col-md-6 login-box">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                                                        <input class="form-control" type="password" placeholder='Senha Atual' />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon"><span class="glyphicon glyphicon-log-in"></span></div>
+                                                        <input class="form-control" id="NovaSenha" type="password" placeholder='Nova Senha' />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon"><span class="glyphicon glyphicon-log-in"></span></div>
+                                                        <input class="form-control" id="CNovaSenha" type="password" placeholder='Confirmar Nova Senha' />
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-addon"><span class="glyphicon glyphicon-log-in"></span></div>
-                                                    <input class="form-control" id="password" type="password" placeholder='Nova Senha'>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-addon"><span class="glyphicon glyphicon-log-in"></span></div>
-                                                    <input class="form-control" type="password" placeholder='Confirmar Nova Senha'>
-                                                </div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6 pull-right">
+                                                <button onclick="validarSenha()" class="btn icon-btn-save estilo pull-right" type="submit">
+                                                    <span class="btn-save-label">
+                                                        <i class="glyphicon glyphicon-floppy-disk">
+                                                        </i>
+                                                    </span>
+                                                    Salvar</button>
                                             </div>
                                         </div>
-                                            <div class="col-xs-6 col-sm-6 col-md-6 pull-right">
-                                                <button class="btn icon-btn-save estilo pull-right" type="submit">
-                                                    <span class="btn-save-label"><i class="glyphicon glyphicon-floppy-disk"></i></span>Salvar</button>
-                                            </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
             <!-- footer content -->
             <?php include("./View/footer.php") ?>
         </div>
     </div>
-
+    <?php 
+    if ($_SESSION['Senha Alterada!'] == 1 ){
+        echo "<script>alert(Senha alterada com sucesso!);</script>";
+        $_SESSION['Senha Alterada!'] = 0;
+    }
+    ?>
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -158,6 +170,17 @@
     <script src="../build/js/custom.min.js"></script>
 
     <!-- Initialize datetimepicker -->
+    <script>
+        function validarSenha() {
+            NovaSenha = document.getElementById('NovaSenha').value;
+            CNovaSenha = document.getElementById('CNovaSenha').value;
+            if (NovaSenha != CNovaSenha) {
+                alert("Senhas não conferem!");
+            } else {
+                document.FormSenha.submit();
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -42,7 +42,7 @@
           <form method="POST" action="">
 
             <h1> <i class="fa fa-tooth po "></i></h1>
-            <p>Insire o seu código de usuário</p>
+            <p>Insira o seu código de usuário</p>
             <p>um email será enviado para você com a recuperação da senha.</p>
             <div>
               <input type="text" class="form-control" placeholder="Codigo de usuário" name="senha" required="required" />
