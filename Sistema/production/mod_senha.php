@@ -52,6 +52,12 @@
 </head>
 <?php include("./View/verificar_Login.php") ?>
 <?php
+if ($_SESSION['Senha Alterada!'] == 1) {
+    echo '<script language="javascript">';
+    echo 'alert("A senha foi alterada com sucesso!")';
+    echo '</script>';
+    $_SESSION['Senha Alterada!'] = 0;
+}
 if ($_SESSION['Nao_alterada'] == 1) {
     echo '<script language="javascript">';
     echo 'alert("A senha atual informada não confere")';

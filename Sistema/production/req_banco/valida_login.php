@@ -4,7 +4,7 @@ $usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
 try {
     require('conexao.php');    
-    $stmt = $conn->prepare("select * from usuario where usua_nm_usuario = '$usuario' and usua_nm_senha = '$senha'");
+    $stmt = $conn->prepare("SELECT * FROM usuario WHERE usua_nm_usuario = '$usuario' AND usua_nm_senha = '$senha'");
     $stmt->execute();
     $dados = $stmt->fetchAll();
 } catch (PDOException $e) {
@@ -24,6 +24,11 @@ $_SESSION['editado']= 0;
 $_SESSION['dados_invalidos'] = 0;
 $_SESSION['Senha Alterada!'] = 0;
 $_SESSION['Nao_alterada'] = 0;
+$_SESSION['ficha_cadastrada'] = false;
+$_SESSION['ficha_nao_cadastrada'] = false;
+$_SESSION['msg_erro'] = false;
+$_SESSION['cadastrou_paciente'] = false;
+$_SESSION["especialidade"]= false;
 if (isset($dados[0])){
     header('Location: ../index.php'); 
 }else{

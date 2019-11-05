@@ -45,7 +45,19 @@
             <td><?php echo $dados['paci_ds_email'] ?></td>
         </tr>
         <tr>
-            <th>Convenio</th>
-            <td><?php echo $dados['paci_ds_convenio'] ?></td>
+            <th>Email</th>
+            <td><?php echo $dados['paci_ds_email'] ?></td>
         </tr>
+        
+    <?php include("../req_banco/consulta_convenio.php");
+    foreach($dados as $value){?>
+        <tr>
+            <th>ID-Convenio</th>
+            <td><?php echo $value['conv_cod_convenio'] ?></td>
+        </tr>
+        <tr>
+            <th>Nome-Convenio</th>
+            <td><?php echo $value['conv_nm_convenio'] ?></td>
+        </tr>
+    <?php } ?>
 </table>

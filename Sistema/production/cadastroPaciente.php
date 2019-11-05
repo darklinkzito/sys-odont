@@ -30,21 +30,28 @@
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
     <style>
-    .estilo {
-        background-color: #2A3F54;
-        color: white;
-    }
+        .estilo {
+            background-color: #2A3F54;
+            color: white;
+        }
 
-    .convenios {
-        align-content: center;
-        justify-content: center;
-    }
-    }
+        .convenios {
+            align-content: center;
+            justify-content: center;
+        }
+        }
     </style>
     <script src="https://kit.fontawesome.com/37b548cb8d.js"></script>
 
 </head>
-<?php include("./View/verificar_Login.php") ?>
+<?php include("./View/verificar_Login.php");
+if ($_SESSION['msg_erro'] == true) {
+    echo '<script language="javascript">';
+    echo 'alert("Paciente não pode ser cadastrado favor entrar em contato com o setor de TI!")';
+    echo '</script>';
+    $_SESSION['msg_erro'] = false;
+}
+?>
 
 <body class="nav-md">
     <div class="container body">
@@ -79,38 +86,30 @@
 
                     <form class="form-horizontal" method="POST" action="./req_banco/cad_paciente.php">
                         <div class="form-group">
-                            <label class="control-label col-sm-2" for="NomeCompleto">Nome Completo:<span
-                                    class="required">*</span></label>
+                            <label class="control-label col-sm-2" for="NomeCompleto">Nome Completo:<span class="required">*</span></label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" required="required" id="NomeCompleto"
-                                    name="nm_usuario">
+                                <input type="text" class="form-control" required="required" id="NomeCompleto" name="nm_paciente">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="pwd">CPF:<span class="required">*</span></label>
                             <div class="col-sm-2">
-                                <input type="text" class="form-control" data-inputmask="'mask' : '999.999.999-99'"
-                                    id="CPF" name="ds_cpf" required="required">
+                                <input type="text" class="form-control" data-inputmask="'mask' : '999.999.999-99'" id="CPF" name="ds_cpf" required="required">
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-sm-2" for="RG">RG:<span
-                                        class="required">*</span></label>
+                                <label class="control-label col-sm-2" for="RG">RG:<span class="required">*</span></label>
                                 <div class="col-sm-2">
-                                    <input type="text" class="form-control" data-inputmask="'mask' : '99.999.999-99'"
-                                        required="required" id="RG" name="ds_rg">
+                                    <input type="text" class="form-control" data-inputmask="'mask' : '99.999.999-99'" required="required" id="RG" name="ds_rg">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-sm-2" for="DataNascimento">Data de nascimento:<span
-                                        class="required">*</span></label>
+                                <label class="control-label col-sm-2" for="DataNascimento">Data de nascimento:<span class="required">*</span></label>
                                 <div class="col-sm-2">
-                                    <input type="text" class="form-control" required="required" id="DataNascimento"
-                                        name="dt_usuario" data-inputmask="'mask': '99/99/9999'">
+                                    <input type="text" class="form-control" required="required" id="DataNascimento" name="dt_paciente" data-inputmask="'mask': '99/99/9999'">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-sm-2" for="sexo">Sexo <span
-                                        class="required">*</span></label>
+                                <label class="control-label col-sm-2" for="sexo">Sexo <span class="required">*</span></label>
                                 <div class="col-sm-2">
                                     <select class="form-control" id="sexo" name="in_sexo">
                                         <option value="Masculino">Masculino</option>
@@ -120,80 +119,75 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-2" for="Endereco">Endereço:<span
-                                    class="required">*</span></label>
+                            <label class="control-label col-sm-2" for="cep">CEP:<span class="required">*</span></label>
+                            <div class="col-sm-2">
+                                <input type="text" class="form-control" data-inputmask="'mask' : '99999-999'" id="CEP" name="ds_cep">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="Endereco">Endereço:<span class="required">*</span></label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" required="required" id="Endereco"
-                                    name="ds_endereco">
+                                <input type="text" class="form-control" required="required" id="Endereco" name="ds_endereco">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-sm-2" for="NumCasa">Número:<span
-                                    class="required">*</span></label>
+                            <label class="control-label col-sm-2" for="NumCasa">Número:<span class="required">*</span></label>
                             <div class="col-sm-1">
-                                <input type="text" class="form-control" required="required" id="num_casa"
-                                    name="num_casa">
+                                <input type="text" class="form-control" required="required" id="num_casa" name="num_casa">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-2" for="Telefone">Telefone:<span
-                                    class="required">*</span></label>
+                            <label class="control-label col-sm-2" for="Telefone">Telefone:<span class="required">*</span></label>
                             <div class="col-sm-3">
-                                <input type="text" class="form-control" data-inputmask="'mask' : '(99) 99999-9999'"
-                                    id="Telefone" name="ds_telefone">
+                                <input type="text" class="form-control" data-inputmask="'mask' : '(99) 99999-9999'" id="Telefone" name="ds_telefone">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-2" for="Email">Email:<span
-                                    class="required">*</span></label>
+                            <label class="control-label col-sm-2" for="Email">Email:<span class="required">*</span></label>
                             <div class="col-sm-4">
                                 <input type="email" class="form-control" required="required" id="Email" name="ds_email">
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="" class="control-label col-md-2">Possui convênio?</label>
                             <div class="form-check form-check-inline">
                                 <div class="col-sm-1">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio1" value="option1" onclick="FunctionConvenio(1)"
-                                        oninput="this.className = ''">
+                                    <input class="form-check-input" type="radio" name="convenio" id="inlineRadio1" value="true" onclick="FunctionConvenio(1)" oninput="this.className = ''">
                                     <label class="form-check-label" for="inlineRadio1">Sim</label>
                                 </div>
                             </div>
                             <div class="form-check form-check-inline">
                                 <div class="col-sm-1">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio1" value="option1" onclick="FunctionConvenio(2)">
+                                    <input class="form-check-input" type="radio" name="convenio" id="inlineRadio1" value="false" onclick="FunctionConvenio(2)">
                                     <label class="form-check-label" for="inlineRadio1">Não</label>
                                 </div>
                             </div>
-                        <div class=" hidden convenios col-md-3" style='margin-right:500px'>
-                            <label class="control-label" for="convenio">Qual?:<span class="required">*</span></label>
-                            <select class="form-control" id="convenio" name="nm_convenio" required="required">
-                                <option value="">Escolha...</option>
-                                <option value="Masculino">Hapvida</option>
-                                <option value="Feminino">Sulamerica</option>
-                            </select>
-                            <label class="control-label" for="convenio">Número da Carteira:<span
-                                    class="required">*</span></label>
-                            <input type="text" class="form-control col-md-3" required="required" id="carteira"
-                                name="ds_carteira" placeholder="Número">
-                            <label class="control-label" for="convenio">Tipo de Convênio:<span
-                                    class="required">*</span></label>
-                            <input type="text" class="form-control col-md-3" required="required" id="carteira"
-                                name="ds_tipo" placeholder="Tipo">
-                            <label class="control-label" for="convenio">Data de Validade:<span
-                                    class="required">*</span></label>
-                            <input type="text" class="form-control col-md-3" required="required" id="DataValidade"
-                                name="dt_validade" data-inputmask="'mask': '99/9999'" placeholder="Data de Validade">
-                        </div>
+                            <div class=" hidden convenios col-md-6 pull-right">
+                                <label class="control-label" for="convenio">Qual?:<span class="required">*</span></label>
+                                <select class="form-control" id="convenio" name="nm_convenio" required="required">
+                                    <option value="">Escolha...</option>
+                                    <option value="Hapvida">Hapvida</option>
+                                    <option value="Sulamerica">Sulamerica</option>
+                                </select>
+                                <div class="form-group">
+                                    <label class="control-label" for="convenio">Número da Carteira:<span class="required">*</span></label>
+                                    <input type="text" class="form-control col-md-3" required="required" id="carteira" name="ds_carteira" placeholder="Número">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="convenio">Tipo de Convênio:<span class="required">*</span></label>
+                                    <input type="text" class="form-control col-md-3" required="required" id="carteira" name="ds_tipo" placeholder="Tipo">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="convenio">Data de Validade:<span class="required">*</span></label>
+                                    <input type="text" class="form-control col-md-3" required="required" id="DataValidade" name="dt_validade" data-inputmask="'mask': '99/9999'" placeholder="Data de Validade">
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn estilo" id="cadastrar"
-                                    style="margin-top:30px">Cadastrar</button>
+                                <button type="submit" class="btn estilo" id="cadastrar" style="margin-top:30px">Cadastrar</button>
                             </div>
                         </div>
 
@@ -240,12 +234,12 @@
 
     <!-- Initialize datetimepicker -->
     <script>
-    function FunctionConvenio(item) {
-        if (item == 1)
-            $('.convenios').removeClass('hidden');
-        else
-            $('.convenios').addClass('hidden')
-    }
+        function FunctionConvenio(item) {
+            if (item == 1)
+                $('.convenios').removeClass('hidden');
+            else
+                $('.convenios').addClass('hidden')
+        }
     </script>
 </body>
 

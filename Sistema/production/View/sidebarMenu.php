@@ -7,7 +7,7 @@
                     <li><a href="cadastroFuncionario.php">Cadastro de Funcionários</a></li>
                     <li><a href="cadastroConsulta.php">Cadastro de consulta</a></li>
                     <li><a href="cadastroPaciente.php">Cadastro de Paciente</a></li>
-                    <li><a href="horarioatendimento.php">Cadastro de Horáriose Especialidades</a></li>
+                    <li><a href="especialidade.php">Cadastro de Especialidades</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-table"></i> Registros <span class="fa fa-chevron-down"></span></a>
@@ -15,6 +15,7 @@
                     <li><a href="perfilUsuario.php">Registro de Usuários</a></li>
                     <li><a href="perfilPaciente.php">Registro de Paciente</a></li>
                     <li><a href="tabelaConsultas.php">Registro de Consultas</a></li>
+                    <li><a href="registro_especialidade.php">Registro de Especialidades</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-file"></i> Relatórios <span class="fa fa-chevron-down"></span></a>

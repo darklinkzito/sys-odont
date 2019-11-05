@@ -39,7 +39,12 @@
     <script src="https://kit.fontawesome.com/37b548cb8d.js"></script>
 
 </head>
-<?php include("./View/verificar_Login.php") ?>
+<?php include("./View/verificar_Login.php");
+if($_SESSION['cadastrou_paciente'] == false){
+    header('Location: acesso_negado.php');
+}
+ ?>
+
 
 <body class="nav-md">
     <div class="container body">
@@ -71,19 +76,19 @@
                         <h2>Ficha Anamnese</h2>
                         <div class="clearfix"></div>
                     </div>
-                    <form class="form-horizontal" method="" action="">
+                    <form class="form-horizontal" method="POST" action="./req_banco/insert_ficha.php">
 
                         <div class="form-group">
                             <div>
                                 <label for="">Se faz uso de algum medicamento informe abaixo:</label>
-                                <p><input name="in_medicamento" placeholder="Digite aqui..." class="form-control"></p>
+                                <p><input name="medicamento" placeholder="Digite aqui..." class="form-control"></p>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="">Se o paciente tiver algum problema de saúde informe
                                 abaixo:</label>
                             <div>
-                                <p><input name="in_problema" placeholder="Digite aqui..." class="form-control"></p>
+                                <p><input name="problema" placeholder="Digite aqui..." class="form-control"></p>
                             </div>
                         </div>
                         <div class="form-group">
@@ -91,7 +96,7 @@
                                 informe
                                 abaixo:</label>
                             <div>
-                                <p><input name="in_acompanhamento" placeholder="Digite aqui..." class="form-control"></p>
+                                <p><input name="acompanhamento" placeholder="Digite aqui..." class="form-control"></p>
                             </div>
                         </div>
 
@@ -99,7 +104,7 @@
                             <label for="">Se o paciente tiver alergia a algum medicamento informe
                                 abaixo:</label>
                             <div>
-                                <p><input name="in_alergia" placeholder="Digite aqui..." class="form-control"></p>
+                                <p><input name="alergia" placeholder="Digite aqui..." class="form-control"></p>
                             </div>
                         </div>
                         <div class="form-group">
@@ -108,79 +113,70 @@
                                 foi internado alguma vez informe
                                 abaixo o motivo:</label>
                             <div>
-                                <p><input name="in_hemorragia" placeholder="Digite aqui..." class="form-control"></p>
+                                <p><input name="hemorragia" placeholder="Digite aqui..." class="form-control"></p>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="">Se o paciente fuma ou já fumou
                                 alguma vez informe por quanto tempo:</label>
                             <div>
-                                <p><input name="in_fumante" placeholder="Digite aqui..." class="form-control"></p>
+                                <p><input name="fumante" placeholder="Digite aqui..." class="form-control"></p>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="">O paciente possui alguns hábitos como
                                 apertamento, bruxismo, morder objetos?</label>
                             <div>
-                                <p><input name="in_habitos" placeholder="Digite aqui..." class="form-control"></p>
+                                <p><input name="habitos" placeholder="Digite aqui..." class="form-control"></p>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea3">Como faz a higiene oral? Quantas vezes
                                 ao dia? Usa fio dental ou algum bochecho com flúor?(Responda na
                                 ordem)</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea3" rows="5"></textarea>
+                            <textarea class="form-control" name="higiene" id="exampleFormControlTextarea3" rows="5"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea3">Já foi ao dentista antes? Quando foi
                                 seu último tratamento?(Responda na ordem)</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea3" rows="5"></textarea>
+                            <textarea class="form-control" name="dentista" id="exampleFormControlTextarea3" rows="5"></textarea>
                         </div>
                         <h3>Crianças</h3>
                         <div class="form-group">
-                            <label for="">Quem faz a higieno bucal da criança?</label>
+                            <label for="">Quem faz a higiene bucal da criança?</label>
                             <div>
-                                <p><input placeholder="Digite aqui..." oninput="this.className = ''" class="form-control"></p>
+                                <p><input placeholder="Digite aqui..." name="higiene_crianca" oninput="this.className = ''" class="form-control"></p>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="exampleFormControlTextarea3">Defina a alimentação básica da
                                 criança:</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea3" rows="5"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea3">Defina a alimentação básica da
-                                criança:</label>
+                            <textarea class="form-control" name="alimentacao_crianca" id="exampleFormControlTextarea3" rows="5"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-md-2">Faz uso de chupeta ou mamadeira?</label>
                             <div class="form-check form-check-inline">
                                 <div class="col-sm-1">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-
-                                    <label class="form-check-label" for="inlineRadio1">Sim</label>
-                                </div>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <div class="col-sm-1">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <input class="form-check-input" type="radio" name="chupeta" id="inlineRadio1" value="Sim">
+                                    <label class="form-check-label" for="inlineRadio1">Sim</label><br>
+                                    <input class="form-check-input" type="radio" name="chupeta" id="inlineRadio1" value="Nao">
                                     <label class="form-check-label" for="inlineRadio1">Não</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <p>Pressão Arterial</p>
-                            <p><input class="form-control col-md-2"></p>
+                            <p><input class="form-control col-md-2" name="pressao" placeholder="Pressão"></p>
                             <br>
                             <br>
                             <p>
-                                <input type="text" class="form-control col-md-2" required="required" id="DataPA" name="dt_pa" data-inputmask="'mask': '99/99/9999'" placeholder="Data da registro">
+                                <input type="text" class="form-control col-md-2" required="required" id="DataPA" name="dt_pressao" data-inputmask="'mask': '99/99/9999'" placeholder="Data da registro">
                             </p>
                             <br>
                             <br>
                             <p>Batimentos por minuto</p>
-                            <p><input class="form-control col-md-2"></p>
+                            <p><input class="form-control col-md-2" name="bpm" placeholder="BPM"></p>
                             <br>
                             <br>
                             <p>

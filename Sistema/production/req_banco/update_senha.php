@@ -28,8 +28,6 @@ if($senha_antiga == $_POST['senha_antiga']){
             echo 'ERROR: ' . $e->getMessage();
         }
         if (isset($stmt)) {
-            echo("senha alterada");
-            die();
             $_SESSION['Senha Alterada!'] = 1;
             header('Location: ../mod_senha.php');
         }

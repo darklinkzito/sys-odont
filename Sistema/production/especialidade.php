@@ -39,8 +39,14 @@
     <script src="https://kit.fontawesome.com/37b548cb8d.js"></script>
 
 </head>
-<?php include("./View/verificar_Login.php") ?>
-
+<?php include("./View/verificar_Login.php"); 
+if ($_SESSION['especialidade'] == true) {
+    echo '<script language="javascript">';
+    echo 'alert("A especialidade foi cadastrada com sucesso!")';
+    echo '</script>';
+    $_SESSION['Senha Alterada!'] = 0;
+}
+?>
 <body class="nav-md">
     <div class="container body">
         <div class="main_container">
@@ -68,60 +74,16 @@
             <div class="right_col" role="main">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Cadastro de Atendimentos e Especialidade</h2>
+                        <h2>Cadastro de Especialidades</h2>
                         <div class="clearfix"></div>
                     </div>
 
-                    <form class="form-horizontal" method="POST" action=".">
+                    <form class="form-horizontal" method="POST" action="./req_banco/insert_especialidade.php">
                         <div class="form-group">
                         <div class=" col-md-3" style='margin-right:500px;'>
-                                <label class="control-label ">Profissional:<span class="required">*</span></label>
-                                <select class="form-control" required="required">
-                                    <option value="">Escolha...</option>
-                                </select>
-                        </div>
-                        <div class=" col-md-3" style='margin-right:500px;'>
                                 <label class="control-label ">Especialidade:<span class="required">*</span></label>
-                                <select class="form-control" required="required">
-                                    <option value="">Escolha...</option>
-                                </select>
+                                <input class="form-control" name="especialidade" required="required">
                         
-                        </div>
-                        <div class="form-group atendimentos">
-                            <div class=" col-md-3" style='margin-right:500px;'>
-                                <label class="control-label ">Turno:<span class="required">*</span></label>
-                                <select class="form-control" required="required">
-                                    <option value="">Escolha...</option>
-                                    <option value="Masculino">Matutino</option>
-                                    <option value="Feminino">Vespertino</option>
-                                    <option value="Feminino">Matutino e Vespertino</option>
-                                </select>
-                            </div>
-                            <div class="form-group" style='margin-right:300px'>
-                                <label class="col-md-5">Quantidade de Atendimentos Diários :<span
-                                        class="required">*</span></label>
-                                <div class="col-sm-10">
-                                    <input class="form-control" required="required">
-                                </div>
-                            </div>
-                            <div class="custom-control custom-checkbox" style='margin-left:10px'>
-                                <label for="">Dias na semana de Atendimentos:</label>
-                                <br>
-                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                                <label class="custom-control-label" for="defaultUnchecked">Segunda-Feira</label>
-                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                                <label class="custom-control-label" for="defaultUnchecked">Terça-feira</label>
-                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                                <label class="custom-control-label" for="defaultUnchecked">Quarta-Feira</label>
-                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                                <label class="custom-control-label" for="defaultUnchecked">Quinta Feira</label>
-                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                                <label class="custom-control-label" for="defaultUnchecked">Sexta-Feira</label>
-                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                                <label class="custom-control-label" for="defaultUnchecked">Sábado</label>
-                            </div>
-                            <br>
-
                         </div>
                 </div>
                 <div class="form-group">
