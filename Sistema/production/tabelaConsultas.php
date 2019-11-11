@@ -30,6 +30,7 @@
     <script src="https://kit.fontawesome.com/37b548cb8d.js"></script>
 </head>
 <?php include("./View/verificar_Login.php") ?>
+
 <body class="nav-md">
     <div class="container body">
         <div class="main_container">
@@ -64,15 +65,38 @@
                             <h2>Exames Agendados</h2>
                             <div class="clearfix"></div>
                         </div>
+                        <div class="container">
+                            <!-- The Modal -->
+                            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">Informações</h4>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+
+                                        </div>
+                                        <!-- Modal footer -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="x_content">
                             <?php include("req_banco/consultar_marcacoes.php"); ?>
                             <table id="datatable-buttons" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
+                                        <th>ID</th>
                                         <th>Paciente</th>
                                         <th>Dentista</th>
                                         <th>Data Marcada</th>
                                         <th>Hora Marcada</th>
+                                        <th>Status</th>
+                                        <th>Fechar Consulta / Editar</th>
                                     </tr>
                                 </thead>
 
@@ -80,10 +104,15 @@
                                 <tbody>
                                     <?php foreach ($dados as $value) { ?>
                                         <tr>
+                                            <td><?php echo $value['cons_cod_consulta'] ?></td>
                                             <td><?php echo $value['paci_nm_paciente'] ?></td>
                                             <td><?php echo $value['prof_nm_profissional'] ?></td>
                                             <td><?php echo $value['cons_dt_consulta'] ?></td>
                                             <td><?php echo $value['cons_hr_consulta'] ?></td>
+                                            <td><?php echo $value['stat_nm_status'] ?></td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary btn-xs" onclick="abrirConsulta(<?php echo $value['cons_cod_consulta'] ?>)"> Finalizar Consulta / Visualizar Dados </button>
+                                            </td>
                                         </tr>
                                     <?php } ?>
                                 </tbody>
@@ -97,6 +126,30 @@
             <?php include("./View/footer.php") ?>
         </div>
     </div>
+    <?php
+  session_start();
+  if (@$_SESSION['consulta_fechada'] == true) { ?>
+  <?php
+    echo '<script language="javascript">';
+    echo 'alert("Consulta foi finalizada com sucesso!")';
+    echo '</script>';
+    $_SESSION['consulta_fechada'] = false;
+  } ?>
+    <script>
+        function abrirConsulta(id_consulta) {
+            $.ajax({
+                type: "POST",
+                url: "./Modal/modal_consulta.php",
+                data: {
+                    id: id_consulta
+                },
+                success: function(result) {
+                    $('.modal-body').html(result);
+                    $('.bs-example-modal-lg').modal('show');
+                }
+            });
+        }
+    </script>
 
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
