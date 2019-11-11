@@ -45,7 +45,22 @@
 
 </head>
 <?php include("./View/verificar_Login.php") ?>
-
+<?php
+  if (@$_SESSION['consulta_ok'] == true) { ?>
+  <?php
+    echo '<script language="javascript">';
+    echo 'alert("Consulta foi marcada com sucesso!")';
+    echo '</script>';
+    $_SESSION['consulta_ok'] = false;
+  } ?>
+   <?php
+  if (@$_SESSION['consulta_erro'] == true) { ?>
+  <?php
+    echo '<script language="javascript">';
+    echo 'alert("Consulta não pode ser marcada favor entra em contato com o setor de TI!")';
+    echo '</script>';
+    $_SESSION['consulta_erro'] = false;
+  } ?>
 <body class="nav-md">
     <div class="container body">
         <div class="main_container">
@@ -109,8 +124,8 @@
                             <div class="form-group hidden especialidade">
                                 <label class="control-label col-md-2"> Especialidade:<span class="required">*</span></label>
                                 <div class="col-md-6 col-sm-9 col-xs-6">
-                                    <select class="form-control" data-live-search="true" required="required" id="especialidade" name="especilidade">
-                                        <option value="0">Selecione</option>
+                                    <select class="form-control" data-live-search="true" required="required" id="especialidade" name="especialidade">
+                                        <option value="">Selecione</option>
                                     </select>
                                 </div>
                             </div>

@@ -4,9 +4,9 @@ try {
     require('conexao.php');
     //inserção de dados no banco de dados
     $sql = 'INSERT INTO consulta 
-    (cons_dt_consulta, cons_hr_consulta, prof_cod_profissional, paci_cod_paciente, usua_cod_usuario)
-    VALUES("'.$_POST['data'].'","'.$_POST['hora'].'","'.$_POST['dentista'].'",
-    "'.$_POST['paciente'].'", "'.$_SESSION['usuario_id'].'")';
+    (stat_cod_status, cons_dt_consulta, cons_hr_consulta, prof_cod_profissional, espe_cod_especialidade, paci_cod_paciente, usua_cod_usuario)
+    VALUES(1,"'.$_POST['data'].'","'.$_POST['hora'].'","'.$_POST['dentista'].'",
+    "'.$_POST['especialidade'].'", "'.$_POST['paciente'].'", "'.$_SESSION['usuario_id'].'")';
     
     $stmt = $conn->prepare($sql);
     $stmt->execute();
@@ -16,9 +16,9 @@ try {
 }
 //condicional para ir para a proxima página
 if ($stmt == 1) {
-    $_SESSION["cunsulta_ok"] = "Consulta Marcada!";
+    $_SESSION["consulta_ok"] = true;
     header('Location: ../cadastroConsulta.php');
 } else {
-    $_SESSION["msg_erro"] = "Consulta não pode ser marcada enrar em contato com a TI";
+    $_SESSION["consulta_erro"] = true;
     header('Location: ../cadastroConsulta.php');
 };
