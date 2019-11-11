@@ -74,19 +74,19 @@
         <div class="row tile_count">
           <?php include("./req_banco/atendimentos_diarios.php") ?>
           <div class="col-md-3 col-sm-5 col-xs-7  tile_stats_count">
-            <span class="count_top"><i class="fa fa-user"></i> Atendimentos Diários em aberto</span>
+            <span class="count_top"><i class="fa fa-user"></i> Atendimentos Diários em <i class="green">aberto</i></span>
             <div class="count"><?php echo ($dados['contagem']) ?></div>
             <span class="count_bottom"><a href="tabelaConsultas.php">Clique para Mais Detalhes</a></span>
           </div>
           <?php include("./req_banco/atendimentos_ok.php") ?>
           <div class="col-md-3 col-sm-5 col-xs-7 tile_stats_count">
-            <span class="count_top"><i class="fa fa-user"></i> Atendimentos Diários Encerrados</span>
+            <span class="count_top"><i class="fa fa-user"></i> Atendimentos Diários <i class="blue"> Encerrados </i></span>
             <div class="count"><?php echo ($dados['fechados']) ?></div>
             <span class="count_bottom"><a href="tabelaConsultas.php">Clique para Mais Detalhes</a></span>
           </div>
           <?php include("./req_banco/atendimentos_pendentes.php") ?>
           <div class="col-md-3 col-sm-5 col-xs-7 tile_stats_count">
-            <span class="count_top"><i class="fa fa-user"></i> Atendimentos Pendentes</span>
+            <span class="count_top"><i class="fa fa-user"></i> Atendimentos <i class="red"> Pendentes</i></span>
             <div class="count"><?php echo ($dados['pendentes']) ?></div>
             <span class="count_bottom"><a href="tabelaConsultas.php">Clique para Mais Detalhes</a></span>
           </div>

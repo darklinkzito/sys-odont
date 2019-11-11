@@ -1,10 +1,10 @@
 <?php
 //pegando os valores da telalogin 
-$usuario = $_POST['usuario'];
+$usuario = $_POST['cpf'];
 $senha = $_POST['senha'];
 try {
     require('conexao.php');    
-    $stmt = $conn->prepare("SELECT * FROM usuario WHERE usua_nm_usuario = '$usuario' AND usua_nm_senha = '$senha'");
+    $stmt = $conn->prepare("SELECT * FROM usuario WHERE usua_ds_cpf = '$usuario' AND usua_nm_senha = '$senha'");
     $stmt->execute();
     $dados = $stmt->fetchAll();
 } catch (PDOException $e) {
