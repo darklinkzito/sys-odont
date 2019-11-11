@@ -40,10 +40,10 @@
 
 </head>
 <?php include("./View/verificar_Login.php");
-if($_SESSION['cadastrou_paciente'] == false){
+if ($_SESSION['cadastrou_paciente'] == false) {
     header('Location: acesso_negado.php');
 }
- ?>
+?>
 
 
 <body class="nav-md">
@@ -176,7 +176,7 @@ if($_SESSION['cadastrou_paciente'] == false){
                             <br>
                             <br>
                             <p>Batimentos por minuto</p>
-                            <p><input class="form-control col-md-2" name="bpm" placeholder="BPM"></p>
+                            <p><input id="bpm" class="form-control col-md-2" name="bpm" placeholder="BPM"></p>
                             <br>
                             <br>
                             <p>
@@ -198,7 +198,6 @@ if($_SESSION['cadastrou_paciente'] == false){
         <?php include("./View/footer.php") ?>
     </div>
     </div>
-
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->

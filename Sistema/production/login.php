@@ -36,11 +36,13 @@
 <body class="login">
   <?php
   session_start();
-  if (isset($_SESSION["msg_erro"])) { ?>
-    <?php echo "<script>alert('usuário ou senha invalido');
-        </script>"; ?>
+  if (@$_SESSION['login_invalido'] == true) { ?>
   <?php
-    unset($_SESSION["msg_erro"]);
+    echo '<script language="javascript">';
+    echo 'alert("Os dados informados não conferem")';
+    echo '</script>';
+
+    unset($_SESSION["login_invalido"]);
   } ?>
   <div>
     <a class="hiddenanchor" id="signup"></a>

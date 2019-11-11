@@ -1,6 +1,7 @@
 <?php
+
+session_start();
 try {
-    session_start();
     require('conexao.php');
     $dados_ficha = 'INSERT INTO ficha_anamnese (fian_in_medicamento, fian_in_problema, fian_in_acompanhamento,
      fian_in_alergia, fian_in_hemorragia, fian_in_fumante, fian_in_habitos, fian_in_higiene, fian_in_dentista,
@@ -13,7 +14,33 @@ try {
     $stmt = $conn->prepare($dados_ficha);
     $stmt->execute();
     echo $stmt->rowCount();
+   
 } catch (PDOException $e) {
+    echo 'ERROR: ' . $e->getMessage();
+}
+try {
+    require('conexao.php');
+    $stmt = $conn->prepare("SELECT MAX(fian_cod_ficha_anamnese) as fian_cod_ficha_anamnese FROM ficha_anamnese");
+    $stmt->execute();
+    $dados = $stmt->fetchAll();
+} catch (PDOException $e) {
+    echo 'ERROR: ' . $e->getMessage();
+}
+foreach($dados as $value){
+    $value['fian_cod_ficha_anamnese'];
+}
+$_SESSION['id_ficha'] = $value['fian_cod_ficha_anamnese'];
+$ficha = $_SESSION['id_ficha'];
+try {
+    $paci = $_SESSION['paciente_ficha'];
+    require('conexao.php');
+    //inserção de dados no banco de dados        
+    $stmt = $conn->prepare('UPDATE paciente SET fian_cod_ficha_anamnese = :fian_cod_ficha_anamnese WHERE paci_nm_paciente = "'.$paci.'" ');
+    $stmt->execute(array(
+        ':fian_cod_ficha_anamnese' => $ficha
+    ));
+    echo $stmt->rowCount();
+} catch(PDOException $e) {
     echo 'ERROR: ' . $e->getMessage();
 }
 if(isset($dados_ficha)){

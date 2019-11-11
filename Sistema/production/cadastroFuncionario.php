@@ -157,39 +157,6 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="form-group atendimentos hidden">
-                                <div class=" col-md-3" style='margin-right:500px;margin-top:30px'>
-                                    <label class="control-label " for="convenio">Turno:<span class="required">*</span></label>
-                                    <select class="form-control" id="convenio" name="nm_convenio" required="required">
-                                        <option value="">Escolha...</option>
-                                        <option value="Masculino">Matutino</option>
-                                        <option value="Feminino">Vespertino</option>
-                                        <option value="Feminino">Matutino e Vespertino</option>
-                                    </select>
-                                </div>
-                                <div class="form-group" style='margin-right:300px'>
-                                    <label class="col-md-5">Quantidade de Atendimentos Diários :<span class="required">*</span></label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" required="required">
-                                    </div>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <label for="">Dias na semana de Atendimentos:</label>
-                                    <br>
-                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                                    <label class="custom-control-label" for="defaultUnchecked">Segunda-Feira</label>
-                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                                    <label class="custom-control-label" for="defaultUnchecked">Terça-feira</label>
-                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                                    <label class="custom-control-label" for="defaultUnchecked">Quarta-Feira</label>
-                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                                    <label class="custom-control-label" for="defaultUnchecked">Quinta Feira</label>
-                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                                    <label class="custom-control-label" for="defaultUnchecked">Sexta-Feira</label>
-                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                                    <label class="custom-control-label" for="defaultUnchecked">Sábado</label>
-                                </div>
-                            </div>
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <button type="submit" class="btn estilo" style="margin-top: 30px">Cadastrar</button>

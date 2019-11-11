@@ -22,7 +22,7 @@
                 <ul class="nav child_menu">
                     <li><a href="relatorio_de_consultas.php">Relatório de Consultas</a></li>
                     <li><a href="relatorio_de_tratamentos.php">Relatório de Tratamentos</a></li>
-                    <li><a href="#">Ficha de Anamnese</a></li>
+                    <li><a href="pdf_ficha_anamnese.php">Ficha de Anamnese</a></li>
                 </ul>
             </li>
     </div>

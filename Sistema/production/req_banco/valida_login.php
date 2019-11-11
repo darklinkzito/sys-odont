@@ -26,13 +26,13 @@ $_SESSION['Senha Alterada!'] = 0;
 $_SESSION['Nao_alterada'] = 0;
 $_SESSION['ficha_cadastrada'] = false;
 $_SESSION['ficha_nao_cadastrada'] = false;
-$_SESSION['msg_erro'] = false;
 $_SESSION['cadastrou_paciente'] = false;
 $_SESSION["especialidade"]= false;
 if (isset($dados[0])){
     header('Location: ../index.php'); 
 }else{
-    session_destroy();
+
+    $_SESSION['login_invalido']= true;
     header('Location: ../login.php');
 }
 ?>

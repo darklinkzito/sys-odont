@@ -2,9 +2,7 @@
 try {
     session_start();
     require('conexao.php');
-    //inserção de dados no banco de dados
-    echo($_POST['cod']);
-        
+    //inserção de dados no banco de dados        
     $stmt = $conn->prepare('UPDATE usuario SET usua_nm_usuario = :usua_nm_usuario,
     usua_dt_usuario = :usua_dt_usuario, usua_in_sexo = :usua_in_sexo, usua_ds_cpf = :usua_ds_cpf, usua_ds_rg = :usua_ds_rg,
     usua_ds_telefone = :usua_ds_telefone, usua_ds_email = :usua_ds_email, usua_ds_cep = :usua_ds_cep, 

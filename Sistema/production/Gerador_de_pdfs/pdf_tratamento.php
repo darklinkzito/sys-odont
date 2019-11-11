@@ -1,5 +1,4 @@
 <?php  
-   include("../req_banco/pdf_tratamento_db.php");
    $nome = $_SESSION['nome'];
    $profissional = $_SESSION['profissional'];   
    include("./pdf-php/src/Cezpdf.php");

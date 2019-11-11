@@ -108,7 +108,7 @@
                                 <div class="form-group">
                                     <label class="control-label col-sm-2" for="Telefone">Telefone:<span class="required">*</span></label>
                                     <div class="col-sm-3">
-                                        <input type="text" class="form-control" value="<?php echo $value['usua_ds_telefone']; ?>">
+                                        <input type="text" class="form-control" data-inputmask="'mask': '(99)99999-9999'" value="<?php echo $value['usua_ds_telefone']; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">

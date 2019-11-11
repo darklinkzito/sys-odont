@@ -134,7 +134,7 @@
                                                     <td><?php echo $value['perf_nm_perfil'] ?></td>
                                                     <td>
                                                         <label>
-                                                            <input type="checkbox" class="js-switch" checked />
+                                                            <input type="checkbox" class="js-switch" />
                                                             Desativar/Ativar
                                                         </label>
                                                     </td>

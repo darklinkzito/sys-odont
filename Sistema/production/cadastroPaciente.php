@@ -45,7 +45,7 @@
 
 </head>
 <?php include("./View/verificar_Login.php");
-if ($_SESSION['msg_erro'] == true) {
+if (@$_SESSION['msg_erro'] == true) {
     echo '<script language="javascript">';
     echo 'alert("Paciente não pode ser cadastrado favor entrar em contato com o setor de TI!")';
     echo '</script>';
@@ -111,7 +111,8 @@ if ($_SESSION['msg_erro'] == true) {
                             <div class="form-group">
                                 <label class="control-label col-sm-2" for="sexo">Sexo <span class="required">*</span></label>
                                 <div class="col-sm-2">
-                                    <select class="form-control" id="sexo" name="in_sexo">
+                                    <select class="form-control" id="sexo" name="in_sexo" required>
+                                        <option value="">Selecione</option>
                                         <option value="Masculino">Masculino</option>
                                         <option value="Feminino">Feminino</option>
                                     </select>
@@ -121,7 +122,7 @@ if ($_SESSION['msg_erro'] == true) {
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="cep">CEP:<span class="required">*</span></label>
                             <div class="col-sm-2">
-                                <input type="text" class="form-control" data-inputmask="'mask' : '99999-999'" id="CEP" name="ds_cep">
+                                <input type="text" class="form-control" data-inputmask="'mask' : '99999-999'" id="CEP" required name="ds_cep">
                             </div>
                         </div>
                         <div class="form-group">
@@ -134,7 +135,7 @@ if ($_SESSION['msg_erro'] == true) {
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="NumCasa">Número:<span class="required">*</span></label>
                             <div class="col-sm-1">
-                                <input type="text" class="form-control" required="required" id="num_casa" name="num_casa">
+                                <input type="text" class="form-control" data-inputmask="'mask' : '9999'" required="required" maxlength="4" id="num_casa" name="num_casa">
                             </div>
                         </div>
                         <div class="form-group">
@@ -168,8 +169,11 @@ if ($_SESSION['msg_erro'] == true) {
                                 <label class="control-label" for="convenio">Qual?:<span class="required">*</span></label>
                                 <select class="form-control" id="convenio" name="nm_convenio" required="required">
                                     <option value="">Escolha...</option>
-                                    <option value="Hapvida">Hapvida</option>
-                                    <option value="Sulamerica">Sulamerica</option>
+                                    <?php include("./req_banco/consulta_convenio.php");
+                                    foreach ($dados as $value) {
+                                        ?>
+                                        <option value="<?php echo ($value['conv_cod_convenio']) ?>"><?php echo ($value['conv_nm_convenio']) ?></option>
+                                    <?php } ?>
                                 </select>
                                 <div class="form-group">
                                     <label class="control-label" for="convenio">Número da Carteira:<span class="required">*</span></label>
