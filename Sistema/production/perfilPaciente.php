@@ -130,10 +130,6 @@
                         <div class="modal-body">
 
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                            <button type="button" class="btn btn-primary">Salvar Mudanças</button>
-                        </div>
 
                     </div>
                 </div>
@@ -144,6 +140,15 @@
             <?php include("./View/footer.php") ?>
         </div>
     </div>
+    <?php
+  session_start();
+  if (@$_SESSION['paciente_editado'] == true) { ?>
+  <?php
+    echo '<script language="javascript">';
+    echo 'alert("Dados do paciente foram salvos com sucesso!")';
+    echo '</script>';
+    $_SESSION['paciente_editado'] = false;
+  } ?>
     <script>
         function abrirmodal(id_paciente) {
             $.ajax({

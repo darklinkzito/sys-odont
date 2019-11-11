@@ -2,6 +2,9 @@
 try {
     session_start();
     require('conexao.php');
+    $data = $_POST['data'];
+    $data = implode("-",array_reverse(explode("/",$data)));
+    $_POST['data'] = $data;
     //inserção de dados no banco de dados        
     $stmt = $conn->prepare('UPDATE usuario SET usua_nm_usuario = :usua_nm_usuario,
     usua_dt_usuario = :usua_dt_usuario, usua_in_sexo = :usua_in_sexo, usua_ds_cpf = :usua_ds_cpf, usua_ds_rg = :usua_ds_rg,
